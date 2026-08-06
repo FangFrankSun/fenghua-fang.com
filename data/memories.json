@@ -1,0 +1,415 @@
+{
+  "version": 2,
+  "couple": {
+    "names": "Fenghua & Fang",
+    "since": "2021-12-19"
+  },
+  "tags": [
+    {
+      "id": "milestone",
+      "name": "Milestone",
+      "emoji": "",
+      "color": "#dfa64e"
+    },
+    {
+      "id": "travel",
+      "name": "Travel",
+      "emoji": "",
+      "color": "#82aed3"
+    },
+    {
+      "id": "date",
+      "name": "Date Night",
+      "emoji": "",
+      "color": "#e08e9f"
+    },
+    {
+      "id": "adventure",
+      "name": "Adventure",
+      "emoji": "",
+      "color": "#84bf9f"
+    },
+    {
+      "id": "holiday",
+      "name": "Holiday",
+      "emoji": "",
+      "color": "#a78bd0"
+    },
+    {
+      "id": "food",
+      "name": "Food",
+      "emoji": "",
+      "color": "#e39a72"
+    }
+  ],
+  "memories": [
+    {
+      "id": "m-2021-12-24-washington-christmas",
+      "title": "Washington Christmas",
+      "date": "2021-12-24",
+      "description": "Our first Christmas together, just five days after everything began.",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.8951,
+        "lng": -77.0364
+      },
+      "tags": [
+        "holiday",
+        "milestone"
+      ],
+      "photos": [
+        {
+          "id": "seed-01",
+          "src": "images/fulls/01.jpg",
+          "thumb": "images/thumbs/01.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-03-06-guggenheim",
+      "title": "Guggenheim Museum",
+      "date": "2022-03-06",
+      "description": "Spiraling up the rotunda together in New York.",
+      "place": {
+        "name": "Solomon R. Guggenheim Museum, New York",
+        "lat": 40.783,
+        "lng": -73.959
+      },
+      "tags": [
+        "travel",
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-02",
+          "src": "images/fulls/02.jpg",
+          "thumb": "images/thumbs/02.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-03-08-statue-of-liberty",
+      "title": "Statue of Liberty",
+      "date": "2022-03-08",
+      "description": "Windy ferry, big smiles, Lady Liberty watching over us.",
+      "place": {
+        "name": "Statue of Liberty, New York",
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-03",
+          "src": "images/fulls/03.jpg",
+          "thumb": "images/thumbs/03.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-03-10-the-edge",
+      "title": "The Edge",
+      "date": "2022-03-10",
+      "description": "Standing on the highest sky deck in the Western Hemisphere.",
+      "place": {
+        "name": "Edge at Hudson Yards, New York",
+        "lat": 40.7538,
+        "lng": -74.0022
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-04",
+          "src": "images/fulls/04.jpg",
+          "thumb": "images/thumbs/04.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-04-02-six-flags",
+      "title": "Six Flags America",
+      "date": "2022-04-02",
+      "description": "Roller coasters and screaming-laughing all day.",
+      "place": {
+        "name": "Six Flags America, Maryland",
+        "lat": 38.9016,
+        "lng": -76.7708
+      },
+      "tags": [
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-05",
+          "src": "images/fulls/05.jpg",
+          "thumb": "images/thumbs/05.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-05-28-graduation",
+      "title": "Graduation Ceremony",
+      "date": "2022-05-28",
+      "description": "Caps in the air — one chapter closes, ours continues.",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.9072,
+        "lng": -77.0369
+      },
+      "tags": [
+        "milestone"
+      ],
+      "photos": [
+        {
+          "id": "seed-06",
+          "src": "images/fulls/06.jpg",
+          "thumb": "images/thumbs/06.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-06-10-washington-monument",
+      "title": "Washington Monument",
+      "date": "2022-06-10",
+      "description": "A golden evening on the National Mall.",
+      "place": {
+        "name": "Washington Monument, Washington, D.C.",
+        "lat": 38.8895,
+        "lng": -77.0353
+      },
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-07",
+          "src": "images/fulls/07.jpg",
+          "thumb": "images/thumbs/07.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-08-16-boston-ferry",
+      "title": "Boston Ferry",
+      "date": "2022-08-16",
+      "description": "Salt air and skyline views across Boston Harbor.",
+      "place": {
+        "name": "Boston Harbor, Massachusetts",
+        "lat": 42.3555,
+        "lng": -71.048
+      },
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-08",
+          "src": "images/fulls/08.jpg",
+          "thumb": "images/thumbs/08.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-10-01-disney-hollywood",
+      "title": "Disney's Hollywood Studios",
+      "date": "2022-10-01",
+      "description": "Movie magic in Orlando — day one of our Disney marathon.",
+      "place": {
+        "name": "Disney's Hollywood Studios, Orlando",
+        "lat": 28.3575,
+        "lng": -81.5583
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-09",
+          "src": "images/fulls/09.jpg",
+          "thumb": "images/thumbs/09.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-10-01-magic-kingdom",
+      "title": "Disney Magic Kingdom",
+      "date": "2022-10-01",
+      "description": "Fireworks over Cinderella Castle.",
+      "place": {
+        "name": "Magic Kingdom, Orlando",
+        "lat": 28.4177,
+        "lng": -81.5812
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-10",
+          "src": "images/fulls/10.jpg",
+          "thumb": "images/thumbs/10.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-10-02-epcot",
+      "title": "Disney Epcot",
+      "date": "2022-10-02",
+      "description": "Around the world in one park, hand in hand.",
+      "place": {
+        "name": "EPCOT, Orlando",
+        "lat": 28.3747,
+        "lng": -81.5494
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-11",
+          "src": "images/fulls/11.jpg",
+          "thumb": "images/thumbs/11.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-10-03-islands-of-adventure",
+      "title": "Universal's Islands of Adventure",
+      "date": "2022-10-03",
+      "description": "Butterbeer, wizards, and one last Orlando thrill.",
+      "place": {
+        "name": "Universal's Islands of Adventure, Orlando",
+        "lat": 28.4722,
+        "lng": -81.4682
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-12",
+          "src": "images/fulls/12.jpg",
+          "thumb": "images/thumbs/12.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "id": "m-2022-10-14-shenandoah",
+      "title": "Shenandoah National Park",
+      "date": "2022-10-14",
+      "description": "Autumn colors along Skyline Drive.",
+      "place": {
+        "name": "Shenandoah National Park, Virginia",
+        "lat": 38.533,
+        "lng": -78.3558
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-13",
+          "src": "images/fulls/13.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T22:20:36.187015Z"
+    },
+    {
+      "id": "m-2023-05-16-spring-evening",
+      "title": "A Spring Evening",
+      "date": "2023-05-16",
+      "description": "A little moment from May 2023. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-14",
+          "src": "images/fulls/14.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T22:20:36.187015Z"
+    },
+    {
+      "id": "m-2023-05-29-memorial-day",
+      "title": "Memorial Day 2023",
+      "date": "2023-05-29",
+      "description": "Holiday weekend together. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-15",
+          "src": "images/fulls/15.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T22:20:36.187015Z"
+    },
+    {
+      "id": "m-2024-12-27-fallingwater",
+      "title": "Fallingwater",
+      "date": "2024-12-27",
+      "description": "Frank Lloyd Wright's house over the waterfall, wrapped in winter.",
+      "place": {
+        "name": "Fallingwater, Pennsylvania",
+        "lat": 39.90635,
+        "lng": -79.46774
+      },
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-16",
+          "src": "images/fulls/16.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T22:20:36.187015Z"
+    },
+    {
+      "id": "m-2024-12-28-cloud-gate",
+      "title": "Cloud Gate, Chicago",
+      "date": "2024-12-28",
+      "description": "Winter reflections at The Bean in Millennium Park.",
+      "place": {
+        "name": "Millennium Park, Chicago",
+        "lat": 41.88268,
+        "lng": -87.62354
+      },
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-17",
+          "src": "images/fulls/17.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-06T22:20:36.187015Z"
+    }
+  ]
+}

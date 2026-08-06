@@ -1,226 +1,243 @@
-<!DOCTYPE HTML>
-<!--
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Fenghua and Fang</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<title>Fenghua &amp; Fang — Our Story</title>
+	<meta name="description" content="The story of Fenghua & Fang — our timeline, our map, our memories." />
+	<meta name="theme-color" content="#faf1e6" />
+	<link rel="manifest" href="manifest.webmanifest" />
+	<link rel="icon" href="app/icons/icon-192.png" type="image/png" />
+	<link rel="apple-touch-icon" href="app/icons/apple-touch-icon.png" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="F &amp; F" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="app/styles.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Animated background -->
+	<div class="bg" aria-hidden="true">
+		<div class="bg-blob bg-blob-1"></div>
+		<div class="bg-blob bg-blob-2"></div>
+		<div class="bg-blob bg-blob-3"></div>
+		<canvas id="hearts-canvas"></canvas>
+	</div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html"><strong>Fenghua and Fang</strong> Since 12/19/2021</a></h1>
-						<nav>
-							<ul>
-								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-							</ul>
-						</nav>
-					</header>
+	<!-- Header -->
+	<header class="site-header">
+		<div class="brand">
+			<a class="brand-name" href="#/timeline">Fenghua <span class="amp">&amp;</span> Fang</a>
+			<span class="brand-sub">since 2021</span>
+		</div>
+		<nav class="tabs" id="tabs" aria-label="Views">
+			<button class="tab is-active" data-view="timeline">Timeline</button>
+			<button class="tab" data-view="map">Map</button>
+			<button class="tab" data-view="gallery">Gallery</button>
+		</nav>
+		<div class="header-actions">
+			<button id="btn-edit-lock" class="btn-lock" title="Edit our story">
+				<span class="lock-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><span class="lock-label">Edit</span>
+			</button>
+		</div>
+	</header>
 
-				<!-- Main -->
-					<div id="main">
-						<article class="thumb">
-							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="" /></a>
-							<h2>12/24/2021</h2>
-							<p>Washington Christmas</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="" /></a>
-							<h2>03/06/2022</h2>
-							<p>Guggenheim Museum</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt="" /></a>
-							<h2>03/08/2022</h2>
-							<p>Statue of Liberty</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt="" /></a>
-							<h2>03/10/2022</h2>
-							<p>The Edge</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt="" /></a>
-							<h2>04/02/2022</h2>
-							<p>Six Flags America in Baltimore</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>05/28/2022</h2>
-							<p>Graduation ceremony</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="" /></a>
-							<h2>06/10/2022</h2>
-							<p>Washington Monument</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="" /></a>
-							<h2>08/16/2022</h2>
-							<p>Boston ferry</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="" /></a>
-							<h2>10/01/2022</h2>
-							<p>Disney Hollywood Park</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="" /></a>
-							<h2>10/01/2022</h2>
-							<p>Disney Magic Kingdom Park</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/11.jpg" alt="" /></a>
-							<h2>10/02/2022</h2>
-							<p>Disney Epcot Park</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/12.jpg" class="image"><img src="images/thumbs/12.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
+	<!-- Hero -->
+	<section class="hero" id="hero">
+		<h1 class="hero-title">Our&nbsp;Story</h1>
+		<p class="hero-sub">every day, every place, every little moment</p>
+		<div class="hero-stats">
+			<div class="stat"><span class="stat-num" id="stat-days">—</span><span class="stat-label">days together</span></div>
+			<div class="stat-heart">♥&#xFE0E;</div>
+			<div class="stat"><span class="stat-num" id="stat-memories">—</span><span class="stat-label">memories</span></div>
+			<div class="stat-heart">♥&#xFE0E;</div>
+			<div class="stat"><span class="stat-num" id="stat-places">—</span><span class="stat-label">places</span></div>
+		</div>
+	</section>
 
+	<!-- Tag filter bar -->
+	<div class="filter-bar" id="filter-bar" aria-label="Filter by tag"></div>
 
+	<!-- Views -->
+	<main id="main">
+		<section id="view-timeline" class="view is-active" aria-label="Timeline">
+			<div class="timeline" id="timeline"></div>
+		</section>
 
+		<section id="view-map" class="view" aria-label="Map">
+			<div class="map-wrap">
+				<div id="map"></div>
+				<div class="map-legend glass" id="map-legend"></div>
+				<button class="map-fit glass" id="btn-map-fit" title="See every place">All our places</button>
+				<div class="map-style" id="map-style">
+					<button class="ms-toggle" id="ms-toggle" title="Change the map's look">✦ Style</button>
+					<div class="ms-options" id="ms-options" hidden></div>
+				</div>
+			</div>
+		</section>
 
+		<section id="view-gallery" class="view" aria-label="Gallery">
+			<div class="gallery" id="gallery"></div>
+		</section>
+	</main>
 
-							<article class="thumb">
-							<a href="images/fulls/13.jpg" class="image"><img src="images/thumbs/13.jpg" alt="" /></a>
-							<h2>10/14/2022</h2>
-							<p>Shenandoah National Park</p>
-						</article>
+	<!-- Edit toolbar (visible when unlocked) -->
+	<div class="edit-toolbar glass" id="edit-toolbar" hidden>
+		<span class="edit-flag">Edit mode</span>
+		<button id="btn-add-memory" class="btn btn-primary">＋ New memory</button>
+		<button id="btn-manage-tags" class="btn">Tags</button>
+		<button id="btn-export" class="btn" title="Download memories.json to publish or share">↓ Export</button>
+		<button id="btn-import" class="btn" title="Merge a memories.json from your love">↑ Import</button>
+		<button id="btn-reset-local" class="btn btn-danger" title="Discard local edits and return to the published version">↺ Reset local</button>
+		<button id="btn-lock" class="btn" title="Leave edit mode">Lock</button>
+		<input type="file" id="import-file" accept="application/json" hidden />
+	</div>
 
-							<article class="thumb">
-							<a href="images/fulls/14.jpg" class="image"><img src="images/thumbs/14.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
+	<!-- Footer -->
+	<footer class="site-footer">
+		<p class="foot-line">Fenghua <span class="amp">&amp;</span> Fang <span class="foot-heart">♥&#xFE0E;</span> love.fenghua-fang.com</p>
+		<p class="foot-keepsakes">
+			keepsakes:
+			<a href="Christmas.html">Christmas Tree ’22</a> ·
+			<a href="Christmas-line.html">Christmas Lines</a> ·
+			<a href="stars.html">Starry Night</a> ·
+			<a href="legacy.html">The First Website</a>
+		</p>
+	</footer>
 
-							<article class="thumb">
-							<a href="images/fulls/15.jpg" class="image"><img src="images/thumbs/15.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
+	<!-- PIN modal -->
+	<div class="modal" id="modal-pin" hidden>
+		<div class="modal-card pin-card glass" role="dialog" aria-modal="true" aria-label="Enter code">
+			<button class="modal-close" data-close>&times;</button>
+			<div class="pin-heart">♥&#xFE0E;</div>
+			<h2 class="pin-title">Just&nbsp;us</h2>
+			<p class="pin-sub">enter our little secret</p>
+			<div class="pin-dots" id="pin-dots">
+				<span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
+			</div>
+			<div class="pin-pad" id="pin-pad">
+				<button data-d="1">1</button><button data-d="2">2</button><button data-d="3">3</button>
+				<button data-d="4">4</button><button data-d="5">5</button><button data-d="6">6</button>
+				<button data-d="7">7</button><button data-d="8">8</button><button data-d="9">9</button>
+				<span></span><button data-d="0">0</button><button data-del title="Delete">⌫</button>
+			</div>
+		</div>
+	</div>
 
-							<article class="thumb">
-							<a href="images/fulls/16.jpg" class="image"><img src="images/thumbs/16.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
+	<!-- Memory editor modal -->
+	<div class="modal" id="modal-editor" hidden>
+		<div class="modal-card editor-card glass" role="dialog" aria-modal="true" aria-label="Edit memory">
+			<button class="modal-close" data-close>&times;</button>
+			<h2 class="editor-title" id="editor-heading">New memory</h2>
 
+			<label class="field">
+				<span class="field-label">Title</span>
+				<input type="text" id="f-title" placeholder="Where were we? What happened?" maxlength="120" />
+			</label>
 
-							<article class="thumb">
-							<a href="images/fulls/17.jpg" class="image"><img src="images/thumbs/17.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/18.jpg" class="image"><img src="images/thumbs/18.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/19.jpg" class="image"><img src="images/thumbs/19.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/20.jpg" class="image"><img src="images/thumbs/20.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/21.jpg" class="image"><img src="images/thumbs/21.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/22.jpg" class="image"><img src="images/thumbs/22.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-							<article class="thumb">
-							<a href="images/fulls/23.jpg" class="image"><img src="images/thumbs/23.jpg" alt="" /></a>
-							<h2>10/03/2022</h2>
-							<p>Universal Studio Island of Adventure</p>
-						</article>
-
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer" class="panel">
-						<div class="inner split">
-							<div>
-								<section>
-									<h2>Fenghua and Fang</h2>
-									<p>Pictures Collection</p>
-								</section>
-								<section>
-									<h2>Follow me on ...</h2>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</section>
-								<p class="copyright">
-									&copy; love.Fenghua-Fang.com<a href="http://html5up.net"></a>.
-								</p>
-							</div>
-							<div>
-								<section>
-									<h2>Get in touch</h2>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="field half">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-											<div class="field">
-												<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-							</div>
-						</div>
-					</footer>
-
+			<div class="field-row">
+				<label class="field">
+					<span class="field-label">Date</span>
+					<input type="date" id="f-date" />
+				</label>
+				<label class="field">
+					<span class="field-label">Time <em>(optional)</em></span>
+					<input type="time" id="f-time" />
+				</label>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<label class="field">
+				<span class="field-label">Our note</span>
+				<textarea id="f-desc" rows="3" placeholder="A few words to remember it by…"></textarea>
+			</label>
 
-	</body>
+			<div class="field">
+				<span class="field-label">Tags</span>
+				<div class="tag-picker" id="f-tags"></div>
+			</div>
+
+			<div class="field">
+				<span class="field-label">Place</span>
+				<div class="place-box">
+					<div class="place-search-wrap">
+						<input type="text" id="f-place-search" placeholder="Search an address or place… (e.g. Eiffel Tower)" autocomplete="off" />
+						<div class="place-results glass" id="f-place-results" hidden></div>
+					</div>
+					<div class="place-current" id="f-place-current" hidden>
+						<span class="place-pin"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+						<span class="place-name" id="f-place-name"></span>
+						<button class="place-remove" id="f-place-remove" title="Remove location">&times;</button>
+					</div>
+					<div id="f-minimap" class="minimap" hidden></div>
+					<p class="place-hint">tip: tap the little map to fine-tune the pin</p>
+				</div>
+			</div>
+
+			<div class="field">
+				<span class="field-label">Photos</span>
+				<div class="photo-grid" id="f-photos"></div>
+				<div class="dropzone" id="f-dropzone">
+					<input type="file" id="f-file" accept="image/*" multiple hidden />
+					<p>Drop photos here or <button type="button" class="linklike" id="f-browse">browse</button></p>
+					<p class="drop-hint">photos are compressed automatically — add as many as you like</p>
+				</div>
+			</div>
+
+			<div class="editor-actions">
+				<button class="btn btn-danger" id="f-delete" hidden>Delete</button>
+				<span class="spacer"></span>
+				<button class="btn" data-close>Cancel</button>
+				<button class="btn btn-primary" id="f-save">Save memory</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tag manager modal -->
+	<div class="modal" id="modal-tags" hidden>
+		<div class="modal-card tags-card glass" role="dialog" aria-modal="true" aria-label="Manage tags">
+			<button class="modal-close" data-close>&times;</button>
+			<h2 class="editor-title">Our tags</h2>
+			<p class="tags-hint">Tags color the pins on the map and the chips on the timeline.</p>
+			<div class="tag-rows" id="tag-rows"></div>
+			<button class="btn" id="btn-tag-add">＋ Add a tag</button>
+			<div class="editor-actions">
+				<span class="spacer"></span>
+				<button class="btn" data-close>Cancel</button>
+				<button class="btn btn-primary" id="btn-tags-save">Save tags</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Confirm dialog -->
+	<div class="modal" id="modal-confirm" hidden>
+		<div class="modal-card confirm-card" role="alertdialog" aria-modal="true">
+			<div class="confirm-icon" id="confirm-icon">♥&#xFE0E;</div>
+			<h2 class="confirm-title" id="confirm-title"></h2>
+			<p class="confirm-msg" id="confirm-msg"></p>
+			<div class="confirm-actions">
+				<button class="btn" id="confirm-cancel">Cancel</button>
+				<button class="btn btn-primary" id="confirm-ok">Confirm</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Lightbox -->
+	<div class="lightbox" id="lightbox" hidden>
+		<button class="lb-close" id="lb-close">&times;</button>
+		<button class="lb-nav lb-prev" id="lb-prev">‹</button>
+		<img id="lb-img" alt="" />
+		<button class="lb-nav lb-next" id="lb-next">›</button>
+		<div class="lb-caption" id="lb-caption"></div>
+	</div>
+
+	<div class="toast" id="toast" hidden></div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script type="module" src="app/main.js"></script>
+</body>
 </html>
