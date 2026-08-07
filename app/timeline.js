@@ -23,11 +23,36 @@ function observeReveals(root) {
 			}
 		}, { threshold: 0.12 });
 	}
-	root.querySelectorAll('.reveal').forEach((el) => {
+	root.querySelectorAll('.reveal:not(.is-in):not([data-obs])').forEach((el) => {
+		el.dataset.obs = '1';
 		const r = el.getBoundingClientRect();
 		if (r.top < innerHeight && r.bottom > 0) el.classList.add('is-in');
 		else revealObserver.observe(el);
 	});
+}
+
+/* progressive chunked rendering — only a screenful of DOM at a time */
+function chunkedAppend(container, total, buildRange, chunkSize) {
+	let i = 0;
+	const sentinel = document.createElement('div');
+	sentinel.style.height = '1px';
+	container.appendChild(sentinel);
+	const obs = new IntersectionObserver((es) => {
+		if (es.some((e) => e.isIntersecting)) step();
+	}, { rootMargin: '1400px 0px' });
+	const step = () => {
+		if (i >= total) return;
+		const frag = document.createDocumentFragment();
+		const end = Math.min(i + chunkSize, total);
+		buildRange(frag, i, end);
+		i = end;
+		container.insertBefore(frag, sentinel);
+		observeReveals(container);
+		if (i >= total) { obs.disconnect(); sentinel.remove(); }
+	};
+	step();
+	obs.observe(sentinel);
+	return { step, isDone: () => i >= total };
 }
 
 function tagChipsHtml(tagIds) {
@@ -58,6 +83,7 @@ function buildCard(mem, { editMode, onEdit, onShowOnMap, onOpenPhoto }) {
 		const img = document.createElement('img');
 		img.alt = mem.title || '';
 		img.loading = 'lazy';
+		img.decoding = 'async';
 		thumbURL(photos[0]).then((u) => { if (u) img.src = u; });
 		img.addEventListener('click', () => onOpenPhoto(mem, idx));
 		media.appendChild(img);
@@ -118,40 +144,53 @@ function buildCard(mem, { editMode, onEdit, onShowOnMap, onOpenPhoto }) {
 
 /* ---------- timeline ---------- */
 
+let tlChunker = null;
+
 export function renderTimeline(container, memories, opts) {
 	container.innerHTML = '';
+	tlChunker = null;
 	if (!memories.length) {
 		container.innerHTML = `<p class="timeline-empty">No memories here yet… unlock edit mode and add our first one ♥︎</p>`;
 		return;
 	}
 	let lastYear = null;
 	let side = 0;
-	for (const mem of memories) {
-		const year = (mem.date || '').slice(0, 4) || '····';
-		if (year !== lastYear) {
-			lastYear = year;
-			const y = document.createElement('div');
-			y.className = 'tl-year reveal';
-			y.textContent = year;
-			container.appendChild(y);
+	tlChunker = chunkedAppend(container, memories.length, (frag, start, end) => {
+		for (let k = start; k < end; k++) {
+			const mem = memories[k];
+			const year = (mem.date || '').slice(0, 4) || '····';
+			if (year !== lastYear) {
+				lastYear = year;
+				const y = document.createElement('div');
+				y.className = 'tl-year reveal';
+				y.textContent = year;
+				frag.appendChild(y);
+			}
+			const item = document.createElement('div');
+			item.className = 'tl-item ' + (side++ % 2 ? 'tl-right' : 'tl-left');
+			item.dataset.memId = mem.id;
+
+			const dot = document.createElement('span');
+			dot.className = 'tl-dot';
+			const firstTag = getTag((mem.tags || [])[0]);
+			if (firstTag) dot.style.setProperty('--dot-color', firstTag.color);
+
+			const cardWrap = document.createElement('div');
+			cardWrap.className = 'tl-card reveal';
+			cardWrap.appendChild(buildCard(mem, opts));
+
+			item.append(dot, cardWrap);
+			frag.appendChild(item);
 		}
-		const item = document.createElement('div');
-		item.className = 'tl-item ' + (side++ % 2 ? 'tl-right' : 'tl-left');
-		item.dataset.memId = mem.id;
+	}, 24);
+}
 
-		const dot = document.createElement('span');
-		dot.className = 'tl-dot';
-		const firstTag = getTag((mem.tags || [])[0]);
-		if (firstTag) dot.style.setProperty('--dot-color', firstTag.color);
-
-		const cardWrap = document.createElement('div');
-		cardWrap.className = 'tl-card reveal';
-		cardWrap.appendChild(buildCard(mem, opts));
-
-		item.append(dot, cardWrap);
-		container.appendChild(item);
+/* force-render chunks until the given memory's card exists (for map -> timeline jumps) */
+export function ensureMemoryRendered(id) {
+	let guard = 40;
+	while (tlChunker && !tlChunker.isDone() && !document.querySelector(`[data-mem-id="${CSS.escape(id)}"]`) && guard--) {
+		tlChunker.step();
 	}
-	observeReveals(container);
 }
 
 /* ---------- gallery ---------- */
@@ -166,22 +205,25 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 		container.innerHTML = `<p class="gallery-empty">No photos yet — our gallery is waiting</p>`;
 		return;
 	}
-	for (const { mem, photo, photoIndex } of items) {
-		const fig = document.createElement('figure');
-		fig.className = 'g-item reveal';
-		fig.style.margin = '0 0 14px';
-		const img = document.createElement('img');
-		img.alt = mem.title || '';
-		img.loading = 'lazy';
-		thumbURL(photo).then((u) => { if (u) img.src = u; });
-		const cap = document.createElement('figcaption');
-		cap.className = 'g-cap';
-		cap.innerHTML = `<small>${escapeHtml(formatDate(mem.date))}</small>${escapeHtml(mem.title || '')}`;
-		fig.append(img, cap);
-		fig.addEventListener('click', () => onOpenPhoto(mem, photoIndex));
-		container.appendChild(fig);
-	}
-	observeReveals(container);
+	chunkedAppend(container, items.length, (frag, start, end) => {
+		for (let k = start; k < end; k++) {
+			const { mem, photo, photoIndex } = items[k];
+			const fig = document.createElement('figure');
+			fig.className = 'g-item reveal';
+			fig.style.margin = '0 0 14px';
+			const img = document.createElement('img');
+			img.alt = mem.title || '';
+			img.loading = 'lazy';
+			img.decoding = 'async';
+			thumbURL(photo).then((u) => { if (u) img.src = u; });
+			const cap = document.createElement('figcaption');
+			cap.className = 'g-cap';
+			cap.innerHTML = `<small>${escapeHtml(formatDate(photo.date || mem.date))}</small>${escapeHtml(mem.title || '')}`;
+			fig.append(img, cap);
+			fig.addEventListener('click', () => onOpenPhoto(mem, photoIndex));
+			frag.appendChild(fig);
+		}
+	}, 48);
 }
 
 /* ---------- lightbox ---------- */

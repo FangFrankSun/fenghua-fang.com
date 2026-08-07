@@ -3,7 +3,7 @@
    ============================================================ */
 
 import * as store from './store.js';
-import { renderTimeline, renderGallery, initLightbox, openLightboxForMemory } from './timeline.js';
+import { renderTimeline, renderGallery, initLightbox, openLightboxForMemory, ensureMemoryRendered } from './timeline.js';
 import {
 	initMap, invalidateMap, renderMarkers, renderLegend,
 	fitAllMarkers, flyToMemory, getBasemaps, getBasemap, setBasemap,
@@ -41,6 +41,7 @@ function cardCallbacks() {
 		onGoTimeline: (id) => {
 			switchView('timeline');
 			setTimeout(() => {
+				ensureMemoryRendered(id);
 				const el = document.querySelector(`[data-mem-id="${CSS.escape(id)}"]`);
 				if (el) {
 					el.scrollIntoView({ behavior: 'smooth', block: 'center' });

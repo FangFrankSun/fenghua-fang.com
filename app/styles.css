@@ -362,6 +362,8 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	display: grid;
 	grid-template-columns: 1fr 64px 1fr;
 	margin: 26px 0;
+	content-visibility: auto;
+	contain-intrinsic-size: auto 540px;
 }
 
 .tl-dot {
@@ -383,16 +385,15 @@ body.map-active .bg-blob { animation-play-state: paused; }
 
 /* ---------- memory card ---------- */
 
+/* no backdrop-filter here — with 150+ cards it melts the GPU */
 .mem-card {
 	position: relative;
 	width: min(430px, 100%);
 	overflow: hidden;
 	border-radius: var(--radius);
-	background: var(--card);
+	background: rgba(255, 255, 255, 0.93);
 	border: 1px solid var(--card-edge);
-	backdrop-filter: blur(14px);
-	-webkit-backdrop-filter: blur(14px);
-	box-shadow: var(--shadow);
+	box-shadow: var(--shadow-soft);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .mem-card:hover {
@@ -638,9 +639,8 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	transform: rotate(-45deg);
 	background: var(--pin, var(--rose));
 	border: 2.5px solid rgba(255, 255, 255, 0.95);
-	box-shadow: 0 4px 12px rgba(120, 85, 70, 0.35);
+	box-shadow: 0 3px 8px rgba(120, 85, 70, 0.3);
 	transition: transform 0.2s ease;
-	animation: pin-drop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
 }
 .pin:hover { transform: rotate(-45deg) scale(1.15); }
 
@@ -734,6 +734,8 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	box-shadow: var(--shadow-soft);
 	cursor: zoom-in;
 	transition: transform 0.25s, box-shadow 0.25s;
+	content-visibility: auto;
+	contain-intrinsic-size: auto 320px;
 }
 .g-item:hover { transform: translateY(-3px) scale(1.012); box-shadow: var(--shadow); }
 .g-item img { width: 100%; display: block; }
