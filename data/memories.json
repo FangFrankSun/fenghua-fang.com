@@ -218,9 +218,13 @@
           "id": "seed-08",
           "src": "images/fulls/08.jpg",
           "thumb": "images/thumbs/08.jpg"
+        },
+        {
+          "id": "seed-24",
+          "src": "images/fulls/24.jpg"
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T16:38:14.986136Z"
     },
     {
       "id": "m-2022-10-01-disney-hollywood",
@@ -332,25 +336,13 @@
         {
           "id": "seed-13",
           "src": "images/fulls/13.jpg"
-        }
-      ],
-      "updatedAt": "2026-08-06T22:20:36.187015Z"
-    },
-    {
-      "id": "m-2023-05-16-spring-evening",
-      "title": "A Spring Evening",
-      "date": "2023-05-16",
-      "description": "A little moment from May 2023. (Write our story here!)",
-      "tags": [
-        "date"
-      ],
-      "photos": [
+        },
         {
-          "id": "seed-14",
-          "src": "images/fulls/14.jpg"
+          "id": "seed-25",
+          "src": "images/fulls/25.jpg"
         }
       ],
-      "updatedAt": "2026-08-06T22:20:36.187015Z"
+      "updatedAt": "2026-08-07T16:38:14.986136Z"
     },
     {
       "id": "m-2023-05-29-memorial-day",
@@ -410,6 +402,327 @@
         }
       ],
       "updatedAt": "2026-08-06T22:20:36.187015Z"
+    },
+    {
+      "id": "m-2022-05-17-virginia-beach",
+      "title": "Virginia Beach",
+      "date": "2022-05-17",
+      "description": "Sunrise on the boardwalk at Virginia Beach.",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-18",
+          "src": "images/fulls/18.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Virginia Beach Boardwalk, Virginia",
+        "lat": 36.84978,
+        "lng": -75.974525
+      }
+    },
+    {
+      "id": "m-2022-05-30-boston-back-bay",
+      "title": "Boston Back Bay",
+      "date": "2022-05-30",
+      "description": "Memorial Day in Boston — lobster rolls at Luke's in Back Bay.",
+      "tags": [
+        "travel",
+        "food"
+      ],
+      "photos": [
+        {
+          "id": "seed-19",
+          "src": "images/fulls/19.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Back Bay, Boston",
+        "lat": 42.348725,
+        "lng": -71.079108
+      }
+    },
+    {
+      "id": "m-2022-06-02-southwicks-zoo",
+      "title": "Southwick's Zoo",
+      "date": "2022-06-02",
+      "description": "A day with the animals at Southwick's Zoo.",
+      "tags": [
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-20",
+          "src": "images/fulls/20.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Southwick's Zoo, Mendon, Massachusetts",
+        "lat": 42.062081,
+        "lng": -71.587067
+      }
+    },
+    {
+      "id": "m-2022-06-05-washington-dc",
+      "title": "A Day in D.C.",
+      "date": "2022-06-05",
+      "description": "Out and about in the city. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-21",
+          "src": "images/fulls/21.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.91087,
+        "lng": -77.002503
+      }
+    },
+    {
+      "id": "m-2022-06-19-tidal-basin",
+      "title": "Tidal Basin",
+      "date": "2022-06-19",
+      "description": "An evening stroll along the Tidal Basin.",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-22",
+          "src": "images/fulls/22.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Tidal Basin, Washington, D.C.",
+        "lat": 38.879953,
+        "lng": -77.036422
+      }
+    },
+    {
+      "id": "m-2022-08-14-medford",
+      "title": "Medford, Massachusetts",
+      "date": "2022-08-14",
+      "description": "A summer day up in Medford. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-23",
+          "src": "images/fulls/23.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Medford, Massachusetts",
+        "lat": 42.407963,
+        "lng": -71.091758
+      }
+    },
+    {
+      "id": "m-2023-03-08-virginia-beach-sunrise",
+      "title": "Virginia Beach Sunrise",
+      "date": "2023-03-08",
+      "description": "Up before the sun on the Virginia Beach shore.",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-26",
+          "src": "images/fulls/26.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Virginia Beach, Virginia",
+        "lat": 36.837063,
+        "lng": -75.971383
+      }
+    },
+    {
+      "id": "m-2023-03-24-richmond",
+      "title": "Richmond, Virginia",
+      "date": "2023-03-24",
+      "description": "Passing through Richmond. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-27",
+          "src": "images/fulls/27.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Midlothian, Virginia",
+        "lat": 37.504483,
+        "lng": -77.624305
+      }
+    },
+    {
+      "id": "m-2023-05-10-natural-bridge",
+      "title": "Natural Bridge",
+      "date": "2023-05-10",
+      "description": "Day one of the big road trip — Natural Bridge, Virginia.",
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-28",
+          "src": "images/fulls/28.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Natural Bridge, Virginia",
+        "lat": 37.627567,
+        "lng": -79.544638
+      }
+    },
+    {
+      "id": "m-2023-05-11-savannah",
+      "title": "Savannah",
+      "date": "2023-05-11",
+      "description": "Spanish moss and old squares in the Savannah Historic District.",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-29",
+          "src": "images/fulls/29.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Savannah, Georgia",
+        "lat": 32.077733,
+        "lng": -81.099122
+      }
+    },
+    {
+      "id": "m-2023-05-13-universal-orlando",
+      "title": "Universal Orlando",
+      "date": "2023-05-13",
+      "description": "Back to Universal — this time as road-trippers.",
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-30",
+          "src": "images/fulls/30.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Universal Orlando, Florida",
+        "lat": 28.474442,
+        "lng": -81.466072
+      }
+    },
+    {
+      "id": "m-2023-05-14-south-beach",
+      "title": "South Beach, Miami",
+      "date": "2023-05-14",
+      "description": "Ocean Drive evenings on South Beach.",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-31",
+          "src": "images/fulls/31.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "South Beach, Miami",
+        "lat": 25.782258,
+        "lng": -80.127914
+      }
+    },
+    {
+      "id": "m-2023-05-16-islamorada",
+      "title": "Islamorada, Florida Keys",
+      "date": "2023-05-16",
+      "description": "Feeding the tarpons at Robbie's, halfway down the Keys.",
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "photos": [
+        {
+          "id": "seed-32",
+          "src": "images/fulls/32.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Robbie's of Islamorada, Florida Keys",
+        "lat": 24.883047,
+        "lng": -80.690392
+      },
+      "time": "14:05"
+    },
+    {
+      "id": "m-2023-05-16-key-west",
+      "title": "Key West",
+      "date": "2023-05-16",
+      "description": "Mile zero — the southernmost point of our road trip.",
+      "tags": [
+        "travel",
+        "milestone"
+      ],
+      "photos": [
+        {
+          "id": "seed-33",
+          "src": "images/fulls/33.jpg"
+        },
+        {
+          "id": "seed-14",
+          "src": "images/fulls/14.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "place": {
+        "name": "Key West, Florida",
+        "lat": 24.546612,
+        "lng": -81.797478
+      },
+      "time": "19:26"
+    },
+    {
+      "id": "m-2023-05-31-late-may",
+      "title": "Late May 2023",
+      "date": "2023-05-31",
+      "description": "A little moment from late May. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-34",
+          "src": "images/fulls/34.jpg"
+        }
+      ],
+      "updatedAt": "2026-08-07T16:38:14.986136Z"
     }
   ]
 }
