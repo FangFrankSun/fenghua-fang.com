@@ -197,6 +197,8 @@ export function ensureMemoryRendered(id) {
 
 export function renderGallery(container, memories, { onOpenPhoto }) {
 	container.innerHTML = '';
+	document.getElementById('g-loadmore')?.remove();
+
 	const items = [];
 	for (const mem of memories) {
 		(mem.photos || []).forEach((p, i) => items.push({ mem, photo: p, photoIndex: i }));
@@ -205,9 +207,20 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 		container.innerHTML = `<p class="gallery-empty">No photos yet — our gallery is waiting</p>`;
 		return;
 	}
-	chunkedAppend(container, items.length, (frag, start, end) => {
-		for (let k = start; k < end; k++) {
-			const { mem, photo, photoIndex } = items[k];
+
+	const FIRST = 16, MORE = 24; // roughly one screenful, then a batch per click
+	let i = 0;
+
+	const btn = document.createElement('button');
+	btn.id = 'g-loadmore';
+	btn.className = 'btn btn-primary g-loadmore';
+	container.parentElement.appendChild(btn);
+
+	const step = (n) => {
+		const frag = document.createDocumentFragment();
+		const end = Math.min(i + n, items.length);
+		for (; i < end; i++) {
+			const { mem, photo, photoIndex } = items[i];
 			const fig = document.createElement('figure');
 			fig.className = 'g-item reveal';
 			fig.style.margin = '0 0 14px';
@@ -223,7 +236,15 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 			fig.addEventListener('click', () => onOpenPhoto(mem, photoIndex));
 			frag.appendChild(fig);
 		}
-	}, 48);
+		container.appendChild(frag);
+		observeReveals(container);
+		const left = items.length - i;
+		if (left <= 0) btn.remove();
+		else btn.textContent = `Load more ♥︎ ${left} photos left`;
+	};
+
+	btn.addEventListener('click', () => step(MORE));
+	step(FIRST);
 }
 
 /* ---------- lightbox ---------- */

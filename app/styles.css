@@ -718,8 +718,15 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	columns: 4 260px;
 	column-gap: 14px;
 	max-width: 1280px;
-	margin: 16px auto 90px;
+	margin: 16px auto 18px;
 	padding: 0 clamp(12px, 3vw, 24px);
+}
+
+.g-loadmore {
+	display: block;
+	margin: 0 auto 90px;
+	padding: 11px 28px;
+	font-size: 0.95rem;
 }
 
 .g-item {
