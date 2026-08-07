@@ -198,14 +198,14 @@ body.map-active .bg-blob { animation-play-state: paused; }
 
 .hero {
 	text-align: center;
-	padding: clamp(40px, 8vw, 84px) 20px 18px;
+	padding: clamp(10px, 1.6vw, 16px) 20px 6px;
 }
 
 .hero-title {
 	margin: 0;
 	font-family: var(--font-display);
 	font-weight: 900;
-	font-size: clamp(2.3rem, 6vw, 4rem);
+	font-size: clamp(1.7rem, 3vw, 2.1rem);
 	background: linear-gradient(120deg, var(--rose-deep) 15%, #d98a68 60%, var(--gold) 95%);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -213,41 +213,41 @@ body.map-active .bg-blob { animation-play-state: paused; }
 }
 
 .hero-sub {
-	margin: 6px 0 26px;
+	margin: 2px 0 8px;
 	color: var(--ink-mute);
-	letter-spacing: 0.18em;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
-	font-size: 0.78rem;
+	font-size: 0.68rem;
 }
 
 .hero-stats {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: clamp(14px, 4vw, 34px);
+	gap: clamp(10px, 3vw, 24px);
 	flex-wrap: wrap;
 }
 
-.stat { display: flex; flex-direction: column; min-width: 90px; }
+.stat { display: flex; flex-direction: column; min-width: 70px; }
 
 .stat-num {
 	font-family: var(--font-display);
-	font-size: clamp(1.7rem, 4vw, 2.5rem);
+	font-size: clamp(1.3rem, 2.4vw, 1.6rem);
 	font-weight: 800;
 	color: var(--ink);
 	line-height: 1.1;
 }
 
 .stat-label {
-	font-size: 0.72rem;
-	letter-spacing: 0.2em;
+	font-size: 0.66rem;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	color: var(--ink-mute);
 }
 
 .stat-heart {
 	font-family: var(--font-display);
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	color: var(--rose);
 }
 
@@ -261,7 +261,7 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 8px;
-	padding: 10px 16px;
+	padding: 7px 16px;
 }
 
 .chip {
@@ -311,66 +311,270 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	to { opacity: 1; transform: none; }
 }
 
-/* ---------- timeline ---------- */
+/* ---------- timeline (the serpentine road) ---------- */
 
 .timeline {
 	position: relative;
-	max-width: 1060px;
-	margin: 20px auto 90px;
-	padding: 10px clamp(12px, 3vw, 24px) 40px;
+	max-width: 1240px;
+	margin: 4px auto 84px;
 }
 
-.timeline::before {
-	content: "";
+.timeline-empty { text-align: center; color: var(--ink-mute); padding: 60px 20px; }
+
+.sp-svg {
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
+	inset: 0;
+	z-index: 0;
+	display: block;
+	pointer-events: none;
+}
+
+.sp-track {
+	fill: none;
+	stroke: url(#sp-grad);
+	stroke-width: 9;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	opacity: 0.13;
+}
+
+.sp-progress {
+	fill: none;
+	stroke: url(#sp-grad);
+	stroke-width: 9;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	opacity: 0.85;
+}
+
+.sp-stub {
+	fill: none;
+	stroke: var(--ink-mute);
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke-dasharray: 1 10;
+	opacity: 0.5;
+}
+
+/* stalk between a card and its dot on the road */
+.sp-stem {
+	position: absolute;
+	z-index: 1;
 	width: 3px;
-	transform: translateX(-50%);
-	background: linear-gradient(to bottom, transparent, rgba(221, 138, 156, 0.4) 6%, rgba(217, 160, 91, 0.4) 94%, transparent);
-	border-radius: 3px;
+	border-radius: 2px;
+	background: linear-gradient(to top, var(--dot-color, var(--rose)), color-mix(in srgb, var(--dot-color, var(--rose)) 30%, transparent));
+	opacity: 0.85;
+	transform: scaleY(0);
+	transform-origin: bottom;
 }
+.sp-stem.is-grown { transform: scaleY(1); transition: transform 0.35s ease; }
+.sp-stem.is-grown.sp-instant { transition: none; }
 
-.tl-year {
-	position: relative;
+.sp-dot {
+	position: absolute;
 	z-index: 2;
-	width: max-content;
-	margin: 34px auto 10px;
-	padding: 6px 26px;
-	font-family: var(--font-display);
-	font-weight: 800;
-	font-size: 1.25rem;
-	color: var(--gold);
-	background: var(--card-solid);
-	border: 1px solid rgba(217, 160, 91, 0.4);
-	border-radius: 999px;
-	box-shadow: var(--shadow-soft);
-}
-
-.tl-item {
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr 64px 1fr;
-	margin: 26px 0;
-}
-
-.tl-dot {
-	grid-column: 2;
-	place-self: start center;
-	margin-top: 26px;
 	width: 17px;
 	height: 17px;
 	border-radius: 50%;
 	background: var(--dot-color, var(--rose));
 	border: 3px solid var(--bg-0);
 	box-shadow: 0 0 0 2px color-mix(in srgb, var(--dot-color, var(--rose)) 45%, transparent), 0 2px 8px rgba(180, 140, 120, 0.3);
-	z-index: 2;
+	transform: scale(0);
+}
+.sp-dot.is-grown { animation: sp-dot-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.sp-dot.is-grown.sp-instant { animation: none; transform: none; }
+
+@keyframes sp-dot-pop {
+	from { transform: scale(0); }
+	60% { transform: scale(1.35); }
+	to { transform: scale(1); }
 }
 
-.tl-card { grid-row: 1; }
-.tl-item.tl-left .tl-card { grid-column: 1; justify-self: end; }
-.tl-item.tl-right .tl-card { grid-column: 3; justify-self: start; }
+/* the memory card sprouting out of its dot */
+.sp-node { position: absolute; z-index: 2; }
+
+.sp-grow {
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	opacity: 0;
+}
+.sp-grow.is-grown { animation: sp-pop 0.6s cubic-bezier(0.34, 1.45, 0.5, 1) 0.08s both; }
+.sp-grow.is-grown.sp-instant { animation: none; transform: none; opacity: 1; }
+
+@keyframes sp-pop {
+	from { transform: scale(0); opacity: 0; }
+	45% { opacity: 1; }
+	70% { transform: scale(1.05); }
+	85% { transform: scale(0.985); }
+	to { transform: scale(1); opacity: 1; }
+}
+
+/* year pill hanging just under the road where a new year begins */
+.sp-year {
+	position: absolute;
+	z-index: 3;
+	padding: 2px 13px;
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 0.92rem;
+	color: var(--gold);
+	background: var(--card-solid);
+	border: 1px solid rgba(217, 160, 91, 0.4);
+	border-radius: 999px;
+	box-shadow: var(--shadow-soft);
+	transform: translate(-50%, 6px) scale(0);
+	opacity: 0;
+}
+.sp-year.is-grown { animation: sp-year-pop 0.5s cubic-bezier(0.34, 1.5, 0.64, 1) 0.05s both; }
+.sp-year.is-grown.sp-instant { animation: none; transform: translate(-50%, 0) scale(1); opacity: 1; }
+
+@keyframes sp-year-pop {
+	from { transform: translate(-50%, 6px) scale(0); opacity: 0; }
+	to { transform: translate(-50%, 0) scale(1); opacity: 1; }
+}
+
+/* the little heart travelling at the head of the line */
+.sp-tip {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	will-change: transform;
+}
+.sp-tip.is-on { opacity: 1; }
+.sp-tip span {
+	position: absolute;
+	left: -13px;
+	top: -13px;
+	width: 26px;
+	height: 26px;
+	display: grid;
+	place-items: center;
+	font-size: 17px;
+	color: var(--rose-deep);
+	text-shadow: 0 0 12px rgba(221, 138, 156, 0.8);
+	animation: sp-beat 1.15s ease-in-out infinite;
+}
+@keyframes sp-beat {
+	0%, 100% { transform: scale(1); }
+	30% { transform: scale(1.3); }
+}
+
+/* parked-line "continue" button — click to let the road roll on */
+.sp-continue {
+	position: absolute;
+	z-index: 4;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 15px;
+	border-radius: 999px;
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 0.8rem;
+	letter-spacing: 0.04em;
+	color: #fff;
+	background: linear-gradient(135deg, var(--rose), var(--rose-deep));
+	box-shadow: 0 6px 18px rgba(201, 111, 134, 0.4);
+	cursor: pointer;
+	border: none;
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-100%, 0) scale(0.7);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	animation: sp-cont-bob 1.6s ease-in-out infinite;
+}
+.sp-continue.sp-cont-rtl { transform: translate(0, 0) scale(0.7); }
+.sp-continue.is-on {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-100%, 0) scale(1);
+}
+.sp-continue.is-on.sp-cont-rtl { transform: translate(0, 0) scale(1); }
+.sp-continue:hover { box-shadow: 0 8px 24px rgba(201, 111, 134, 0.55); }
+
+@keyframes sp-cont-bob {
+	0%, 100% { margin-top: 0; }
+	50% { margin-top: 4px; }
+}
+
+.sp-tbc {
+	position: absolute;
+	z-index: 3;
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 0.82rem;
+	letter-spacing: 0.05em;
+	color: var(--ink-mute);
+	white-space: nowrap;
+	transform: translate(-50%, 8px);
+	opacity: 0;
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.sp-tbc.is-grown { transform: translate(-50%, 0); opacity: 0.85; }
+
+/* compact card variant for the road */
+.mem-card--sp {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+}
+.mem-card--sp .mem-media { flex: none; aspect-ratio: auto; }
+.mem-card--sp .mem-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+	padding: 8px 11px 10px;
+}
+.mem-card--sp .mem-date {
+	font-size: 0.63rem;
+	letter-spacing: 0.1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+.mem-card--sp .mem-title {
+	margin: 2px 0;
+	font-size: 0.95rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mem-card--sp .mem-desc {
+	margin: 0;
+	font-size: 0.78rem;
+	line-height: 1.35;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.mem-card--sp .mem-place {
+	margin: auto 0 0;
+	padding-top: 3px;
+	font-size: 0.74rem;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.mem-card--sp .mem-place .mem-place-name { overflow: hidden; text-overflow: ellipsis; }
+
+/* two-column (phone) fine-tuning */
+.timeline.sp-cols-2 .mem-card--sp .mem-desc { display: none; }
+.timeline.sp-cols-2 .mem-card--sp .mem-title { font-size: 0.88rem; }
+.timeline.sp-cols-2 .mem-card--sp .mem-body { padding: 7px 9px 9px; }
+.timeline.sp-cols-2 .sp-year { font-size: 0.85rem; padding: 3px 12px; }
 
 /* ---------- memory card ---------- */
 
@@ -1286,12 +1490,6 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	.tab { flex: 1; text-align: center; padding: 7px 6px; font-size: 0.84rem; }
 	.filter-bar { top: 108px; }
 
-	.timeline::before { left: 22px; }
-	.tl-year { margin-left: 0; }
-	.tl-item { grid-template-columns: 44px 1fr; }
-	.tl-dot { grid-column: 1; }
-	.tl-item.tl-left .tl-card,
-	.tl-item.tl-right .tl-card { grid-column: 2; justify-self: stretch; }
 	.mem-card { width: 100%; }
 
 	.map-wrap { height: calc(100vh - 210px); }
