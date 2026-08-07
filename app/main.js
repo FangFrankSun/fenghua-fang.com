@@ -58,7 +58,13 @@ function cardCallbacks() {
 function renderStats() {
 	const couple = store.getCouple();
 	const since = new Date(couple.since + 'T00:00:00');
-	const days = Math.max(0, Math.floor((Date.now() - since.getTime()) / 86400000));
+	let days = Math.max(0, Math.floor((Date.now() - since.getTime()) / 86400000));
+	// subtract the stretches we had to spend apart
+	for (const r of couple.apart || []) {
+		const start = Math.max(since.getTime(), new Date(r.from + 'T00:00:00').getTime());
+		const end = Math.min(Date.now(), new Date(r.to + 'T00:00:00').getTime());
+		if (end > start) days -= Math.floor((end - start) / 86400000);
+	}
 	const memories = store.getMemories();
 	const places = new Set(
 		memories.filter((m) => m.place && Number.isFinite(m.place.lat))

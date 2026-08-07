@@ -4,6 +4,7 @@
    ============================================================ */
 
 import { escapeHtml, formatDate, getTag, getTags, resolvePhotoURL } from './store.js';
+import { setImgSrc } from './timeline.js';
 
 let map = null;
 let markerLayer = null;
@@ -90,7 +91,7 @@ function popupContent(mem, { editMode, onEdit, onOpenPhoto, onGoTimeline }) {
 		img.className = 'pop-img';
 		img.alt = mem.title || '';
 		const first = mem.photos[0];
-		resolvePhotoURL(first.thumb ? { src: first.thumb } : first).then((u) => { if (u) img.src = u; });
+		resolvePhotoURL(first.thumb ? { src: first.thumb } : first).then((u) => setImgSrc(img, u));
 		img.addEventListener('click', () => onOpenPhoto(mem, 0));
 		el.appendChild(img);
 	}

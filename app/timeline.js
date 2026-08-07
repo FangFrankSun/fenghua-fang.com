@@ -8,6 +8,19 @@ const SVG_PIN = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="curre
 
 /* small display sizes load the thumb; the lightbox loads the full photo */
 const thumbURL = (p) => resolvePhotoURL(p.thumb ? { src: p.thumb } : p);
+
+/* set an image source with one automatic retry — covers flaky mobile
+   networks and CDN propagation right after a deploy */
+export function setImgSrc(img, url) {
+	if (!url) return;
+	let retried = false;
+	img.onerror = () => {
+		if (retried) return;
+		retried = true;
+		setTimeout(() => { img.src = url + (url.includes('?') ? '&' : '?') + 'r=1'; }, 1500);
+	};
+	img.src = url;
+}
 const SVG_PENCIL = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
 
 let revealObserver = null;
@@ -84,14 +97,14 @@ function buildCard(mem, { editMode, onEdit, onShowOnMap, onOpenPhoto }) {
 		img.alt = mem.title || '';
 		img.loading = 'lazy';
 		img.decoding = 'async';
-		thumbURL(photos[0]).then((u) => { if (u) img.src = u; });
+		thumbURL(photos[0]).then((u) => setImgSrc(img, u));
 		img.addEventListener('click', () => onOpenPhoto(mem, idx));
 		media.appendChild(img);
 
 		if (photos.length > 1) {
 			const show = (next) => {
 				idx = (next + photos.length) % photos.length;
-				thumbURL(photos[idx]).then((u) => { if (u) img.src = u; });
+				thumbURL(photos[idx]).then((u) => setImgSrc(img, u));
 				count.textContent = `${idx + 1}/${photos.length}`;
 			};
 			const prev = document.createElement('button');
@@ -249,7 +262,7 @@ export function renderGallery(container, memories, callbacks, initialCount = 16)
 			img.loading = 'lazy';
 			img.decoding = 'async';
 			img.style.aspectRatio = `${w} / ${h}`; // exact space reserved before load
-			thumbURL(photo).then((u) => { if (u) img.src = u; });
+			thumbURL(photo).then((u) => setImgSrc(img, u));
 			const cap = document.createElement('figcaption');
 			cap.className = 'g-cap';
 			cap.innerHTML = `<small>${escapeHtml(formatDate(photo.date || mem.date))}</small>${escapeHtml(mem.title || '')}`;
