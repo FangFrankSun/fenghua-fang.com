@@ -249,15 +249,6 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	font-family: var(--font-display);
 	font-size: 1.4rem;
 	color: var(--rose);
-	animation: heartbeat 1.8s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-	0%, 100% { transform: scale(1); }
-	12% { transform: scale(1.25); }
-	24% { transform: scale(1); }
-	36% { transform: scale(1.18); }
-	48% { transform: scale(1); }
 }
 
 /* ---------- filter bar ---------- */
@@ -362,8 +353,6 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	display: grid;
 	grid-template-columns: 1fr 64px 1fr;
 	margin: 26px 0;
-	content-visibility: auto;
-	contain-intrinsic-size: auto 540px;
 }
 
 .tl-dot {
@@ -715,11 +704,20 @@ body.map-active .bg-blob { animation-play-state: paused; }
 /* ---------- gallery ---------- */
 
 .gallery {
-	columns: 4 260px;
-	column-gap: 14px;
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
 	max-width: 1280px;
 	margin: 16px auto 18px;
 	padding: 0 clamp(12px, 3vw, 24px);
+}
+
+.g-col {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
 }
 
 .g-loadmore {
@@ -736,16 +734,13 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	margin-bottom: 14px;
 	border-radius: 14px;
 	overflow: hidden;
-	break-inside: avoid;
 	border: 1px solid var(--card-edge);
 	box-shadow: var(--shadow-soft);
 	cursor: zoom-in;
 	transition: transform 0.25s, box-shadow 0.25s;
-	content-visibility: auto;
-	contain-intrinsic-size: auto 320px;
 }
 .g-item:hover { transform: translateY(-3px) scale(1.012); box-shadow: var(--shadow); }
-.g-item img { width: 100%; display: block; }
+.g-item img { width: 100%; display: block; object-fit: cover; background: var(--bg-1); }
 
 .g-cap {
 	position: absolute;
@@ -823,7 +818,7 @@ body.map-active .bg-blob { animation-play-state: paused; }
 }
 
 .foot-line { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--ink-soft); margin: 0 0 6px; }
-.foot-heart { color: var(--rose-deep); animation: heartbeat 1.8s ease-in-out infinite; display: inline-block; }
+.foot-heart { color: var(--rose-deep); display: inline-block; }
 .foot-keepsakes { margin: 0; }
 .foot-keepsakes a { color: var(--ink-mute); border-bottom: 1px dotted var(--ink-mute); }
 .foot-keepsakes a:hover { color: var(--rose-deep); text-decoration: none; }
@@ -881,7 +876,6 @@ body.map-active .bg-blob { animation-play-state: paused; }
 	font-size: 2.4rem;
 	line-height: 1.1;
 	color: var(--rose);
-	animation: heartbeat 1.8s ease-in-out infinite;
 }
 
 .pin-title {

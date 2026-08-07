@@ -195,10 +195,18 @@ export function ensureMemoryRendered(id) {
 
 /* ---------- gallery ---------- */
 
-export function renderGallery(container, memories, { onOpenPhoto }) {
+/* Stable masonry: fixed JS-managed columns. Every image declares its
+   aspect ratio up front, and each new photo goes to the shortest column —
+   photos that are already placed NEVER move, even while loading. */
+let galleryResizeWired = false;
+let galleryArgs = null;
+
+export function renderGallery(container, memories, callbacks, initialCount = 16) {
 	container.innerHTML = '';
 	document.getElementById('g-loadmore')?.remove();
+	galleryArgs = { container, memories, callbacks };
 
+	const { onOpenPhoto } = callbacks;
 	const items = [];
 	for (const mem of memories) {
 		(mem.photos || []).forEach((p, i) => items.push({ mem, photo: p, photoIndex: i }));
@@ -208,7 +216,18 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 		return;
 	}
 
-	const FIRST = 16, MORE = 24; // roughly one screenful, then a batch per click
+	const width = container.clientWidth || innerWidth;
+	const colCount = Math.max(2, Math.min(4, Math.floor(width / 260)));
+	const cols = [], heights = [];
+	for (let c = 0; c < colCount; c++) {
+		const col = document.createElement('div');
+		col.className = 'g-col';
+		container.appendChild(col);
+		cols.push(col);
+		heights.push(0);
+	}
+
+	const MORE = 24;
 	let i = 0;
 
 	const btn = document.createElement('button');
@@ -217,26 +236,31 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 	container.parentElement.appendChild(btn);
 
 	const step = (n) => {
-		const frag = document.createDocumentFragment();
 		const end = Math.min(i + n, items.length);
 		for (; i < end; i++) {
 			const { mem, photo, photoIndex } = items[i];
+			const w = photo.w || 4, h = photo.h || 3;
+
 			const fig = document.createElement('figure');
 			fig.className = 'g-item reveal';
-			fig.style.margin = '0 0 14px';
+			fig.style.margin = '0';
 			const img = document.createElement('img');
 			img.alt = mem.title || '';
 			img.loading = 'lazy';
 			img.decoding = 'async';
+			img.style.aspectRatio = `${w} / ${h}`; // exact space reserved before load
 			thumbURL(photo).then((u) => { if (u) img.src = u; });
 			const cap = document.createElement('figcaption');
 			cap.className = 'g-cap';
 			cap.innerHTML = `<small>${escapeHtml(formatDate(photo.date || mem.date))}</small>${escapeHtml(mem.title || '')}`;
 			fig.append(img, cap);
 			fig.addEventListener('click', () => onOpenPhoto(mem, photoIndex));
-			frag.appendChild(fig);
+
+			let ci = 0;
+			for (let c = 1; c < colCount; c++) if (heights[c] < heights[ci]) ci = c;
+			heights[ci] += h / w;
+			cols[ci].appendChild(fig);
 		}
-		container.appendChild(frag);
 		observeReveals(container);
 		const left = items.length - i;
 		if (left <= 0) btn.remove();
@@ -244,7 +268,21 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 	};
 
 	btn.addEventListener('click', () => step(MORE));
-	step(FIRST);
+	step(initialCount);
+
+	if (!galleryResizeWired) {
+		galleryResizeWired = true;
+		let lastW = innerWidth, timer = null;
+		addEventListener('resize', () => {
+			if (innerWidth === lastW || !galleryArgs) return;
+			clearTimeout(timer);
+			timer = setTimeout(() => {
+				lastW = innerWidth;
+				const a = galleryArgs;
+				renderGallery(a.container, a.memories, a.callbacks, Math.max(16, i));
+			}, 300);
+		});
+	}
 }
 
 /* ---------- lightbox ---------- */

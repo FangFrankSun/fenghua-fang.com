@@ -162,8 +162,12 @@ function startHearts() {
 	let cleared = false;
 
 	const resize = () => {
-		w = canvas.width = innerWidth * DPR;
-		h = canvas.height = innerHeight * DPR;
+		const W = innerWidth * DPR;
+		const H = innerHeight * DPR;
+		// ignore the mobile URL-bar height wobble — resetting the canvas mid-scroll flickers
+		if (W === w && Math.abs(H - (h || 0)) < 160 * DPR) return;
+		w = canvas.width = W;
+		h = canvas.height = H;
 	};
 	resize();
 	addEventListener('resize', resize);

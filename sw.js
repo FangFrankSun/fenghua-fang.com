@@ -2,7 +2,7 @@
    Strategy: network-first for HTML and data (so updates always land),
    cache-first for everything else (styles, scripts, photos, tiles). */
 
-const VERSION = 'ff-v8';
+const VERSION = 'ff-v9';
 const SHELL = [
 	'./',
 	'index.html',
