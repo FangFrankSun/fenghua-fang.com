@@ -85,9 +85,18 @@
           "id": "seed-02",
           "src": "images/fulls/02.jpg",
           "thumb": "images/thumbs/02.jpg"
+        },
+        {
+          "id": "seed-49",
+          "src": "images/fulls/49.jpg",
+          "thumb": "images/thumbs/49.jpg",
+          "date": "2022-03-06",
+          "time": "14:08",
+          "lat": 40.783158,
+          "lng": -73.959167
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
       "id": "m-2022-03-08-statue-of-liberty",
@@ -130,9 +139,18 @@
           "id": "seed-04",
           "src": "images/fulls/04.jpg",
           "thumb": "images/thumbs/04.jpg"
+        },
+        {
+          "id": "seed-51",
+          "src": "images/fulls/51.jpg",
+          "thumb": "images/thumbs/51.jpg",
+          "date": "2022-03-10",
+          "time": "19:24",
+          "lat": 40.760292,
+          "lng": -73.983275
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
       "id": "m-2022-04-02-six-flags",
@@ -196,9 +214,18 @@
           "id": "seed-07",
           "src": "images/fulls/07.jpg",
           "thumb": "images/thumbs/07.jpg"
+        },
+        {
+          "id": "seed-66",
+          "src": "images/fulls/66.jpg",
+          "thumb": "images/thumbs/66.jpg",
+          "date": "2022-06-10",
+          "time": "19:40",
+          "lat": 38.881345,
+          "lng": -77.090736
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
       "id": "m-2022-08-16-boston-ferry",
@@ -221,7 +248,8 @@
         },
         {
           "id": "seed-24",
-          "src": "images/fulls/24.jpg"
+          "src": "images/fulls/24.jpg",
+          "thumb": "images/thumbs/24.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z"
@@ -268,9 +296,18 @@
           "id": "seed-10",
           "src": "images/fulls/10.jpg",
           "thumb": "images/thumbs/10.jpg"
+        },
+        {
+          "id": "seed-73",
+          "src": "images/fulls/73.jpg",
+          "thumb": "images/thumbs/73.jpg",
+          "date": "2022-10-01",
+          "time": "20:17",
+          "lat": 28.418983,
+          "lng": -81.58162
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
       "id": "m-2022-10-02-epcot",
@@ -291,9 +328,18 @@
           "id": "seed-11",
           "src": "images/fulls/11.jpg",
           "thumb": "images/thumbs/11.jpg"
+        },
+        {
+          "id": "seed-74",
+          "src": "images/fulls/74.jpg",
+          "thumb": "images/thumbs/74.jpg",
+          "date": "2022-10-02",
+          "time": "13:48",
+          "lat": 28.368103,
+          "lng": -81.547608
         }
       ],
-      "updatedAt": "2026-08-06T00:00:00.000Z"
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
       "id": "m-2022-10-03-islands-of-adventure",
@@ -335,11 +381,13 @@
       "photos": [
         {
           "id": "seed-13",
-          "src": "images/fulls/13.jpg"
+          "src": "images/fulls/13.jpg",
+          "thumb": "images/thumbs/13.jpg"
         },
         {
           "id": "seed-25",
-          "src": "images/fulls/25.jpg"
+          "src": "images/fulls/25.jpg",
+          "thumb": "images/thumbs/25.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z"
@@ -355,7 +403,8 @@
       "photos": [
         {
           "id": "seed-15",
-          "src": "images/fulls/15.jpg"
+          "src": "images/fulls/15.jpg",
+          "thumb": "images/thumbs/15.jpg"
         }
       ],
       "updatedAt": "2026-08-06T22:20:36.187015Z"
@@ -377,7 +426,8 @@
       "photos": [
         {
           "id": "seed-16",
-          "src": "images/fulls/16.jpg"
+          "src": "images/fulls/16.jpg",
+          "thumb": "images/thumbs/16.jpg"
         }
       ],
       "updatedAt": "2026-08-06T22:20:36.187015Z"
@@ -398,7 +448,8 @@
       "photos": [
         {
           "id": "seed-17",
-          "src": "images/fulls/17.jpg"
+          "src": "images/fulls/17.jpg",
+          "thumb": "images/thumbs/17.jpg"
         }
       ],
       "updatedAt": "2026-08-06T22:20:36.187015Z"
@@ -414,7 +465,8 @@
       "photos": [
         {
           "id": "seed-18",
-          "src": "images/fulls/18.jpg"
+          "src": "images/fulls/18.jpg",
+          "thumb": "images/thumbs/18.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -436,7 +488,8 @@
       "photos": [
         {
           "id": "seed-19",
-          "src": "images/fulls/19.jpg"
+          "src": "images/fulls/19.jpg",
+          "thumb": "images/thumbs/19.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -457,10 +510,29 @@
       "photos": [
         {
           "id": "seed-20",
-          "src": "images/fulls/20.jpg"
+          "src": "images/fulls/20.jpg",
+          "thumb": "images/thumbs/20.jpg"
+        },
+        {
+          "id": "seed-64",
+          "src": "images/fulls/64.jpg",
+          "thumb": "images/thumbs/64.jpg",
+          "date": "2022-06-02",
+          "time": "13:12",
+          "lat": 42.062069,
+          "lng": -71.587105
+        },
+        {
+          "id": "seed-65",
+          "src": "images/fulls/65.jpg",
+          "thumb": "images/thumbs/65.jpg",
+          "date": "2022-06-02",
+          "time": "15:10",
+          "lat": 42.061017,
+          "lng": -71.582962
         }
       ],
-      "updatedAt": "2026-08-07T16:38:14.986136Z",
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
       "place": {
         "name": "Southwick's Zoo, Mendon, Massachusetts",
         "lat": 42.062081,
@@ -478,7 +550,8 @@
       "photos": [
         {
           "id": "seed-21",
-          "src": "images/fulls/21.jpg"
+          "src": "images/fulls/21.jpg",
+          "thumb": "images/thumbs/21.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -499,7 +572,8 @@
       "photos": [
         {
           "id": "seed-22",
-          "src": "images/fulls/22.jpg"
+          "src": "images/fulls/22.jpg",
+          "thumb": "images/thumbs/22.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -520,7 +594,8 @@
       "photos": [
         {
           "id": "seed-23",
-          "src": "images/fulls/23.jpg"
+          "src": "images/fulls/23.jpg",
+          "thumb": "images/thumbs/23.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -541,7 +616,8 @@
       "photos": [
         {
           "id": "seed-26",
-          "src": "images/fulls/26.jpg"
+          "src": "images/fulls/26.jpg",
+          "thumb": "images/thumbs/26.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -562,7 +638,8 @@
       "photos": [
         {
           "id": "seed-27",
-          "src": "images/fulls/27.jpg"
+          "src": "images/fulls/27.jpg",
+          "thumb": "images/thumbs/27.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -584,7 +661,8 @@
       "photos": [
         {
           "id": "seed-28",
-          "src": "images/fulls/28.jpg"
+          "src": "images/fulls/28.jpg",
+          "thumb": "images/thumbs/28.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -605,7 +683,8 @@
       "photos": [
         {
           "id": "seed-29",
-          "src": "images/fulls/29.jpg"
+          "src": "images/fulls/29.jpg",
+          "thumb": "images/thumbs/29.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -627,7 +706,8 @@
       "photos": [
         {
           "id": "seed-30",
-          "src": "images/fulls/30.jpg"
+          "src": "images/fulls/30.jpg",
+          "thumb": "images/thumbs/30.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -648,7 +728,8 @@
       "photos": [
         {
           "id": "seed-31",
-          "src": "images/fulls/31.jpg"
+          "src": "images/fulls/31.jpg",
+          "thumb": "images/thumbs/31.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -670,7 +751,8 @@
       "photos": [
         {
           "id": "seed-32",
-          "src": "images/fulls/32.jpg"
+          "src": "images/fulls/32.jpg",
+          "thumb": "images/thumbs/32.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -693,11 +775,13 @@
       "photos": [
         {
           "id": "seed-33",
-          "src": "images/fulls/33.jpg"
+          "src": "images/fulls/33.jpg",
+          "thumb": "images/thumbs/33.jpg"
         },
         {
           "id": "seed-14",
-          "src": "images/fulls/14.jpg"
+          "src": "images/fulls/14.jpg",
+          "thumb": "images/thumbs/14.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z",
@@ -719,10 +803,3965 @@
       "photos": [
         {
           "id": "seed-34",
-          "src": "images/fulls/34.jpg"
+          "src": "images/fulls/34.jpg",
+          "thumb": "images/thumbs/34.jpg"
         }
       ],
       "updatedAt": "2026-08-07T16:38:14.986136Z"
+    },
+    {
+      "id": "m-2021-12-31-arlington",
+      "title": "Arlington",
+      "date": "2021-12-31",
+      "time": "21:56",
+      "description": "December 31–January 1, 2021: a few days around Arlington. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-35",
+          "src": "images/fulls/35.jpg",
+          "thumb": "images/thumbs/35.jpg",
+          "date": "2021-12-31",
+          "time": "21:56",
+          "lat": 38.887712,
+          "lng": -77.083778
+        },
+        {
+          "id": "seed-36",
+          "src": "images/fulls/36.jpg",
+          "thumb": "images/thumbs/36.jpg",
+          "date": "2022-01-01",
+          "time": "01:08"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Arlington, Virginia",
+        "lat": 38.887712,
+        "lng": -77.083778
+      }
+    },
+    {
+      "id": "m-2022-01-09-washington-d-c",
+      "title": "Washington, D.C.",
+      "date": "2022-01-09",
+      "time": "15:05",
+      "description": "A day around Washington, D.C.. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-37",
+          "src": "images/fulls/37.jpg",
+          "thumb": "images/thumbs/37.jpg",
+          "date": "2022-01-09",
+          "time": "15:05",
+          "lat": 38.899803,
+          "lng": -77.020797
+        },
+        {
+          "id": "seed-38",
+          "src": "images/fulls/38.jpg",
+          "thumb": "images/thumbs/38.jpg",
+          "date": "2022-01-09",
+          "time": "21:36",
+          "lat": 38.921895,
+          "lng": -77.043328
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.910849,
+        "lng": -77.032062
+      }
+    },
+    {
+      "id": "m-2022-01-12-falls-church",
+      "title": "Falls Church",
+      "date": "2022-01-12",
+      "time": "19:47",
+      "description": "A little moment in Falls Church. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-39",
+          "src": "images/fulls/39.jpg",
+          "thumb": "images/thumbs/39.jpg",
+          "date": "2022-01-12",
+          "time": "19:47",
+          "lat": 38.873312,
+          "lng": -77.154686
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Falls Church, Virginia",
+        "lat": 38.873312,
+        "lng": -77.154686
+      }
+    },
+    {
+      "id": "m-2022-01-15-baltimore",
+      "title": "Baltimore",
+      "date": "2022-01-15",
+      "time": "15:22",
+      "description": "January 15–January 17, 2022: a few days around Baltimore. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-40",
+          "src": "images/fulls/40.jpg",
+          "thumb": "images/thumbs/40.jpg",
+          "date": "2022-01-15",
+          "time": "15:22",
+          "lat": 39.284967,
+          "lng": -76.607125
+        },
+        {
+          "id": "seed-41",
+          "src": "images/fulls/41.jpg",
+          "thumb": "images/thumbs/41.jpg",
+          "date": "2022-01-15",
+          "time": "19:39",
+          "lat": 39.286342,
+          "lng": -76.761995
+        },
+        {
+          "id": "seed-42",
+          "src": "images/fulls/42.jpg",
+          "thumb": "images/thumbs/42.jpg",
+          "date": "2022-01-15",
+          "time": "22:35",
+          "lat": 39.28428,
+          "lng": -76.609007
+        },
+        {
+          "id": "seed-43",
+          "src": "images/fulls/43.jpg",
+          "thumb": "images/thumbs/43.jpg",
+          "date": "2022-01-16",
+          "time": "20:16",
+          "lat": 39.27098,
+          "lng": -76.598847
+        },
+        {
+          "id": "seed-44",
+          "src": "images/fulls/44.jpg",
+          "thumb": "images/thumbs/44.jpg",
+          "date": "2022-01-17",
+          "time": "12:50",
+          "lat": 39.276658,
+          "lng": -76.613512
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Baltimore, Maryland",
+        "lat": 39.280645,
+        "lng": -76.638097
+      }
+    },
+    {
+      "id": "m-2022-02-09-charlottesville",
+      "title": "Charlottesville",
+      "date": "2022-02-09",
+      "time": "20:41",
+      "description": "A day around Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-45",
+          "src": "images/fulls/45.jpg",
+          "thumb": "images/thumbs/45.jpg",
+          "date": "2022-02-09",
+          "time": "20:41",
+          "lat": 38.030608,
+          "lng": -78.480972
+        },
+        {
+          "id": "seed-46",
+          "src": "images/fulls/46.jpg",
+          "thumb": "images/thumbs/46.jpg",
+          "date": "2022-02-09",
+          "time": "20:55",
+          "lat": 38.030614,
+          "lng": -78.480942
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.030611,
+        "lng": -78.480957
+      }
+    },
+    {
+      "id": "m-2022-02-14-somewhere-together",
+      "title": "Somewhere Together",
+      "date": "2022-02-14",
+      "time": "21:22",
+      "description": "A little moment in Somewhere Together. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-47",
+          "src": "images/fulls/47.jpg",
+          "thumb": "images/thumbs/47.jpg",
+          "date": "2022-02-14",
+          "time": "21:22"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
+    },
+    {
+      "id": "m-2022-02-21-somewhere-together",
+      "title": "Somewhere Together",
+      "date": "2022-02-21",
+      "time": "02:02",
+      "description": "A little moment in Somewhere Together. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-48",
+          "src": "images/fulls/48.jpg",
+          "thumb": "images/thumbs/48.jpg",
+          "date": "2022-02-21",
+          "time": "02:02"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
+    },
+    {
+      "id": "m-2022-03-09-new-york",
+      "title": "New York",
+      "date": "2022-03-09",
+      "time": "22:44",
+      "description": "A little moment in New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-50",
+          "src": "images/fulls/50.jpg",
+          "thumb": "images/thumbs/50.jpg",
+          "date": "2022-03-09",
+          "time": "22:44",
+          "lat": 40.75428,
+          "lng": -74.006253
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.75428,
+        "lng": -74.006253
+      }
+    },
+    {
+      "id": "m-2022-03-11-new-york",
+      "title": "New York",
+      "date": "2022-03-11",
+      "time": "17:55",
+      "description": "A day around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-52",
+          "src": "images/fulls/52.jpg",
+          "thumb": "images/thumbs/52.jpg",
+          "date": "2022-03-11",
+          "time": "17:55",
+          "lat": 40.575028,
+          "lng": -73.885153
+        },
+        {
+          "id": "seed-53",
+          "src": "images/fulls/53.jpg",
+          "thumb": "images/thumbs/53.jpg",
+          "date": "2022-03-11",
+          "time": "20:14",
+          "lat": 40.761508,
+          "lng": -73.828117
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.668268,
+        "lng": -73.856635
+      }
+    },
+    {
+      "id": "m-2022-03-16-university-of-virginia",
+      "title": "University of Virginia",
+      "date": "2022-03-16",
+      "time": "21:27",
+      "description": "A little moment in University of Virginia. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-54",
+          "src": "images/fulls/54.jpg",
+          "thumb": "images/thumbs/54.jpg",
+          "date": "2022-03-16",
+          "time": "21:27",
+          "lat": 38.047236,
+          "lng": -78.516183
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "University of Virginia",
+        "lat": 38.047236,
+        "lng": -78.516183
+      }
+    },
+    {
+      "id": "m-2022-03-18-ivy-woods",
+      "title": "Ivy Woods",
+      "date": "2022-03-18",
+      "time": "18:29",
+      "description": "A little moment in Ivy Woods. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-55",
+          "src": "images/fulls/55.jpg",
+          "thumb": "images/thumbs/55.jpg",
+          "date": "2022-03-18",
+          "time": "18:29",
+          "lat": 38.060878,
+          "lng": -78.6333
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Ivy Woods, Virginia",
+        "lat": 38.060878,
+        "lng": -78.6333
+      }
+    },
+    {
+      "id": "m-2022-03-22-university-of-virginia",
+      "title": "University of Virginia",
+      "date": "2022-03-22",
+      "time": "15:12",
+      "description": "A little moment in University of Virginia. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-56",
+          "src": "images/fulls/56.jpg",
+          "thumb": "images/thumbs/56.jpg",
+          "date": "2022-03-22",
+          "time": "15:12",
+          "lat": 38.047108,
+          "lng": -78.516342
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "University of Virginia",
+        "lat": 38.047108,
+        "lng": -78.516342
+      }
+    },
+    {
+      "id": "m-2022-04-23-skyland",
+      "title": "Skyland",
+      "date": "2022-04-23",
+      "time": "18:58",
+      "description": "A little moment in Skyland. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-57",
+          "src": "images/fulls/57.jpg",
+          "thumb": "images/thumbs/57.jpg",
+          "date": "2022-04-23",
+          "time": "18:58",
+          "lat": 38.575042,
+          "lng": -78.384087
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Skyland, Virginia",
+        "lat": 38.575042,
+        "lng": -78.384087
+      }
+    },
+    {
+      "id": "m-2022-05-14-flordon",
+      "title": "Flordon",
+      "date": "2022-05-14",
+      "time": "13:56",
+      "description": "A day around Flordon. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-58",
+          "src": "images/fulls/58.jpg",
+          "thumb": "images/thumbs/58.jpg",
+          "date": "2022-05-14",
+          "time": "13:56",
+          "lat": 38.059875,
+          "lng": -78.564362
+        },
+        {
+          "id": "seed-59",
+          "src": "images/fulls/59.jpg",
+          "thumb": "images/thumbs/59.jpg",
+          "date": "2022-05-14",
+          "time": "13:58",
+          "lat": 38.059922,
+          "lng": -78.564413
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Flordon, Virginia",
+        "lat": 38.059899,
+        "lng": -78.564388
+      }
+    },
+    {
+      "id": "m-2022-05-18-virginia-beach",
+      "title": "Virginia Beach",
+      "date": "2022-05-18",
+      "time": "16:30",
+      "description": "A day around Virginia Beach. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-60",
+          "src": "images/fulls/60.jpg",
+          "thumb": "images/thumbs/60.jpg",
+          "date": "2022-05-18",
+          "time": "16:30",
+          "lat": 36.843742,
+          "lng": -75.970345
+        },
+        {
+          "id": "seed-61",
+          "src": "images/fulls/61.jpg",
+          "thumb": "images/thumbs/61.jpg",
+          "date": "2022-05-18",
+          "time": "19:05",
+          "lat": 36.843583,
+          "lng": -75.974358
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Virginia Beach",
+        "lat": 36.843663,
+        "lng": -75.972352
+      }
+    },
+    {
+      "id": "m-2022-05-26-boston",
+      "title": "Boston",
+      "date": "2022-05-26",
+      "time": "15:39",
+      "description": "May 26–May 27, 2022: a few days around Boston. One frame here is a still from a video we took. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-62",
+          "src": "images/fulls/62.jpg",
+          "thumb": "images/thumbs/62.jpg",
+          "date": "2022-05-26",
+          "time": "15:39",
+          "lat": 42.3619,
+          "lng": -71.0753,
+          "video": true
+        },
+        {
+          "id": "seed-63",
+          "src": "images/fulls/63.jpg",
+          "thumb": "images/thumbs/63.jpg",
+          "date": "2022-05-27",
+          "time": "13:28",
+          "lat": 42.360787,
+          "lng": -71.076181
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Boston, Massachusetts",
+        "lat": 42.361343,
+        "lng": -71.07574
+      }
+    },
+    {
+      "id": "m-2022-06-18-breezy-point",
+      "title": "Breezy Point",
+      "date": "2022-06-18",
+      "time": "16:24",
+      "description": "A day around Breezy Point. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-67",
+          "src": "images/fulls/67.jpg",
+          "thumb": "images/thumbs/67.jpg",
+          "date": "2022-06-18",
+          "time": "16:24",
+          "lat": 38.619738,
+          "lng": -76.513253
+        },
+        {
+          "id": "seed-68",
+          "src": "images/fulls/68.jpg",
+          "thumb": "images/thumbs/68.jpg",
+          "date": "2022-06-18",
+          "time": "16:59",
+          "lat": 38.619717,
+          "lng": -76.513275
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Breezy Point, Maryland",
+        "lat": 38.619727,
+        "lng": -76.513264
+      }
+    },
+    {
+      "id": "m-2022-07-16-arlington",
+      "title": "Arlington",
+      "date": "2022-07-16",
+      "time": "17:49",
+      "description": "A little moment in Arlington. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-69",
+          "src": "images/fulls/69.jpg",
+          "thumb": "images/thumbs/69.jpg",
+          "date": "2022-07-16",
+          "time": "17:49",
+          "lat": 38.9211,
+          "lng": -77.109
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Arlington, Virginia",
+        "lat": 38.9211,
+        "lng": -77.109
+      }
+    },
+    {
+      "id": "m-2022-08-06-washington-d-c",
+      "title": "Washington, D.C.",
+      "date": "2022-08-06",
+      "time": "19:16",
+      "description": "August 6–August 7, 2022: a few days around Washington, D.C.. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-70",
+          "src": "images/fulls/70.jpg",
+          "thumb": "images/thumbs/70.jpg",
+          "date": "2022-08-06",
+          "time": "19:16",
+          "lat": 38.887822,
+          "lng": -77.075792
+        },
+        {
+          "id": "seed-71",
+          "src": "images/fulls/71.jpg",
+          "thumb": "images/thumbs/71.jpg",
+          "date": "2022-08-07",
+          "time": "16:20",
+          "lat": 38.921692,
+          "lng": -76.998878
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.904757,
+        "lng": -77.037335
+      }
+    },
+    {
+      "id": "m-2022-09-11-charlottesville",
+      "title": "Charlottesville",
+      "date": "2022-09-11",
+      "time": "22:37",
+      "description": "A little moment in Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-72",
+          "src": "images/fulls/72.jpg",
+          "thumb": "images/thumbs/72.jpg",
+          "date": "2022-09-11",
+          "time": "22:37",
+          "lat": 38.027183,
+          "lng": -78.509987
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.027183,
+        "lng": -78.509987
+      }
+    },
+    {
+      "id": "m-2022-11-04-charlottesville",
+      "title": "Charlottesville",
+      "date": "2022-11-04",
+      "time": "23:50",
+      "description": "A little moment in Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-75",
+          "src": "images/fulls/75.jpg",
+          "thumb": "images/thumbs/75.jpg",
+          "date": "2022-11-04",
+          "time": "23:50",
+          "lat": 38.027142,
+          "lng": -78.510047
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.027142,
+        "lng": -78.510047
+      }
+    },
+    {
+      "id": "m-2023-01-07-dulles",
+      "title": "Dulles",
+      "date": "2023-01-07",
+      "time": "16:21",
+      "description": "A little moment in Dulles. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-76",
+          "src": "images/fulls/76.jpg",
+          "thumb": "images/thumbs/76.jpg",
+          "date": "2023-01-07",
+          "time": "16:21",
+          "lat": 38.959458,
+          "lng": -77.448692
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Dulles, Virginia",
+        "lat": 38.959458,
+        "lng": -77.448692
+      }
+    },
+    {
+      "id": "m-2023-01-15-philadelphia",
+      "title": "Philadelphia",
+      "date": "2023-01-15",
+      "time": "23:14",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-77",
+          "src": "images/fulls/77.jpg",
+          "thumb": "images/thumbs/77.jpg",
+          "date": "2023-01-15",
+          "time": "23:14",
+          "lat": 39.95767,
+          "lng": -75.166755
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.95767,
+        "lng": -75.166755
+      }
+    },
+    {
+      "id": "m-2023-01-21-charlottesville",
+      "title": "Charlottesville",
+      "date": "2023-01-21",
+      "time": "19:25",
+      "description": "A little moment in Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-78",
+          "src": "images/fulls/78.jpg",
+          "thumb": "images/thumbs/78.jpg",
+          "date": "2023-01-21",
+          "time": "19:25",
+          "lat": 38.0272,
+          "lng": -78.5101
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.0272,
+        "lng": -78.5101
+      }
+    },
+    {
+      "id": "m-2023-03-07-virginia-beach",
+      "title": "Virginia Beach",
+      "date": "2023-03-07",
+      "time": "18:04",
+      "description": "A little moment in Virginia Beach. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-79",
+          "src": "images/fulls/79.jpg",
+          "thumb": "images/thumbs/79.jpg",
+          "date": "2023-03-07",
+          "time": "18:04",
+          "lat": 36.837053,
+          "lng": -75.971305
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Virginia Beach",
+        "lat": 36.837053,
+        "lng": -75.971305
+      }
+    },
+    {
+      "id": "m-2023-03-09-virginia-beach",
+      "title": "Virginia Beach",
+      "date": "2023-03-09",
+      "time": "18:50",
+      "description": "March 9–March 10, 2023: a few days around Virginia Beach. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-80",
+          "src": "images/fulls/80.jpg",
+          "thumb": "images/thumbs/80.jpg",
+          "date": "2023-03-09",
+          "time": "18:50",
+          "lat": 36.847703,
+          "lng": -76.036042
+        },
+        {
+          "id": "seed-81",
+          "src": "images/fulls/81.jpg",
+          "thumb": "images/thumbs/81.jpg",
+          "date": "2023-03-10",
+          "time": "03:41"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Virginia Beach",
+        "lat": 36.847703,
+        "lng": -76.036042
+      }
+    },
+    {
+      "id": "m-2023-03-12-pimmit-hills",
+      "title": "Pimmit Hills",
+      "date": "2023-03-12",
+      "time": "19:02",
+      "description": "A little moment in Pimmit Hills. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-82",
+          "src": "images/fulls/82.jpg",
+          "thumb": "images/thumbs/82.jpg",
+          "date": "2023-03-12",
+          "time": "19:02",
+          "lat": 38.920783,
+          "lng": -77.227088
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Pimmit Hills, Virginia",
+        "lat": 38.920783,
+        "lng": -77.227088
+      }
+    },
+    {
+      "id": "m-2023-03-16-charlottesville",
+      "title": "Charlottesville",
+      "date": "2023-03-16",
+      "time": "16:09",
+      "description": "A little moment in Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-83",
+          "src": "images/fulls/83.jpg",
+          "thumb": "images/thumbs/83.jpg",
+          "date": "2023-03-16",
+          "time": "16:09",
+          "lat": 38.030278,
+          "lng": -78.47683
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.030278,
+        "lng": -78.47683
+      }
+    },
+    {
+      "id": "m-2023-03-26-charlottesville",
+      "title": "Charlottesville",
+      "date": "2023-03-26",
+      "time": "16:27",
+      "description": "A little moment in Charlottesville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-84",
+          "src": "images/fulls/84.jpg",
+          "thumb": "images/thumbs/84.jpg",
+          "date": "2023-03-26",
+          "time": "16:27",
+          "lat": 38.009636,
+          "lng": -78.511763
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Charlottesville, Virginia",
+        "lat": 38.009636,
+        "lng": -78.511763
+      }
+    },
+    {
+      "id": "m-2023-04-01-crozet",
+      "title": "Crozet",
+      "date": "2023-04-01",
+      "time": "15:01",
+      "description": "A little moment in Crozet. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-85",
+          "src": "images/fulls/85.jpg",
+          "thumb": "images/thumbs/85.jpg",
+          "date": "2023-04-01",
+          "time": "15:01",
+          "lat": 38.072964,
+          "lng": -78.651397
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Crozet, Virginia",
+        "lat": 38.072964,
+        "lng": -78.651397
+      }
+    },
+    {
+      "id": "m-2023-05-16-coral-gables",
+      "title": "Coral Gables",
+      "date": "2023-05-16",
+      "time": "10:16",
+      "description": "A little moment in Coral Gables. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-86",
+          "src": "images/fulls/86.jpg",
+          "thumb": "images/thumbs/86.jpg",
+          "date": "2023-05-16",
+          "time": "10:16",
+          "lat": 25.714547,
+          "lng": -80.278617
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Coral Gables, Florida",
+        "lat": 25.714547,
+        "lng": -80.278617
+      }
+    },
+    {
+      "id": "m-2023-05-30-somewhere-together",
+      "title": "Somewhere Together",
+      "date": "2023-05-30",
+      "time": "22:16",
+      "description": "A little moment in Somewhere Together. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-87",
+          "src": "images/fulls/87.jpg",
+          "thumb": "images/thumbs/87.jpg",
+          "date": "2023-05-30",
+          "time": "22:16"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
+    },
+    {
+      "id": "m-2023-06-06-norwood",
+      "title": "Norwood",
+      "date": "2023-06-06",
+      "time": "13:26",
+      "description": "A day around Norwood. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-88",
+          "src": "images/fulls/88.jpg",
+          "thumb": "images/thumbs/88.jpg",
+          "date": "2023-06-06",
+          "time": "13:26",
+          "lat": 42.362583,
+          "lng": -71.113975
+        },
+        {
+          "id": "seed-89",
+          "src": "images/fulls/89.jpg",
+          "thumb": "images/thumbs/89.jpg",
+          "date": "2023-06-06",
+          "time": "20:40",
+          "lat": 42.028392,
+          "lng": -71.250237
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Norwood, Massachusetts",
+        "lat": 42.195487,
+        "lng": -71.182106
+      }
+    },
+    {
+      "id": "m-2023-06-23-boston",
+      "title": "Boston",
+      "date": "2023-06-23",
+      "time": "16:22",
+      "description": "June 23–June 24, 2023: a few days around Boston. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-90",
+          "src": "images/fulls/90.jpg",
+          "thumb": "images/thumbs/90.jpg",
+          "date": "2023-06-23",
+          "time": "16:22",
+          "lat": 42.355687,
+          "lng": -71.058442
+        },
+        {
+          "id": "seed-91",
+          "src": "images/fulls/91.jpg",
+          "thumb": "images/thumbs/91.jpg",
+          "date": "2023-06-23",
+          "time": "16:39",
+          "lat": 42.355675,
+          "lng": -71.058769
+        },
+        {
+          "id": "seed-92",
+          "src": "images/fulls/92.jpg",
+          "thumb": "images/thumbs/92.jpg",
+          "date": "2023-06-24",
+          "time": "15:19",
+          "lat": 42.353775,
+          "lng": -70.967812
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Boston, Massachusetts",
+        "lat": 42.355046,
+        "lng": -71.028341
+      }
+    },
+    {
+      "id": "m-2023-06-30-boston",
+      "title": "Boston",
+      "date": "2023-06-30",
+      "time": "21:16",
+      "description": "A little moment in Boston. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-93",
+          "src": "images/fulls/93.jpg",
+          "thumb": "images/thumbs/93.jpg",
+          "date": "2023-06-30",
+          "time": "21:16",
+          "lat": 42.35343,
+          "lng": -71.059136
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Boston, Massachusetts",
+        "lat": 42.35343,
+        "lng": -71.059136
+      }
+    },
+    {
+      "id": "m-2023-07-03-yarmouth",
+      "title": "Yarmouth",
+      "date": "2023-07-03",
+      "time": "13:49",
+      "description": "A little moment in Yarmouth. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-94",
+          "src": "images/fulls/94.jpg",
+          "thumb": "images/thumbs/94.jpg",
+          "date": "2023-07-03",
+          "time": "13:49",
+          "lat": 41.705508,
+          "lng": -70.194763
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Yarmouth, Massachusetts",
+        "lat": 41.705508,
+        "lng": -70.194763
+      }
+    },
+    {
+      "id": "m-2023-07-03-cambridge",
+      "title": "Cambridge",
+      "date": "2023-07-03",
+      "time": "20:37",
+      "description": "July 3–July 4, 2023: a few days around Cambridge. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-95",
+          "src": "images/fulls/95.jpg",
+          "thumb": "images/thumbs/95.jpg",
+          "date": "2023-07-03",
+          "time": "20:37",
+          "lat": 42.384517,
+          "lng": -71.163536
+        },
+        {
+          "id": "seed-96",
+          "src": "images/fulls/96.jpg",
+          "thumb": "images/thumbs/96.jpg",
+          "date": "2023-07-04",
+          "time": "21:55",
+          "lat": 42.360347,
+          "lng": -71.082436
+        },
+        {
+          "id": "seed-97",
+          "src": "images/fulls/97.jpg",
+          "thumb": "images/thumbs/97.jpg",
+          "date": "2023-07-04",
+          "time": "22:00",
+          "lat": 42.360413,
+          "lng": -71.082405
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Cambridge, Massachusetts",
+        "lat": 42.368426,
+        "lng": -71.109459
+      }
+    },
+    {
+      "id": "m-2023-08-08-rockville",
+      "title": "Rockville",
+      "date": "2023-08-08",
+      "time": "14:08",
+      "description": "August 8–August 9, 2023: a few days around Rockville. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-98",
+          "src": "images/fulls/98.jpg",
+          "thumb": "images/thumbs/98.jpg",
+          "date": "2023-08-08",
+          "time": "14:08",
+          "lat": 38.900047,
+          "lng": -77.024672
+        },
+        {
+          "id": "seed-99",
+          "src": "images/fulls/99.jpg",
+          "thumb": "images/thumbs/99.jpg",
+          "date": "2023-08-09",
+          "time": "16:17",
+          "lat": 39.22152,
+          "lng": -77.235145
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Rockville, Maryland",
+        "lat": 39.060783,
+        "lng": -77.129909
+      }
+    },
+    {
+      "id": "m-2023-08-11-mclean",
+      "title": "McLean",
+      "date": "2023-08-11",
+      "time": "17:09",
+      "description": "August 11–August 13, 2023: a few days around McLean. One frame here is a still from a video we took. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-100",
+          "src": "images/fulls/100.jpg",
+          "thumb": "images/thumbs/100.jpg",
+          "date": "2023-08-11",
+          "time": "17:09",
+          "lat": 38.905288,
+          "lng": -77.061608
+        },
+        {
+          "id": "seed-101",
+          "src": "images/fulls/101.jpg",
+          "thumb": "images/thumbs/101.jpg",
+          "date": "2023-08-12",
+          "time": "12:58",
+          "lat": 38.9738,
+          "lng": -77.3167,
+          "video": true
+        },
+        {
+          "id": "seed-102",
+          "src": "images/fulls/102.jpg",
+          "thumb": "images/thumbs/102.jpg",
+          "date": "2023-08-12",
+          "time": "13:02",
+          "lat": 38.973,
+          "lng": -77.3164,
+          "video": true
+        },
+        {
+          "id": "seed-103",
+          "src": "images/fulls/103.jpg",
+          "thumb": "images/thumbs/103.jpg",
+          "date": "2023-08-13",
+          "time": "15:39",
+          "lat": 38.805,
+          "lng": -77.039811
+        },
+        {
+          "id": "seed-104",
+          "src": "images/fulls/104.jpg",
+          "thumb": "images/thumbs/104.jpg",
+          "date": "2023-08-13",
+          "time": "19:08",
+          "lat": 38.904913,
+          "lng": -77.061814
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "McLean, Virginia",
+        "lat": 38.9124,
+        "lng": -77.159267
+      }
+    },
+    {
+      "id": "m-2023-08-18-houston",
+      "title": "Houston",
+      "date": "2023-08-18",
+      "time": "14:19",
+      "description": "August 18–August 19, 2023: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-105",
+          "src": "images/fulls/105.jpg",
+          "thumb": "images/thumbs/105.jpg",
+          "date": "2023-08-18",
+          "time": "14:19",
+          "lat": 29.714255,
+          "lng": -95.390128
+        },
+        {
+          "id": "seed-106",
+          "src": "images/fulls/106.jpg",
+          "thumb": "images/thumbs/106.jpg",
+          "date": "2023-08-19",
+          "time": "12:31",
+          "lat": 29.986737,
+          "lng": -95.350197
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.850496,
+        "lng": -95.370162
+      }
+    },
+    {
+      "id": "m-2023-09-11-houston",
+      "title": "Houston",
+      "date": "2023-09-11",
+      "time": "10:31",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-107",
+          "src": "images/fulls/107.jpg",
+          "thumb": "images/thumbs/107.jpg",
+          "date": "2023-09-11",
+          "time": "10:31",
+          "lat": 29.714158,
+          "lng": -95.405167
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.714158,
+        "lng": -95.405167
+      }
+    },
+    {
+      "id": "m-2023-09-30-houston",
+      "title": "Houston",
+      "date": "2023-09-30",
+      "time": "14:33",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-108",
+          "src": "images/fulls/108.jpg",
+          "thumb": "images/thumbs/108.jpg",
+          "date": "2023-09-30",
+          "time": "14:33",
+          "lat": 29.70573,
+          "lng": -95.550933
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.70573,
+        "lng": -95.550933
+      }
+    },
+    {
+      "id": "m-2023-10-07-houston",
+      "title": "Houston",
+      "date": "2023-10-07",
+      "time": "18:06",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-109",
+          "src": "images/fulls/109.jpg",
+          "thumb": "images/thumbs/109.jpg",
+          "date": "2023-10-07",
+          "time": "18:06",
+          "lat": 29.702738,
+          "lng": -95.553567
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702738,
+        "lng": -95.553567
+      }
+    },
+    {
+      "id": "m-2023-10-15-houston",
+      "title": "Houston",
+      "date": "2023-10-15",
+      "time": "18:05",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-110",
+          "src": "images/fulls/110.jpg",
+          "thumb": "images/thumbs/110.jpg",
+          "date": "2023-10-15",
+          "time": "18:05",
+          "lat": 29.705045,
+          "lng": -95.543738
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.705045,
+        "lng": -95.543738
+      }
+    },
+    {
+      "id": "m-2023-10-26-houston",
+      "title": "Houston",
+      "date": "2023-10-26",
+      "time": "18:03",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-111",
+          "src": "images/fulls/111.jpg",
+          "thumb": "images/thumbs/111.jpg",
+          "date": "2023-10-26",
+          "time": "18:03",
+          "lat": 29.702922,
+          "lng": -95.552728
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702922,
+        "lng": -95.552728
+      }
+    },
+    {
+      "id": "m-2023-10-30-houston",
+      "title": "Houston",
+      "date": "2023-10-30",
+      "time": "16:33",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-112",
+          "src": "images/fulls/112.jpg",
+          "thumb": "images/thumbs/112.jpg",
+          "date": "2023-10-30",
+          "time": "16:33",
+          "lat": 29.718042,
+          "lng": -95.400437
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.718042,
+        "lng": -95.400437
+      }
+    },
+    {
+      "id": "m-2023-11-01-houston",
+      "title": "Houston",
+      "date": "2023-11-01",
+      "time": "18:51",
+      "description": "November 1–November 2, 2023: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-113",
+          "src": "images/fulls/113.jpg",
+          "thumb": "images/thumbs/113.jpg",
+          "date": "2023-11-01",
+          "time": "18:51",
+          "lat": 29.705433,
+          "lng": -95.540222
+        },
+        {
+          "id": "seed-114",
+          "src": "images/fulls/114.jpg",
+          "thumb": "images/thumbs/114.jpg",
+          "date": "2023-11-02",
+          "time": "14:26",
+          "lat": 29.986683,
+          "lng": -95.3498
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.846058,
+        "lng": -95.445011
+      }
+    },
+    {
+      "id": "m-2023-11-11-houston",
+      "title": "Houston",
+      "date": "2023-11-11",
+      "time": "20:09",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-115",
+          "src": "images/fulls/115.jpg",
+          "thumb": "images/thumbs/115.jpg",
+          "date": "2023-11-11",
+          "time": "20:09",
+          "lat": 29.702795,
+          "lng": -95.552987
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702795,
+        "lng": -95.552987
+      }
+    },
+    {
+      "id": "m-2023-11-15-houston",
+      "title": "Houston",
+      "date": "2023-11-15",
+      "time": "18:56",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-116",
+          "src": "images/fulls/116.jpg",
+          "thumb": "images/thumbs/116.jpg",
+          "date": "2023-11-15",
+          "time": "18:56",
+          "lat": 29.706372,
+          "lng": -95.544175
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.706372,
+        "lng": -95.544175
+      }
+    },
+    {
+      "id": "m-2023-11-17-houston",
+      "title": "Houston",
+      "date": "2023-11-17",
+      "time": "20:12",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-117",
+          "src": "images/fulls/117.jpg",
+          "thumb": "images/thumbs/117.jpg",
+          "date": "2023-11-17",
+          "time": "20:12",
+          "lat": 29.706847,
+          "lng": -95.556472
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.706847,
+        "lng": -95.556472
+      }
+    },
+    {
+      "id": "m-2023-11-23-washington-d-c",
+      "title": "Washington, D.C.",
+      "date": "2023-11-23",
+      "time": "02:47",
+      "description": "A little moment in Washington, D.C.. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-118",
+          "src": "images/fulls/118.jpg",
+          "thumb": "images/thumbs/118.jpg",
+          "date": "2023-11-23",
+          "time": "02:47",
+          "lat": 38.878738,
+          "lng": -77.026825
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Washington, D.C.",
+        "lat": 38.878738,
+        "lng": -77.026825
+      }
+    },
+    {
+      "id": "m-2023-12-10-arlington",
+      "title": "Arlington",
+      "date": "2023-12-10",
+      "time": "10:45",
+      "description": "A little moment in Arlington. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-119",
+          "src": "images/fulls/119.jpg",
+          "thumb": "images/thumbs/119.jpg",
+          "date": "2023-12-10",
+          "time": "10:45",
+          "lat": 38.855762,
+          "lng": -77.0522
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Arlington, Virginia",
+        "lat": 38.855762,
+        "lng": -77.0522
+      }
+    },
+    {
+      "id": "m-2023-12-13-bethesda",
+      "title": "Bethesda",
+      "date": "2023-12-13",
+      "time": "19:33",
+      "description": "December 13–December 14, 2023: a few days around Bethesda. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-120",
+          "src": "images/fulls/120.jpg",
+          "thumb": "images/thumbs/120.jpg",
+          "date": "2023-12-13",
+          "time": "19:33",
+          "lat": 39.103833,
+          "lng": -77.156525
+        },
+        {
+          "id": "seed-121",
+          "src": "images/fulls/121.jpg",
+          "thumb": "images/thumbs/121.jpg",
+          "date": "2023-12-14",
+          "time": "15:20",
+          "lat": 38.930455,
+          "lng": -77.04895
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Bethesda, Maryland",
+        "lat": 39.017144,
+        "lng": -77.102738
+      }
+    },
+    {
+      "id": "m-2023-12-15-marlboro-village",
+      "title": "Marlboro Village",
+      "date": "2023-12-15",
+      "time": "16:39",
+      "description": "December 15–December 16, 2023: a few days around Marlboro Village. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-122",
+          "src": "images/fulls/122.jpg",
+          "thumb": "images/thumbs/122.jpg",
+          "date": "2023-12-15",
+          "time": "16:39",
+          "lat": 38.88255,
+          "lng": -76.493888
+        },
+        {
+          "id": "seed-123",
+          "src": "images/fulls/123.jpg",
+          "thumb": "images/thumbs/123.jpg",
+          "date": "2023-12-16",
+          "time": "20:28",
+          "lat": 38.784858,
+          "lng": -77.016333
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Marlboro Village, Maryland",
+        "lat": 38.833704,
+        "lng": -76.755111
+      }
+    },
+    {
+      "id": "m-2023-12-22-north-kensington",
+      "title": "North Kensington",
+      "date": "2023-12-22",
+      "time": "17:53",
+      "description": "A day around North Kensington. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-124",
+          "src": "images/fulls/124.jpg",
+          "thumb": "images/thumbs/124.jpg",
+          "date": "2023-12-22",
+          "time": "17:53",
+          "lat": 39.015414,
+          "lng": -77.065606
+        },
+        {
+          "id": "seed-125",
+          "src": "images/fulls/125.jpg",
+          "thumb": "images/thumbs/125.jpg",
+          "date": "2023-12-22",
+          "time": "19:16",
+          "lat": 39.086047,
+          "lng": -77.151619
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "North Kensington, Maryland",
+        "lat": 39.050731,
+        "lng": -77.108612
+      }
+    },
+    {
+      "id": "m-2023-12-24-west-falls-church",
+      "title": "West Falls Church",
+      "date": "2023-12-24",
+      "time": "13:19",
+      "description": "December 24–December 25, 2023: a few days around West Falls Church. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-126",
+          "src": "images/fulls/126.jpg",
+          "thumb": "images/thumbs/126.jpg",
+          "date": "2023-12-24",
+          "time": "13:19",
+          "lat": 38.862008,
+          "lng": -77.357728
+        },
+        {
+          "id": "seed-127",
+          "src": "images/fulls/127.jpg",
+          "thumb": "images/thumbs/127.jpg",
+          "date": "2023-12-25",
+          "time": "16:08",
+          "lat": 38.889892,
+          "lng": -77.011117
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "West Falls Church, Virginia",
+        "lat": 38.87595,
+        "lng": -77.184422
+      }
+    },
+    {
+      "id": "m-2023-12-30-new-york",
+      "title": "New York",
+      "date": "2023-12-30",
+      "time": "12:07",
+      "description": "December 30–December 31, 2023: a few days around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-128",
+          "src": "images/fulls/128.jpg",
+          "thumb": "images/thumbs/128.jpg",
+          "date": "2023-12-30",
+          "time": "12:07",
+          "lat": 40.759388,
+          "lng": -73.832222
+        },
+        {
+          "id": "seed-129",
+          "src": "images/fulls/129.jpg",
+          "thumb": "images/thumbs/129.jpg",
+          "date": "2023-12-30",
+          "time": "17:30",
+          "lat": 40.757642,
+          "lng": -73.829217
+        },
+        {
+          "id": "seed-130",
+          "src": "images/fulls/130.jpg",
+          "thumb": "images/thumbs/130.jpg",
+          "date": "2023-12-31",
+          "time": "14:35",
+          "lat": 40.75983,
+          "lng": -73.82923
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.758953,
+        "lng": -73.830223
+      }
+    },
+    {
+      "id": "m-2024-01-02-new-york",
+      "title": "New York",
+      "date": "2024-01-02",
+      "time": "19:38",
+      "description": "January 2–January 4, 2024: a few days around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-131",
+          "src": "images/fulls/131.jpg",
+          "thumb": "images/thumbs/131.jpg",
+          "date": "2024-01-02",
+          "time": "19:38",
+          "lat": 40.759895,
+          "lng": -73.833787
+        },
+        {
+          "id": "seed-132",
+          "src": "images/fulls/132.jpg",
+          "thumb": "images/thumbs/132.jpg",
+          "date": "2024-01-03",
+          "time": "19:30",
+          "lat": 40.715225,
+          "lng": -73.999113
+        },
+        {
+          "id": "seed-133",
+          "src": "images/fulls/133.jpg",
+          "thumb": "images/thumbs/133.jpg",
+          "date": "2024-01-04",
+          "time": "14:07",
+          "lat": 40.761025,
+          "lng": -73.963433
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.745382,
+        "lng": -73.932111
+      }
+    },
+    {
+      "id": "m-2024-01-16-houston",
+      "title": "Houston",
+      "date": "2024-01-16",
+      "time": "16:47",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-134",
+          "src": "images/fulls/134.jpg",
+          "thumb": "images/thumbs/134.jpg",
+          "date": "2024-01-16",
+          "time": "16:47",
+          "lat": 29.706462,
+          "lng": -95.552933
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.706462,
+        "lng": -95.552933
+      }
+    },
+    {
+      "id": "m-2024-02-09-belmont",
+      "title": "Belmont",
+      "date": "2024-02-09",
+      "time": "18:43",
+      "description": "A little moment in Belmont. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-135",
+          "src": "images/fulls/135.jpg",
+          "thumb": "images/thumbs/135.jpg",
+          "date": "2024-02-09",
+          "time": "18:43",
+          "lat": 42.406983,
+          "lng": -71.187163
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Belmont, Massachusetts",
+        "lat": 42.406983,
+        "lng": -71.187163
+      }
+    },
+    {
+      "id": "m-2024-02-22-houston",
+      "title": "Houston",
+      "date": "2024-02-22",
+      "time": "15:39",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-136",
+          "src": "images/fulls/136.jpg",
+          "thumb": "images/thumbs/136.jpg",
+          "date": "2024-02-22",
+          "time": "15:39",
+          "lat": 29.761995,
+          "lng": -95.393608
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.761995,
+        "lng": -95.393608
+      }
+    },
+    {
+      "id": "m-2024-02-29-houston",
+      "title": "Houston",
+      "date": "2024-02-29",
+      "time": "18:17",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-137",
+          "src": "images/fulls/137.jpg",
+          "thumb": "images/thumbs/137.jpg",
+          "date": "2024-02-29",
+          "time": "18:17",
+          "lat": 29.704997,
+          "lng": -95.555687
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.704997,
+        "lng": -95.555687
+      }
+    },
+    {
+      "id": "m-2024-03-02-houston",
+      "title": "Houston",
+      "date": "2024-03-02",
+      "time": "19:21",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-138",
+          "src": "images/fulls/138.jpg",
+          "thumb": "images/thumbs/138.jpg",
+          "date": "2024-03-02",
+          "time": "19:21",
+          "lat": 29.689675,
+          "lng": -95.413108
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.689675,
+        "lng": -95.413108
+      }
+    },
+    {
+      "id": "m-2024-03-09-houston",
+      "title": "Houston",
+      "date": "2024-03-09",
+      "time": "20:35",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-139",
+          "src": "images/fulls/139.jpg",
+          "thumb": "images/thumbs/139.jpg",
+          "date": "2024-03-09",
+          "time": "20:35",
+          "lat": 29.702872,
+          "lng": -95.55262
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702872,
+        "lng": -95.55262
+      }
+    },
+    {
+      "id": "m-2024-03-12-houston",
+      "title": "Houston",
+      "date": "2024-03-12",
+      "time": "19:17",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-140",
+          "src": "images/fulls/140.jpg",
+          "thumb": "images/thumbs/140.jpg",
+          "date": "2024-03-12",
+          "time": "19:17",
+          "lat": 29.688847,
+          "lng": -95.559053
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.688847,
+        "lng": -95.559053
+      }
+    },
+    {
+      "id": "m-2024-03-14-galveston",
+      "title": "Galveston",
+      "date": "2024-03-14",
+      "time": "14:00",
+      "description": "A little moment in Galveston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-141",
+          "src": "images/fulls/141.jpg",
+          "thumb": "images/thumbs/141.jpg",
+          "date": "2024-03-14",
+          "time": "14:00",
+          "lat": 29.332905,
+          "lng": -94.776383
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Galveston, Texas",
+        "lat": 29.332905,
+        "lng": -94.776383
+      }
+    },
+    {
+      "id": "m-2024-03-15-houston",
+      "title": "Houston",
+      "date": "2024-03-15",
+      "time": "17:53",
+      "description": "A day around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-142",
+          "src": "images/fulls/142.jpg",
+          "thumb": "images/thumbs/142.jpg",
+          "date": "2024-03-15",
+          "time": "17:53",
+          "lat": 29.684353,
+          "lng": -95.411028
+        },
+        {
+          "id": "seed-143",
+          "src": "images/fulls/143.jpg",
+          "thumb": "images/thumbs/143.jpg",
+          "date": "2024-03-15",
+          "time": "19:50",
+          "lat": 29.684428,
+          "lng": -95.411688
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.684391,
+        "lng": -95.411358
+      }
+    },
+    {
+      "id": "m-2024-04-20-houston",
+      "title": "Houston",
+      "date": "2024-04-20",
+      "time": "17:40",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-144",
+          "src": "images/fulls/144.jpg",
+          "thumb": "images/thumbs/144.jpg",
+          "date": "2024-04-20",
+          "time": "17:40",
+          "lat": 29.7056,
+          "lng": -95.534363
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.7056,
+        "lng": -95.534363
+      }
+    },
+    {
+      "id": "m-2024-04-24-jersey-village",
+      "title": "Jersey Village",
+      "date": "2024-04-24",
+      "time": "17:18",
+      "description": "A little moment in Jersey Village. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-145",
+          "src": "images/fulls/145.jpg",
+          "thumb": "images/thumbs/145.jpg",
+          "date": "2024-04-24",
+          "time": "17:18",
+          "lat": 29.915562,
+          "lng": -95.613853
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Jersey Village, Texas",
+        "lat": 29.915562,
+        "lng": -95.613853
+      }
+    },
+    {
+      "id": "m-2024-04-29-jersey-village",
+      "title": "Jersey Village",
+      "date": "2024-04-29",
+      "time": "15:47",
+      "description": "A little moment in Jersey Village. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-146",
+          "src": "images/fulls/146.jpg",
+          "thumb": "images/thumbs/146.jpg",
+          "date": "2024-04-29",
+          "time": "15:47",
+          "lat": 29.9129,
+          "lng": -95.615067
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Jersey Village, Texas",
+        "lat": 29.9129,
+        "lng": -95.615067
+      }
+    },
+    {
+      "id": "m-2024-05-03-houston",
+      "title": "Houston",
+      "date": "2024-05-03",
+      "time": "18:49",
+      "description": "A day around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-147",
+          "src": "images/fulls/147.jpg",
+          "thumb": "images/thumbs/147.jpg",
+          "date": "2024-05-03",
+          "time": "18:49"
+        },
+        {
+          "id": "seed-148",
+          "src": "images/fulls/148.jpg",
+          "thumb": "images/thumbs/148.jpg",
+          "date": "2024-05-03",
+          "time": "19:31",
+          "lat": 29.706725,
+          "lng": -95.556503
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.706725,
+        "lng": -95.556503
+      }
+    },
+    {
+      "id": "m-2024-05-07-houston",
+      "title": "Houston",
+      "date": "2024-05-07",
+      "time": "23:06",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-149",
+          "src": "images/fulls/149.jpg",
+          "thumb": "images/thumbs/149.jpg",
+          "date": "2024-05-07",
+          "time": "23:06",
+          "lat": 29.69767,
+          "lng": -95.422692
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.69767,
+        "lng": -95.422692
+      }
+    },
+    {
+      "id": "m-2024-05-11-houston",
+      "title": "Houston",
+      "date": "2024-05-11",
+      "time": "12:53",
+      "description": "A day around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-150",
+          "src": "images/fulls/150.jpg",
+          "thumb": "images/thumbs/150.jpg",
+          "date": "2024-05-11",
+          "time": "12:53"
+        },
+        {
+          "id": "seed-151",
+          "src": "images/fulls/151.jpg",
+          "thumb": "images/thumbs/151.jpg",
+          "date": "2024-05-11",
+          "time": "16:38",
+          "lat": 29.86678,
+          "lng": -95.538475
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.86678,
+        "lng": -95.538475
+      }
+    },
+    {
+      "id": "m-2024-05-21-houston",
+      "title": "Houston",
+      "date": "2024-05-21",
+      "time": "14:13",
+      "description": "A day around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-152",
+          "src": "images/fulls/152.jpg",
+          "thumb": "images/thumbs/152.jpg",
+          "date": "2024-05-21",
+          "time": "14:13",
+          "lat": 29.735905,
+          "lng": -95.461388
+        },
+        {
+          "id": "seed-153",
+          "src": "images/fulls/153.jpg",
+          "thumb": "images/thumbs/153.jpg",
+          "date": "2024-05-21",
+          "time": "16:01",
+          "lat": 29.721572,
+          "lng": -95.389397
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.728738,
+        "lng": -95.425393
+      }
+    },
+    {
+      "id": "m-2024-05-23-houston",
+      "title": "Houston",
+      "date": "2024-05-23",
+      "time": "17:26",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-154",
+          "src": "images/fulls/154.jpg",
+          "thumb": "images/thumbs/154.jpg",
+          "date": "2024-05-23",
+          "time": "17:26",
+          "lat": 29.7265,
+          "lng": -95.389687
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.7265,
+        "lng": -95.389687
+      }
+    },
+    {
+      "id": "m-2024-05-26-galveston",
+      "title": "Galveston",
+      "date": "2024-05-26",
+      "time": "15:10",
+      "description": "A little moment in Galveston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-155",
+          "src": "images/fulls/155.jpg",
+          "thumb": "images/thumbs/155.jpg",
+          "date": "2024-05-26",
+          "time": "15:10",
+          "lat": 29.307228,
+          "lng": -94.794167
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Galveston, Texas",
+        "lat": 29.307228,
+        "lng": -94.794167
+      }
+    },
+    {
+      "id": "m-2024-06-01-houston",
+      "title": "Houston",
+      "date": "2024-06-01",
+      "time": "15:51",
+      "description": "June 1–June 2, 2024: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-156",
+          "src": "images/fulls/156.jpg",
+          "thumb": "images/thumbs/156.jpg",
+          "date": "2024-06-01",
+          "time": "15:51",
+          "lat": 30.042422,
+          "lng": -95.405105
+        },
+        {
+          "id": "seed-157",
+          "src": "images/fulls/157.jpg",
+          "thumb": "images/thumbs/157.jpg",
+          "date": "2024-06-02",
+          "time": "19:35",
+          "lat": 29.697675,
+          "lng": -95.422692
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.870049,
+        "lng": -95.413898
+      }
+    },
+    {
+      "id": "m-2024-06-04-houston",
+      "title": "Houston",
+      "date": "2024-06-04",
+      "time": "14:44",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-158",
+          "src": "images/fulls/158.jpg",
+          "thumb": "images/thumbs/158.jpg",
+          "date": "2024-06-04",
+          "time": "14:44",
+          "lat": 29.552062,
+          "lng": -95.097594
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.552062,
+        "lng": -95.097594
+      }
+    },
+    {
+      "id": "m-2024-06-18-boston",
+      "title": "Boston",
+      "date": "2024-06-18",
+      "time": "20:46",
+      "description": "A little moment in Boston. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-159",
+          "src": "images/fulls/159.jpg",
+          "thumb": "images/thumbs/159.jpg",
+          "date": "2024-06-18",
+          "time": "20:46",
+          "lat": 42.353,
+          "lng": -71.131364
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Boston, Massachusetts",
+        "lat": 42.353,
+        "lng": -71.131364
+      }
+    },
+    {
+      "id": "m-2024-09-21-philadelphia",
+      "title": "Philadelphia",
+      "date": "2024-09-21",
+      "time": "18:15",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-160",
+          "src": "images/fulls/160.jpg",
+          "thumb": "images/thumbs/160.jpg",
+          "date": "2024-09-21",
+          "time": "18:15",
+          "lat": 39.974412,
+          "lng": -75.12065
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.974412,
+        "lng": -75.12065
+      }
+    },
+    {
+      "id": "m-2024-10-03-houston",
+      "title": "Houston",
+      "date": "2024-10-03",
+      "time": "19:01",
+      "description": "October 3–October 5, 2024: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-161",
+          "src": "images/fulls/161.jpg",
+          "thumb": "images/thumbs/161.jpg",
+          "date": "2024-10-03",
+          "time": "19:01",
+          "lat": 29.750742,
+          "lng": -95.375137
+        },
+        {
+          "id": "seed-162",
+          "src": "images/fulls/162.jpg",
+          "thumb": "images/thumbs/162.jpg",
+          "date": "2024-10-04",
+          "time": "18:57",
+          "lat": 29.756688,
+          "lng": -95.45697
+        },
+        {
+          "id": "seed-163",
+          "src": "images/fulls/163.jpg",
+          "thumb": "images/thumbs/163.jpg",
+          "date": "2024-10-05",
+          "time": "14:15",
+          "lat": 29.763833,
+          "lng": -95.368263
+        },
+        {
+          "id": "seed-164",
+          "src": "images/fulls/164.jpg",
+          "thumb": "images/thumbs/164.jpg",
+          "date": "2024-10-05",
+          "time": "15:10",
+          "lat": 29.764038,
+          "lng": -95.367508
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.758825,
+        "lng": -95.39197
+      }
+    },
+    {
+      "id": "m-2024-10-12-philadelphia",
+      "title": "Philadelphia",
+      "date": "2024-10-12",
+      "time": "18:22",
+      "description": "October 12–October 13, 2024: a few days around Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-165",
+          "src": "images/fulls/165.jpg",
+          "thumb": "images/thumbs/165.jpg",
+          "date": "2024-10-12",
+          "time": "18:22",
+          "lat": 39.954945,
+          "lng": -75.156014
+        },
+        {
+          "id": "seed-166",
+          "src": "images/fulls/166.jpg",
+          "thumb": "images/thumbs/166.jpg",
+          "date": "2024-10-13",
+          "time": "19:44",
+          "lat": 39.953025,
+          "lng": -75.187247
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.953985,
+        "lng": -75.17163
+      }
+    },
+    {
+      "id": "m-2024-10-23-somewhere-together",
+      "title": "Somewhere Together",
+      "date": "2024-10-23",
+      "time": "17:56",
+      "description": "A little moment in Somewhere Together. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-167",
+          "src": "images/fulls/167.jpg",
+          "thumb": "images/thumbs/167.jpg",
+          "date": "2024-10-23",
+          "time": "17:56"
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z"
+    },
+    {
+      "id": "m-2024-11-01-houston",
+      "title": "Houston",
+      "date": "2024-11-01",
+      "time": "21:18",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-168",
+          "src": "images/fulls/168.jpg",
+          "thumb": "images/thumbs/168.jpg",
+          "date": "2024-11-01",
+          "time": "21:18",
+          "lat": 29.702987,
+          "lng": -95.5533
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702987,
+        "lng": -95.5533
+      }
+    },
+    {
+      "id": "m-2024-11-03-houston",
+      "title": "Houston",
+      "date": "2024-11-03",
+      "time": "13:00",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-169",
+          "src": "images/fulls/169.jpg",
+          "thumb": "images/thumbs/169.jpg",
+          "date": "2024-11-03",
+          "time": "13:00",
+          "lat": 29.702597,
+          "lng": -95.516778
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702597,
+        "lng": -95.516778
+      }
+    },
+    {
+      "id": "m-2024-11-23-houston",
+      "title": "Houston",
+      "date": "2024-11-23",
+      "time": "22:35",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-170",
+          "src": "images/fulls/170.jpg",
+          "thumb": "images/thumbs/170.jpg",
+          "date": "2024-11-23",
+          "time": "22:35",
+          "lat": 29.703645,
+          "lng": -95.553597
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.703645,
+        "lng": -95.553597
+      }
+    },
+    {
+      "id": "m-2024-11-29-houston",
+      "title": "Houston",
+      "date": "2024-11-29",
+      "time": "19:29",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-171",
+          "src": "images/fulls/171.jpg",
+          "thumb": "images/thumbs/171.jpg",
+          "date": "2024-11-29",
+          "time": "19:29",
+          "lat": 29.705688,
+          "lng": -95.544083
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.705688,
+        "lng": -95.544083
+      }
+    },
+    {
+      "id": "m-2024-12-19-philadelphia",
+      "title": "Philadelphia",
+      "date": "2024-12-19",
+      "time": "21:12",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-172",
+          "src": "images/fulls/172.jpg",
+          "thumb": "images/thumbs/172.jpg",
+          "date": "2024-12-19",
+          "time": "21:12",
+          "lat": 39.914008,
+          "lng": -75.156778
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.914008,
+        "lng": -75.156778
+      }
+    },
+    {
+      "id": "m-2024-12-21-new-york",
+      "title": "New York",
+      "date": "2024-12-21",
+      "time": "19:22",
+      "description": "A day around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-173",
+          "src": "images/fulls/173.jpg",
+          "thumb": "images/thumbs/173.jpg",
+          "date": "2024-12-21",
+          "time": "19:22",
+          "lat": 40.761387,
+          "lng": -73.828138
+        },
+        {
+          "id": "seed-174",
+          "src": "images/fulls/174.jpg",
+          "thumb": "images/thumbs/174.jpg",
+          "date": "2024-12-21",
+          "time": "23:34",
+          "lat": 40.758853,
+          "lng": -73.985267
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.76012,
+        "lng": -73.906702
+      }
+    },
+    {
+      "id": "m-2024-12-24-new-york",
+      "title": "New York",
+      "date": "2024-12-24",
+      "time": "21:08",
+      "description": "A little moment in New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-175",
+          "src": "images/fulls/175.jpg",
+          "thumb": "images/thumbs/175.jpg",
+          "date": "2024-12-24",
+          "time": "21:08",
+          "lat": 40.724512,
+          "lng": -74.002944
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.724512,
+        "lng": -74.002944
+      }
+    },
+    {
+      "id": "m-2024-12-29-chicago",
+      "title": "Chicago",
+      "date": "2024-12-29",
+      "time": "15:36",
+      "description": "December 29–December 30, 2024: a few days around Chicago. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-176",
+          "src": "images/fulls/176.jpg",
+          "thumb": "images/thumbs/176.jpg",
+          "date": "2024-12-29",
+          "time": "15:36",
+          "lat": 41.791325,
+          "lng": -87.581512
+        },
+        {
+          "id": "seed-177",
+          "src": "images/fulls/177.jpg",
+          "thumb": "images/thumbs/177.jpg",
+          "date": "2024-12-30",
+          "time": "12:41",
+          "lat": 41.919217,
+          "lng": -87.633422
+        },
+        {
+          "id": "seed-178",
+          "src": "images/fulls/178.jpg",
+          "thumb": "images/thumbs/178.jpg",
+          "date": "2024-12-30",
+          "time": "21:38",
+          "lat": 41.898728,
+          "lng": -87.623353
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Chicago, Illinois",
+        "lat": 41.869757,
+        "lng": -87.612762
+      }
+    },
+    {
+      "id": "m-2025-01-02-ann-arbor",
+      "title": "Ann Arbor",
+      "date": "2025-01-02",
+      "time": "00:35",
+      "description": "A little moment in Ann Arbor. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-179",
+          "src": "images/fulls/179.jpg",
+          "thumb": "images/thumbs/179.jpg",
+          "date": "2025-01-02",
+          "time": "00:35",
+          "lat": 42.289817,
+          "lng": -83.7164
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Ann Arbor, Michigan",
+        "lat": 42.289817,
+        "lng": -83.7164
+      }
+    },
+    {
+      "id": "m-2025-01-02-detroit",
+      "title": "Detroit",
+      "date": "2025-01-02",
+      "time": "15:08",
+      "description": "A little moment in Detroit. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-180",
+          "src": "images/fulls/180.jpg",
+          "thumb": "images/thumbs/180.jpg",
+          "date": "2025-01-02",
+          "time": "15:08",
+          "lat": 42.330212,
+          "lng": -83.031364
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Detroit, Michigan",
+        "lat": 42.330212,
+        "lng": -83.031364
+      }
+    },
+    {
+      "id": "m-2025-01-05-san-juan",
+      "title": "San Juan",
+      "date": "2025-01-05",
+      "time": "18:23",
+      "description": "A day around San Juan. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-181",
+          "src": "images/fulls/181.jpg",
+          "thumb": "images/thumbs/181.jpg",
+          "date": "2025-01-05",
+          "time": "18:23",
+          "lat": 18.465772,
+          "lng": -66.116381
+        },
+        {
+          "id": "seed-182",
+          "src": "images/fulls/182.jpg",
+          "thumb": "images/thumbs/182.jpg",
+          "date": "2025-01-05",
+          "time": "19:20",
+          "lat": 18.465267,
+          "lng": -66.1195
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "San Juan, Puerto Rico",
+        "lat": 18.465519,
+        "lng": -66.11794
+      }
+    },
+    {
+      "id": "m-2025-01-05-las-croabas",
+      "title": "Las Croabas",
+      "date": "2025-01-05",
+      "time": "21:56",
+      "description": "A little moment in Las Croabas. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-183",
+          "src": "images/fulls/183.jpg",
+          "thumb": "images/thumbs/183.jpg",
+          "date": "2025-01-05",
+          "time": "21:56",
+          "lat": 18.35002,
+          "lng": -65.637883
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Las Croabas, Puerto Rico",
+        "lat": 18.35002,
+        "lng": -65.637883
+      }
+    },
+    {
+      "id": "m-2025-01-08-san-juan",
+      "title": "San Juan",
+      "date": "2025-01-08",
+      "time": "14:32",
+      "description": "A day around San Juan. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-184",
+          "src": "images/fulls/184.jpg",
+          "thumb": "images/thumbs/184.jpg",
+          "date": "2025-01-08",
+          "time": "14:32",
+          "lat": 18.456862,
+          "lng": -66.075753
+        },
+        {
+          "id": "seed-185",
+          "src": "images/fulls/185.jpg",
+          "thumb": "images/thumbs/185.jpg",
+          "date": "2025-01-08",
+          "time": "21:16",
+          "lat": 18.422758,
+          "lng": -66.063364
+        },
+        {
+          "id": "seed-186",
+          "src": "images/fulls/186.jpg",
+          "thumb": "images/thumbs/186.jpg",
+          "date": "2025-01-08",
+          "time": "23:58",
+          "lat": 18.45693,
+          "lng": -66.074878
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "San Juan, Puerto Rico",
+        "lat": 18.445517,
+        "lng": -66.071331
+      }
+    },
+    {
+      "id": "m-2025-01-09-philadelphia",
+      "title": "Philadelphia",
+      "date": "2025-01-09",
+      "time": "20:37",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-187",
+          "src": "images/fulls/187.jpg",
+          "thumb": "images/thumbs/187.jpg",
+          "date": "2025-01-09",
+          "time": "20:37",
+          "lat": 39.953797,
+          "lng": -75.157464
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.953797,
+        "lng": -75.157464
+      }
+    },
+    {
+      "id": "m-2025-02-20-houston",
+      "title": "Houston",
+      "date": "2025-02-20",
+      "time": "18:58",
+      "description": "February 20–February 21, 2025: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-188",
+          "src": "images/fulls/188.jpg",
+          "thumb": "images/thumbs/188.jpg",
+          "date": "2025-02-20",
+          "time": "18:58",
+          "lat": 29.755378,
+          "lng": -95.752113
+        },
+        {
+          "id": "seed-189",
+          "src": "images/fulls/189.jpg",
+          "thumb": "images/thumbs/189.jpg",
+          "date": "2025-02-21",
+          "time": "21:33",
+          "lat": 29.704837,
+          "lng": -95.568572
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.730107,
+        "lng": -95.660342
+      }
+    },
+    {
+      "id": "m-2025-03-19-bryn-mawr",
+      "title": "Bryn Mawr",
+      "date": "2025-03-19",
+      "time": "15:14",
+      "description": "March 19–March 20, 2025: a few days around Bryn Mawr. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-190",
+          "src": "images/fulls/190.jpg",
+          "thumb": "images/thumbs/190.jpg",
+          "date": "2025-03-19",
+          "time": "15:14",
+          "lat": 39.95347,
+          "lng": -75.187195
+        },
+        {
+          "id": "seed-191",
+          "src": "images/fulls/191.jpg",
+          "thumb": "images/thumbs/191.jpg",
+          "date": "2025-03-20",
+          "time": "17:30",
+          "lat": 40.097889,
+          "lng": -75.454497
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Bryn Mawr, Pennsylvania",
+        "lat": 40.025679,
+        "lng": -75.320846
+      }
+    },
+    {
+      "id": "m-2025-04-12-houston",
+      "title": "Houston",
+      "date": "2025-04-12",
+      "time": "20:06",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-192",
+          "src": "images/fulls/192.jpg",
+          "thumb": "images/thumbs/192.jpg",
+          "date": "2025-04-12",
+          "time": "20:06",
+          "lat": 29.702853,
+          "lng": -95.553008
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.702853,
+        "lng": -95.553008
+      }
+    },
+    {
+      "id": "m-2025-04-17-houston",
+      "title": "Houston",
+      "date": "2025-04-17",
+      "time": "16:42",
+      "description": "April 17–April 18, 2025: a few days around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-193",
+          "src": "images/fulls/193.jpg",
+          "thumb": "images/thumbs/193.jpg",
+          "date": "2025-04-17",
+          "time": "16:42",
+          "lat": 29.809867,
+          "lng": -95.457038
+        },
+        {
+          "id": "seed-194",
+          "src": "images/fulls/194.jpg",
+          "thumb": "images/thumbs/194.jpg",
+          "date": "2025-04-18",
+          "time": "16:19",
+          "lat": 29.720322,
+          "lng": -95.392617
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.765094,
+        "lng": -95.424827
+      }
+    },
+    {
+      "id": "m-2025-04-20-houston",
+      "title": "Houston",
+      "date": "2025-04-20",
+      "time": "20:54",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-195",
+          "src": "images/fulls/195.jpg",
+          "thumb": "images/thumbs/195.jpg",
+          "date": "2025-04-20",
+          "time": "20:54",
+          "lat": 29.705242,
+          "lng": -95.5438
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.705242,
+        "lng": -95.5438
+      }
+    },
+    {
+      "id": "m-2025-04-25-bellaire",
+      "title": "Bellaire",
+      "date": "2025-04-25",
+      "time": "10:39",
+      "description": "A day around Bellaire. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-196",
+          "src": "images/fulls/196.jpg",
+          "thumb": "images/thumbs/196.jpg",
+          "date": "2025-04-25",
+          "time": "10:39",
+          "lat": 29.718928,
+          "lng": -95.399925
+        },
+        {
+          "id": "seed-197",
+          "src": "images/fulls/197.jpg",
+          "thumb": "images/thumbs/197.jpg",
+          "date": "2025-04-25",
+          "time": "16:57",
+          "lat": 29.719083,
+          "lng": -95.399697
+        },
+        {
+          "id": "seed-198",
+          "src": "images/fulls/198.jpg",
+          "thumb": "images/thumbs/198.jpg",
+          "date": "2025-04-25",
+          "time": "19:00",
+          "lat": 29.737137,
+          "lng": -95.58383
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Bellaire, Texas",
+        "lat": 29.725049,
+        "lng": -95.461151
+      }
+    },
+    {
+      "id": "m-2025-05-09-philadelphia",
+      "title": "Philadelphia",
+      "date": "2025-05-09",
+      "time": "08:43",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-199",
+          "src": "images/fulls/199.jpg",
+          "thumb": "images/thumbs/199.jpg",
+          "date": "2025-05-09",
+          "time": "08:43",
+          "lat": 40.041825,
+          "lng": -75.054856
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 40.041825,
+        "lng": -75.054856
+      }
+    },
+    {
+      "id": "m-2025-05-11-philadelphia",
+      "title": "Philadelphia",
+      "date": "2025-05-11",
+      "time": "20:18",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-200",
+          "src": "images/fulls/200.jpg",
+          "thumb": "images/thumbs/200.jpg",
+          "date": "2025-05-11",
+          "time": "20:18",
+          "lat": 39.949137,
+          "lng": -75.162558
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.949137,
+        "lng": -75.162558
+      }
+    },
+    {
+      "id": "m-2025-05-14-new-york",
+      "title": "New York",
+      "date": "2025-05-14",
+      "time": "21:23",
+      "description": "May 14–May 15, 2025: a few days around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-201",
+          "src": "images/fulls/201.jpg",
+          "thumb": "images/thumbs/201.jpg",
+          "date": "2025-05-14",
+          "time": "21:23",
+          "lat": 40.753822,
+          "lng": -73.9908
+        },
+        {
+          "id": "seed-202",
+          "src": "images/fulls/202.jpg",
+          "thumb": "images/thumbs/202.jpg",
+          "date": "2025-05-15",
+          "time": "13:38",
+          "lat": 40.76035,
+          "lng": -73.983322
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.757086,
+        "lng": -73.987061
+      }
+    },
+    {
+      "id": "m-2025-05-25-seabrook",
+      "title": "Seabrook",
+      "date": "2025-05-25",
+      "time": "11:42",
+      "description": "A little moment in Seabrook. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-203",
+          "src": "images/fulls/203.jpg",
+          "thumb": "images/thumbs/203.jpg",
+          "date": "2025-05-25",
+          "time": "11:42",
+          "lat": 42.886392,
+          "lng": -70.814308
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Seabrook, New Hampshire",
+        "lat": 42.886392,
+        "lng": -70.814308
+      }
+    },
+    {
+      "id": "m-2025-07-04-san-francisco",
+      "title": "San Francisco",
+      "date": "2025-07-04",
+      "time": "10:05",
+      "description": "A day around San Francisco. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-204",
+          "src": "images/fulls/204.jpg",
+          "thumb": "images/thumbs/204.jpg",
+          "date": "2025-07-04",
+          "time": "10:05",
+          "lat": 37.80872,
+          "lng": -122.413688
+        },
+        {
+          "id": "seed-205",
+          "src": "images/fulls/205.jpg",
+          "thumb": "images/thumbs/205.jpg",
+          "date": "2025-07-04",
+          "time": "17:52",
+          "lat": 37.800308,
+          "lng": -122.375703
+        },
+        {
+          "id": "seed-206",
+          "src": "images/fulls/206.jpg",
+          "thumb": "images/thumbs/206.jpg",
+          "date": "2025-07-04",
+          "time": "17:53",
+          "lat": 37.800117,
+          "lng": -122.375908
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "San Francisco, California",
+        "lat": 37.803048,
+        "lng": -122.388433
+      }
+    },
+    {
+      "id": "m-2025-07-19-las-vegas",
+      "title": "Las Vegas",
+      "date": "2025-07-19",
+      "time": "10:15",
+      "description": "A day around Las Vegas. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-207",
+          "src": "images/fulls/207.jpg",
+          "thumb": "images/thumbs/207.jpg",
+          "date": "2025-07-19",
+          "time": "10:15",
+          "lat": 36.124511,
+          "lng": -115.164794
+        },
+        {
+          "id": "seed-208",
+          "src": "images/fulls/208.jpg",
+          "thumb": "images/thumbs/208.jpg",
+          "date": "2025-07-19",
+          "time": "12:41",
+          "lat": 36.124128,
+          "lng": -115.164536
+        },
+        {
+          "id": "seed-209",
+          "src": "images/fulls/209.jpg",
+          "thumb": "images/thumbs/209.jpg",
+          "date": "2025-07-19",
+          "time": "14:49",
+          "lat": 36.109069,
+          "lng": -115.150964
+        },
+        {
+          "id": "seed-210",
+          "src": "images/fulls/210.jpg",
+          "thumb": "images/thumbs/210.jpg",
+          "date": "2025-07-19",
+          "time": "16:50",
+          "lat": 36.170517,
+          "lng": -115.143639
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Las Vegas, Nevada",
+        "lat": 36.132056,
+        "lng": -115.155983
+      }
+    },
+    {
+      "id": "m-2025-08-02-new-york",
+      "title": "New York",
+      "date": "2025-08-02",
+      "time": "19:11",
+      "description": "A little moment in New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-211",
+          "src": "images/fulls/211.jpg",
+          "thumb": "images/thumbs/211.jpg",
+          "date": "2025-08-02",
+          "time": "19:11",
+          "lat": 40.632708,
+          "lng": -74.011169
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.632708,
+        "lng": -74.011169
+      }
+    },
+    {
+      "id": "m-2025-08-09-new-york",
+      "title": "New York",
+      "date": "2025-08-09",
+      "time": "16:23",
+      "description": "A little moment in New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-212",
+          "src": "images/fulls/212.jpg",
+          "thumb": "images/thumbs/212.jpg",
+          "date": "2025-08-09",
+          "time": "16:23",
+          "lat": 40.742503,
+          "lng": -73.982247
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.742503,
+        "lng": -73.982247
+      }
+    },
+    {
+      "id": "m-2025-08-14-philadelphia",
+      "title": "Philadelphia",
+      "date": "2025-08-14",
+      "time": "19:32",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-213",
+          "src": "images/fulls/213.jpg",
+          "thumb": "images/thumbs/213.jpg",
+          "date": "2025-08-14",
+          "time": "19:32",
+          "lat": 39.953547,
+          "lng": -75.155906
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 39.953547,
+        "lng": -75.155906
+      }
+    },
+    {
+      "id": "m-2025-08-17-new-york",
+      "title": "New York",
+      "date": "2025-08-17",
+      "time": "18:23",
+      "description": "A day around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-214",
+          "src": "images/fulls/214.jpg",
+          "thumb": "images/thumbs/214.jpg",
+          "date": "2025-08-17",
+          "time": "18:23",
+          "lat": 40.748695,
+          "lng": -73.844078
+        },
+        {
+          "id": "seed-215",
+          "src": "images/fulls/215.jpg",
+          "thumb": "images/thumbs/215.jpg",
+          "date": "2025-08-17",
+          "time": "21:42",
+          "lat": 40.747913,
+          "lng": -73.987428
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.748304,
+        "lng": -73.915753
+      }
+    },
+    {
+      "id": "m-2025-08-19-university-of-virginia",
+      "title": "University of Virginia",
+      "date": "2025-08-19",
+      "time": "13:46",
+      "description": "A day around University of Virginia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-216",
+          "src": "images/fulls/216.jpg",
+          "thumb": "images/thumbs/216.jpg",
+          "date": "2025-08-19",
+          "time": "13:46",
+          "lat": 38.038967,
+          "lng": -78.503958
+        },
+        {
+          "id": "seed-217",
+          "src": "images/fulls/217.jpg",
+          "thumb": "images/thumbs/217.jpg",
+          "date": "2025-08-19",
+          "time": "15:02",
+          "lat": 38.038806,
+          "lng": -78.503975
+        },
+        {
+          "id": "seed-218",
+          "src": "images/fulls/218.jpg",
+          "thumb": "images/thumbs/218.jpg",
+          "date": "2025-08-19",
+          "time": "16:13",
+          "lat": 38.034561,
+          "lng": -78.503975
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "University of Virginia",
+        "lat": 38.037444,
+        "lng": -78.503969
+      }
+    },
+    {
+      "id": "m-2025-08-21-new-york",
+      "title": "New York",
+      "date": "2025-08-21",
+      "time": "18:44",
+      "description": "A little moment in New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-219",
+          "src": "images/fulls/219.jpg",
+          "thumb": "images/thumbs/219.jpg",
+          "date": "2025-08-21",
+          "time": "18:44",
+          "lat": 40.748347,
+          "lng": -73.847297
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.748347,
+        "lng": -73.847297
+      }
+    },
+    {
+      "id": "m-2025-10-26-philadelphia",
+      "title": "Philadelphia",
+      "date": "2025-10-26",
+      "time": "20:54",
+      "description": "A little moment in Philadelphia. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-220",
+          "src": "images/fulls/220.jpg",
+          "thumb": "images/thumbs/220.jpg",
+          "date": "2025-10-26",
+          "time": "20:54",
+          "lat": 40.0079,
+          "lng": -75.208092
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Philadelphia, Pennsylvania",
+        "lat": 40.0079,
+        "lng": -75.208092
+      }
+    },
+    {
+      "id": "m-2025-11-03-houston",
+      "title": "Houston",
+      "date": "2025-11-03",
+      "time": "18:08",
+      "description": "A day around Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-221",
+          "src": "images/fulls/221.jpg",
+          "thumb": "images/thumbs/221.jpg",
+          "date": "2025-11-03",
+          "time": "18:08",
+          "lat": 29.750792,
+          "lng": -95.36203
+        },
+        {
+          "id": "seed-222",
+          "src": "images/fulls/222.jpg",
+          "thumb": "images/thumbs/222.jpg",
+          "date": "2025-11-03",
+          "time": "19:52",
+          "lat": 29.750805,
+          "lng": -95.361947
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.750798,
+        "lng": -95.361988
+      }
+    },
+    {
+      "id": "m-2025-11-07-houston",
+      "title": "Houston",
+      "date": "2025-11-07",
+      "time": "23:14",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-223",
+          "src": "images/fulls/223.jpg",
+          "thumb": "images/thumbs/223.jpg",
+          "date": "2025-11-07",
+          "time": "23:14",
+          "lat": 29.686803,
+          "lng": -95.3974
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.686803,
+        "lng": -95.3974
+      }
+    },
+    {
+      "id": "m-2025-11-30-new-york",
+      "title": "New York",
+      "date": "2025-11-30",
+      "time": "20:13",
+      "description": "A day around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-224",
+          "src": "images/fulls/224.jpg",
+          "thumb": "images/thumbs/224.jpg",
+          "date": "2025-11-30",
+          "time": "20:13",
+          "lat": 40.682878,
+          "lng": -73.975753
+        },
+        {
+          "id": "seed-225",
+          "src": "images/fulls/225.jpg",
+          "thumb": "images/thumbs/225.jpg",
+          "date": "2025-11-30",
+          "time": "20:44",
+          "lat": 40.682987,
+          "lng": -73.97593
+        },
+        {
+          "id": "seed-226",
+          "src": "images/fulls/226.jpg",
+          "thumb": "images/thumbs/226.jpg",
+          "date": "2025-11-30",
+          "time": "22:07",
+          "lat": 40.683053,
+          "lng": -73.975992
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.682973,
+        "lng": -73.975892
+      }
+    },
+    {
+      "id": "m-2025-12-24-houston",
+      "title": "Houston",
+      "date": "2025-12-24",
+      "time": "23:34",
+      "description": "A little moment in Houston. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-227",
+          "src": "images/fulls/227.jpg",
+          "thumb": "images/thumbs/227.jpg",
+          "date": "2025-12-24",
+          "time": "23:34",
+          "lat": 29.704537,
+          "lng": -95.554542
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Houston, Texas",
+        "lat": 29.704537,
+        "lng": -95.554542
+      }
+    },
+    {
+      "id": "m-2025-12-27-pecan-grove",
+      "title": "Pecan Grove",
+      "date": "2025-12-27",
+      "time": "03:07",
+      "description": "A little moment in Pecan Grove. (Write our story here!)",
+      "tags": [
+        "date"
+      ],
+      "photos": [
+        {
+          "id": "seed-228",
+          "src": "images/fulls/228.jpg",
+          "thumb": "images/thumbs/228.jpg",
+          "date": "2025-12-27",
+          "time": "03:07",
+          "lat": 29.623133,
+          "lng": -95.739617
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Pecan Grove, Texas",
+        "lat": 29.623133,
+        "lng": -95.739617
+      }
+    },
+    {
+      "id": "m-2026-08-01-jersey-city",
+      "title": "Jersey City",
+      "date": "2026-08-01",
+      "time": "10:27",
+      "description": "A little moment in Jersey City. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-229",
+          "src": "images/fulls/229.jpg",
+          "thumb": "images/thumbs/229.jpg",
+          "date": "2026-08-01",
+          "time": "10:27",
+          "lat": 40.733558,
+          "lng": -74.05793
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Jersey City, New Jersey",
+        "lat": 40.733558,
+        "lng": -74.05793
+      }
+    },
+    {
+      "id": "m-2026-08-01-lakewood",
+      "title": "Lakewood",
+      "date": "2026-08-01",
+      "time": "14:30",
+      "description": "A little moment in Lakewood. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-230",
+          "src": "images/fulls/230.jpg",
+          "thumb": "images/thumbs/230.jpg",
+          "date": "2026-08-01",
+          "time": "14:30",
+          "lat": 40.074844,
+          "lng": -74.187522
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Lakewood, New Jersey",
+        "lat": 40.074844,
+        "lng": -74.187522
+      }
+    },
+    {
+      "id": "m-2026-08-02-new-york",
+      "title": "New York",
+      "date": "2026-08-02",
+      "time": "14:01",
+      "description": "A day around New York. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-231",
+          "src": "images/fulls/231.jpg",
+          "thumb": "images/thumbs/231.jpg",
+          "date": "2026-08-02",
+          "time": "14:01",
+          "lat": 40.765208,
+          "lng": -73.975472
+        },
+        {
+          "id": "seed-232",
+          "src": "images/fulls/232.jpg",
+          "thumb": "images/thumbs/232.jpg",
+          "date": "2026-08-02",
+          "time": "15:51",
+          "lat": 40.7615,
+          "lng": -73.97663
+        },
+        {
+          "id": "seed-233",
+          "src": "images/fulls/233.jpg",
+          "thumb": "images/thumbs/233.jpg",
+          "date": "2026-08-02",
+          "time": "17:22",
+          "lat": 40.766997,
+          "lng": -73.965438
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "New York",
+        "lat": 40.764568,
+        "lng": -73.972513
+      }
+    },
+    {
+      "id": "m-2026-08-06-albany",
+      "title": "Albany",
+      "date": "2026-08-06",
+      "time": "20:05",
+      "description": "A little moment in Albany. (Write our story here!)",
+      "tags": [
+        "travel"
+      ],
+      "photos": [
+        {
+          "id": "seed-234",
+          "src": "images/fulls/234.jpg",
+          "thumb": "images/thumbs/234.jpg",
+          "date": "2026-08-06",
+          "time": "20:05",
+          "lat": 42.662322,
+          "lng": -73.769592
+        }
+      ],
+      "updatedAt": "2026-08-07T18:16:57.133591Z",
+      "place": {
+        "name": "Albany, New York",
+        "lat": 42.662322,
+        "lng": -73.769592
+      }
     }
   ]
 }

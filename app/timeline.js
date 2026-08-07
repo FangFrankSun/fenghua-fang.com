@@ -5,6 +5,9 @@
 import { escapeHtml, formatDate, getTag, resolvePhotoURL } from './store.js';
 
 const SVG_PIN = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+/* small display sizes load the thumb; the lightbox loads the full photo */
+const thumbURL = (p) => resolvePhotoURL(p.thumb ? { src: p.thumb } : p);
 const SVG_PENCIL = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
 
 let revealObserver = null;
@@ -55,14 +58,14 @@ function buildCard(mem, { editMode, onEdit, onShowOnMap, onOpenPhoto }) {
 		const img = document.createElement('img');
 		img.alt = mem.title || '';
 		img.loading = 'lazy';
-		resolvePhotoURL(photos[0]).then((u) => { if (u) img.src = u; });
+		thumbURL(photos[0]).then((u) => { if (u) img.src = u; });
 		img.addEventListener('click', () => onOpenPhoto(mem, idx));
 		media.appendChild(img);
 
 		if (photos.length > 1) {
 			const show = (next) => {
 				idx = (next + photos.length) % photos.length;
-				resolvePhotoURL(photos[idx]).then((u) => { if (u) img.src = u; });
+				thumbURL(photos[idx]).then((u) => { if (u) img.src = u; });
 				count.textContent = `${idx + 1}/${photos.length}`;
 			};
 			const prev = document.createElement('button');
@@ -170,7 +173,7 @@ export function renderGallery(container, memories, { onOpenPhoto }) {
 		const img = document.createElement('img');
 		img.alt = mem.title || '';
 		img.loading = 'lazy';
-		resolvePhotoURL(photo).then((u) => { if (u) img.src = u; });
+		thumbURL(photo).then((u) => { if (u) img.src = u; });
 		const cap = document.createElement('figcaption');
 		cap.className = 'g-cap';
 		cap.innerHTML = `<small>${escapeHtml(formatDate(mem.date))}</small>${escapeHtml(mem.title || '')}`;
@@ -208,7 +211,9 @@ export async function openLightboxForMemory(mem, startIndex = 0) {
 	const items = [];
 	for (const p of mem.photos || []) {
 		const url = await resolvePhotoURL(p);
-		if (url) items.push({ url, caption: `${formatDate(mem.date)} — ${mem.title || ''}` });
+		if (!url) continue;
+		const when = formatDate(p.date || mem.date) + (p.time ? ` · ${p.time}` : '');
+		items.push({ url, caption: `${when} — ${mem.title || ''}` });
 	}
 	if (!items.length) return;
 	lb.items = items;

@@ -89,7 +89,8 @@ function popupContent(mem, { editMode, onEdit, onOpenPhoto, onGoTimeline }) {
 		const img = document.createElement('img');
 		img.className = 'pop-img';
 		img.alt = mem.title || '';
-		resolvePhotoURL(mem.photos[0]).then((u) => { if (u) img.src = u; });
+		const first = mem.photos[0];
+		resolvePhotoURL(first.thumb ? { src: first.thumb } : first).then((u) => { if (u) img.src = u; });
 		img.addEventListener('click', () => onOpenPhoto(mem, 0));
 		el.appendChild(img);
 	}
