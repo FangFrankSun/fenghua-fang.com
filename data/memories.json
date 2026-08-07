@@ -1026,26 +1026,6 @@
       "updatedAt": "2026-08-07T18:16:57.133591Z"
     },
     {
-      "id": "m-2022-02-21-somewhere-together",
-      "title": "Somewhere Together",
-      "date": "2022-02-21",
-      "time": "02:02",
-      "description": "A little moment in Somewhere Together. (Write our story here!)",
-      "tags": [
-        "date"
-      ],
-      "photos": [
-        {
-          "id": "seed-48",
-          "src": "images/fulls/48.jpg",
-          "thumb": "images/thumbs/48.jpg",
-          "date": "2022-02-21",
-          "time": "02:02"
-        }
-      ],
-      "updatedAt": "2026-08-07T18:16:57.133591Z"
-    },
-    {
       "id": "m-2022-03-09-new-york",
       "title": "New York",
       "date": "2022-03-09",
@@ -4008,15 +3988,6 @@
         "date"
       ],
       "photos": [
-        {
-          "id": "seed-196",
-          "src": "images/fulls/196.jpg",
-          "thumb": "images/thumbs/196.jpg",
-          "date": "2025-04-25",
-          "time": "10:39",
-          "lat": 29.718928,
-          "lng": -95.399925
-        },
         {
           "id": "seed-197",
           "src": "images/fulls/197.jpg",
