@@ -1065,10 +1065,10 @@
 			confetti.pop(r.left + r.width / 2, r.top + r.height / 2, count);
 		}
 
-		/* ================= sound: a bouncy little Happy Birthday ================= */
+		/* ================= sound: a soft music-box Happy Birthday ================= */
 
 		const sound = (() => {
-			let ac = null, out = null, noise = null, bus = null;
+			let ac = null, out = null, bus = null;
 			let timer = 0, endTimer = 0, onEnd = () => {};
 			const hz = (m) => 440 * Math.pow(2, (m - 69) / 12);
 
@@ -1082,11 +1082,8 @@
 					const comp = ac.createDynamicsCompressor();
 					comp.connect(ac.destination);
 					out = ac.createGain();
-					out.gain.value = 0.9;
+					out.gain.value = 0.35;
 					out.connect(comp);
-					noise = ac.createBuffer(1, ac.sampleRate, ac.sampleRate);
-					const d = noise.getChannelData(0);
-					for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
 				}
 				if (ac.state === 'suspended') ac.resume();
 				return ac;
@@ -1098,36 +1095,36 @@
 				const g = ac.createGain();
 				const f = ac.createBiquadFilter();
 				f.type = 'lowpass';
-				f.frequency.value = 3000;
+				f.frequency.value = 1800;
 				f.connect(g);
 				g.connect(dest);
 				g.gain.setValueAtTime(0.0001, t);
-				g.gain.exponentialRampToValueAtTime(0.16, t + 0.012);
-				g.gain.exponentialRampToValueAtTime(0.1, t + 0.1);
-				g.gain.setValueAtTime(0.1, t + len);
-				g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.08);
+				g.gain.exponentialRampToValueAtTime(0.12, t + 0.02);
+				g.gain.exponentialRampToValueAtTime(0.05, t + 0.35);
+				g.gain.setValueAtTime(0.05, t + Math.max(len, 0.36));
+				g.gain.exponentialRampToValueAtTime(0.0001, t + Math.max(len, 0.36) + 0.35);
 				const o1 = ac.createOscillator();
-				o1.type = 'square';
+				o1.type = 'sine';
 				o1.frequency.value = hz(m);
 				o1.connect(f);
 				const o2 = ac.createOscillator();
 				const g2 = ac.createGain();
-				o2.type = 'triangle';
+				o2.type = 'sine';
 				o2.frequency.value = hz(m + 12);
-				g2.gain.value = 0.35;
+				g2.gain.value = 0.18;
 				o2.connect(g2);
 				g2.connect(f);
 				if (dur > 0.5) {
 					const lfo = ac.createOscillator();
 					const depth = ac.createGain();
 					lfo.frequency.value = 6;
-					depth.gain.value = hz(m) * 0.012;
+					depth.gain.value = hz(m) * 0.006;
 					lfo.connect(depth);
 					depth.connect(o1.frequency);
 					lfo.start(t + 0.15);
-					lfo.stop(t + len + 0.1);
+					lfo.stop(t + Math.max(len, 0.36) + 0.4);
 				}
-				[o1, o2].forEach((o) => { o.start(t); o.stop(t + len + 0.1); });
+				[o1, o2].forEach((o) => { o.start(t); o.stop(t + Math.max(len, 0.36) + 0.4); });
 			}
 			function pluck(dest, notes, t, vol, dec, type) {
 				const g = ac.createGain();
@@ -1137,7 +1134,7 @@
 				g.gain.exponentialRampToValueAtTime(0.0001, t + dec);
 				notes.forEach((m) => {
 					const o = ac.createOscillator();
-					o.type = type || 'triangle';
+					o.type = type || 'sine';
 					o.frequency.value = hz(m);
 					o.connect(g);
 					o.start(t);
@@ -1145,54 +1142,9 @@
 				});
 			}
 			function bass(dest, m, t) {
-				pluck(dest, [m], t, 0.3, 0.32, 'triangle');
-				pluck(dest, [m + 12], t, 0.05, 0.2, 'square');
+				pluck(dest, [m + 12], t, 0.08, 0.5);
 			}
-			function kick(dest, t) {
-				const o = ac.createOscillator();
-				const g = ac.createGain();
-				o.frequency.setValueAtTime(160, t);
-				o.frequency.exponentialRampToValueAtTime(45, t + 0.12);
-				g.gain.setValueAtTime(0.5, t);
-				g.gain.exponentialRampToValueAtTime(0.0001, t + 0.2);
-				o.connect(g);
-				g.connect(dest);
-				o.start(t);
-				o.stop(t + 0.22);
-			}
-			function hiss(dest, t, type, freq, vol, dec) {
-				const src = ac.createBufferSource();
-				const f = ac.createBiquadFilter();
-				const g = ac.createGain();
-				src.buffer = noise;
-				f.type = type;
-				f.frequency.value = freq;
-				g.gain.setValueAtTime(vol, t);
-				g.gain.exponentialRampToValueAtTime(0.0001, t + dec);
-				src.connect(f);
-				f.connect(g);
-				g.connect(dest);
-				src.start(t);
-				src.stop(t + dec + 0.02);
-			}
-			const hat = (d, t) => hiss(d, t, 'highpass', 7000, 0.07, 0.05);
-			const clap = (d, t) => hiss(d, t, 'bandpass', 1600, 0.16, 0.11);
-			const crash = (d, t) => hiss(d, t, 'highpass', 4500, 0.12, 1.2);
-			function glide(dest, t, from, to, dur, vol) {
-				const o = ac.createOscillator();
-				const g = ac.createGain();
-				o.type = 'sine';
-				o.frequency.setValueAtTime(from, t);
-				o.frequency.exponentialRampToValueAtTime(to, t + dur);
-				g.gain.setValueAtTime(vol, t);
-				g.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.05);
-				o.connect(g);
-				g.connect(dest);
-				o.start(t);
-				o.stop(t + dur + 0.08);
-			}
-
-			/* the arrangement: ta-da intro, oom-pah-pah verse in C, key change to D, run + boing */
+			/* the arrangement: little intro, a gentle waltz in C, lift to D, soft rolled ending */
 			const MELODY = [
 				[[69, 0, 1], [67, 1, 1], [72, 2, 1]],
 				[[71, 0, 2], [67, 2, 0.75], [67, 2.75, 0.25]],
@@ -1213,8 +1165,8 @@
 				const ev = [];
 				const at = (beat, fn) => ev.push([beat, fn]);
 				// intro: ta-da-da-DAA! then the "Hap-py" pickup
-				[[72, 0], [76, 0.33], [79, 0.67]].forEach(([m, b]) => at(b, (d, t) => pluck(d, [m], t, 0.1, 0.2, 'square')));
-				at(1, (d, t) => { pluck(d, [72, 76, 79, 84], t, 0.07, 0.6); kick(d, t); crash(d, t); });
+				[[72, 0], [76, 0.33], [79, 0.67]].forEach(([m, b]) => at(b, (d, t) => pluck(d, [m + 12], t, 0.05, 0.5)));
+				at(1, (d, t) => pluck(d, [72, 76, 79, 84], t, 0.03, 1.2));
 				at(2, (d, t, beat) => lead(d, 67, t, 0.75 * beat));
 				at(2.75, (d, t, beat) => lead(d, 67, t, 0.25 * beat));
 				let bar = 3;
@@ -1224,28 +1176,22 @@
 						MELODY[i].forEach(([m, s, l]) => at(b0 + s, (d, t, beat) => lead(d, m + key, t, l * beat)));
 						const [c1, c2, c3] = BARS[i];
 						const last = i === 7;
-						at(b0, (d, t) => { bass(d, CH[c1].b + key, t); kick(d, t); });
-						at(b0 + 1, (d, t) => { pluck(d, CH[c2].s.map((n) => n + key), t, 0.06, 0.14); hat(d, t); });
+						at(b0, (d, t) => bass(d, CH[c1].b + key, t));
+						at(b0 + 1, (d, t) => pluck(d, CH[c2].s.map((n) => n + 12 + key), t, 0.018, 0.4));
 						if (last && verse === 0) {
-							// pivot on A7 into the new key, with a little clap fill and the pickup in D
-							at(b0 + 2, (d, t) => { pluck(d, CH.A7.s, t, 0.07, 0.2); clap(d, t); });
-							at(b0 + 2.5, (d, t) => clap(d, t));
+							// gentle pivot on A7 into the new key, with the pickup in D
+							at(b0 + 2, (d, t) => pluck(d, CH.A7.s.map((n) => n + 12), t, 0.02, 0.5));
 							at(b0 + 2, (d, t, beat) => lead(d, 69, t, 0.75 * beat));
-							at(b0 + 2.75, (d, t, beat) => { lead(d, 69, t, 0.25 * beat); clap(d, t); });
-						} else if (last) {
-							at(b0 + 2, (d, t) => { clap(d, t); hat(d, t); });
-							at(b0 + 2.5, (d, t) => clap(d, t));
-							at(b0 + 2.75, (d, t) => clap(d, t));
-						} else {
-							at(b0 + 2, (d, t) => { pluck(d, CH[c3].s.map((n) => n + key), t, 0.06, 0.14); clap(d, t); });
+							at(b0 + 2.75, (d, t, beat) => lead(d, 69, t, 0.25 * beat));
+						} else if (!last) {
+							at(b0 + 2, (d, t) => pluck(d, CH[c3].s.map((n) => n + 12 + key), t, 0.018, 0.4));
 						}
 					}
 				});
-				// ending: quick run up, big D chord, crash, then a silly boing
-				[74, 78, 81, 86].forEach((m, k) => at(bar + k * 0.25, (d, t) => pluck(d, [m], t, 0.1, 0.18, 'square')));
-				at(bar + 1, (d, t) => { pluck(d, [62, 66, 69, 74, 78], t, 0.08, 1.4); bass(d, 38, t); kick(d, t); crash(d, t); });
-				at(bar + 1, (d, t, beat) => lead(d, 86, t, 2 * beat));
-				at(bar + 3.4, (d, t) => glide(d, t, 900, 220, 0.35, 0.16));
+				// ending: a soft rolled chord and a little twinkle on top
+				[74, 78, 81, 86].forEach((m, k) => at(bar + k * 0.33, (d, t) => pluck(d, [m], t, 0.04, 1.4)));
+				at(bar + 1.5, (d, t) => pluck(d, [62, 66, 69, 74], t, 0.025, 2.2));
+				[93, 98].forEach((m, k) => at(bar + 2.5 + k * 0.4, (d, t) => pluck(d, [m], t, 0.02, 0.9)));
 				return ev.sort((a, b) => a[0] - b[0]);
 			}
 
@@ -1259,7 +1205,7 @@
 				},
 				chime() {
 					if (!ctx()) return;
-					[72, 76, 79, 84].forEach((m, i) => pluck(out, [m], ac.currentTime + 0.05 + i * 0.09, 0.09, 0.5, 'sine'));
+					[84, 88, 91, 96].forEach((m, i) => pluck(out, [m], ac.currentTime + 0.05 + i * 0.09, 0.035, 0.6));
 				},
 				play(done) {
 					if (!ctx()) return false;
@@ -1268,7 +1214,7 @@
 					const b = ac.createGain();
 					b.connect(out);
 					bus = b;
-					const beat = 0.31;
+					const beat = 0.4;
 					const ev = arrangement();
 					const t0 = ac.currentTime + 0.12;
 					let i = 0;
