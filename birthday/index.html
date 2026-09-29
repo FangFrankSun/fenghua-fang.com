@@ -4,9 +4,9 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<title>生日快乐 ♥</title>
-	<meta name="description" content="今晚 7 点（美东时间）准时开启" />
+	<meta name="description" content="今晚 8 点（美东时间）准时开启" />
 	<meta property="og:title" content="嘘——这里藏着一份生日惊喜" />
-	<meta property="og:description" content="今晚 7 点（美东时间）准时开启" />
+	<meta property="og:description" content="今晚 8 点（美东时间）准时开启" />
 	<meta name="robots" content="noindex" />
 	<meta name="theme-color" content="#fff4ea" />
 	<meta name="format-detection" content="telephone=no" />
@@ -559,7 +559,7 @@
 					<span class="cd-sep">:</span>
 					<div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-cap">秒</span></div>
 				</div>
-				<p class="cd-foot" id="cd-foot">今晚 7 点（美东时间）准时开启</p>
+				<p class="cd-foot" id="cd-foot">今晚 8 点（美东时间）准时开启</p>
 				<button class="btn-big" id="btn-ready" hidden>时间到啦！拆开惊喜</button>
 			</div>
 		</section>
@@ -567,7 +567,7 @@
 		<!-- ============ 7pm, first visit: the doorbell ============ -->
 		<section id="stage-door" class="stage" hidden>
 			<div class="head">
-				<span class="eyebrow">叮咚～ 7 点到啦</span>
+				<span class="eyebrow">叮咚～ 8 点到啦</span>
 				<h1 class="title">你的生日惊喜<br />送到啦！</h1>
 			</div>
 			<div class="door-scene">
@@ -689,8 +689,8 @@
 	(() => {
 		'use strict';
 
-		// 2026-09-29 19:00 America/New_York (EDT = UTC-4)
-		const UNLOCK = Date.UTC(2026, 8, 29, 23, 0, 0);
+		// 2026-09-29 20:00 America/New_York (EDT = UTC-4)
+		const UNLOCK = Date.UTC(2026, 8, 30, 0, 0, 0);
 
 		// Preview helpers: ?now=2026-09-29T23:00:05Z pretends it's that moment; ?reset forgets progress.
 		const qs = new URLSearchParams(location.search);
@@ -1263,10 +1263,10 @@
 
 		const OPENING = ['嘿嘿，被我抓到了吧～', '礼物还锁着呢，现在不可以偷看哦'];
 		const FIRST_CHIP = '什么时候可以看？';
-		const FIRST_REPLY = '好吧好吧，那我允许你7点打开';
+		const FIRST_REPLY = '好吧好吧，那我允许你8点打开';
 		const MORE_CHIPS = ['能不能提前一点点？', '给点提示嘛', '哼'];
 		const RANDOM = ['倒计时已经在走啦，不许催～', '再等一下下嘛', '嘘——惊喜要留到最后', '我也很着急的！但是要忍住', '猫猫说：喵～（意思是再等等）'];
-		const GIFT_TEASE = ['锁住啦！', '不可以偷看！', '7 点才能开哦', '摇也没用～', '里面是什么呢～', '嘿，放下它！'];
+		const GIFT_TEASE = ['锁住啦！', '不可以偷看！', '8 点才能开哦', '摇也没用～', '里面是什么呢～', '嘿，放下它！'];
 
 		let unlocked = false, busy = false, tickTimer = 0, lastSec = -1, giftTaps = 0, toastTimer = 0;
 		const chatLog = $('#chat-log');
@@ -1318,10 +1318,10 @@
 		}
 
 		function replyTo(t) {
-			if (/爱|想你|想我|miss|love/i.test(t)) return '我也超级想你的 ♥ 但还是要 7 点才能开哦';
+			if (/爱|想你|想我|miss|love/i.test(t)) return '我也超级想你的 ♥ 但还是要 8 点才能开哦';
 			if (/提示|hint|是什么|啥/i.test(t)) return '提示：一共有两份哦，别的……不能再说了';
 			if (/提前|现在|马上|立刻|早点|now/i.test(t)) return '不行不行，一秒都不能提前～';
-			if (/几点|什么时候|多久|when/i.test(t)) return '晚上 7 点呀（美东时间），看倒计时～';
+			if (/几点|什么时候|多久|when/i.test(t)) return '晚上 8 点呀（美东时间），看倒计时～';
 			if (/哼|生气|坏|讨厌/.test(t)) return '不许哼～ 很快的，乖乖等一下嘛';
 			return pick(RANDOM);
 		}
@@ -1344,7 +1344,7 @@
 					setChips(MORE_CHIPS);
 				}
 			} else {
-				await bearSays(unlocked ? '7 点已经到啦！快去拆！' : replyTo(text), 800);
+				await bearSays(unlocked ? '8 点已经到啦！快去拆！' : replyTo(text), 800);
 			}
 			busy = false;
 		}
@@ -1398,7 +1398,7 @@
 			chips.innerHTML = '';
 			composer.hidden = true;
 			confetti.rain(70);
-			bearSays('7 点到啦！！快去拆礼物！', 500).then(() => $('#btn-ready').scrollIntoView({ block: 'center', behavior: 'smooth' }));
+			bearSays('8 点到啦！！快去拆礼物！', 500).then(() => $('#btn-ready').scrollIntoView({ block: 'center', behavior: 'smooth' }));
 		}
 
 		async function enterLock() {
