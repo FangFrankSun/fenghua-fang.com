@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex" />
+	<title>test</title>
+	<script>
+		// Temporary preview: start /birthday 10s before 7pm ET with the chat already done,
+		// so the countdown is on screen and hits zero right away. Delete this folder afterwards.
+		try {
+			const K = 'ff-bday-2026:';
+			Object.keys(localStorage).filter((k) => k.startsWith(K)).forEach((k) => localStorage.removeItem(k));
+			localStorage.setItem(K + 'asked', '1');
+			localStorage.setItem(K + 'asked-text', '什么时候可以看？');
+		} catch (e) {}
+		location.replace('/birthday/?now=2026-09-29T22:59:50Z');
+	</script>
+</head>
+<body></body>
+</html>
