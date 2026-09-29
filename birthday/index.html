@@ -1065,77 +1065,231 @@
 			confetti.pop(r.left + r.width / 2, r.top + r.height / 2, count);
 		}
 
-		/* ================= sound (tiny music box) ================= */
+		/* ================= sound: a bouncy little Happy Birthday ================= */
 
 		const sound = (() => {
-			let ac = null, bus = null, endTimer = 0;
-			const N = { G4: 392, A4: 440, B4: 493.88, C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99, C6: 1046.5 };
-			const SONG = [
-				['G4', 0.75], ['G4', 0.25], ['A4', 1], ['G4', 1], ['C5', 1], ['B4', 2],
-				['G4', 0.75], ['G4', 0.25], ['A4', 1], ['G4', 1], ['D5', 1], ['C5', 2],
-				['G4', 0.75], ['G4', 0.25], ['G5', 1], ['E5', 1], ['C5', 1], ['B4', 1], ['A4', 2],
-				['F5', 0.75], ['F5', 0.25], ['E5', 1], ['C5', 1], ['D5', 1], ['C5', 3],
-			];
-			let onEnd = () => {};
+			let ac = null, out = null, noise = null, bus = null;
+			let timer = 0, endTimer = 0, onEnd = () => {};
+			const hz = (m) => 440 * Math.pow(2, (m - 69) / 12);
 
 			function ctx() {
 				if (!ac) {
 					const AC = window.AudioContext || window.webkitAudioContext;
 					if (!AC) return null;
+					// iOS: play like media, so the ring/silent switch doesn't mute it
+					try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
 					ac = new AC();
+					const comp = ac.createDynamicsCompressor();
+					comp.connect(ac.destination);
+					out = ac.createGain();
+					out.gain.value = 0.9;
+					out.connect(comp);
+					noise = ac.createBuffer(1, ac.sampleRate, ac.sampleRate);
+					const d = noise.getChannelData(0);
+					for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
 				}
 				if (ac.state === 'suspended') ac.resume();
 				return ac;
 			}
-			function tone(dest, f, t, dur, vol) {
-				const tail = Math.max(dur, 0.3) + 0.6;
+
+			/* instruments — each takes (destination, startTime, ...) */
+			function lead(dest, m, t, dur) {
+				const len = Math.max(0.12, dur * 0.9);
 				const g = ac.createGain();
-				g.gain.setValueAtTime(0.0001, t);
-				g.gain.exponentialRampToValueAtTime(vol, t + 0.015);
-				g.gain.exponentialRampToValueAtTime(0.0001, t + tail);
+				const f = ac.createBiquadFilter();
+				f.type = 'lowpass';
+				f.frequency.value = 3000;
+				f.connect(g);
 				g.connect(dest);
-				[[1, 1], [2, 0.28], [3, 0.07]].forEach(([m, amp]) => {
+				g.gain.setValueAtTime(0.0001, t);
+				g.gain.exponentialRampToValueAtTime(0.16, t + 0.012);
+				g.gain.exponentialRampToValueAtTime(0.1, t + 0.1);
+				g.gain.setValueAtTime(0.1, t + len);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + len + 0.08);
+				const o1 = ac.createOscillator();
+				o1.type = 'square';
+				o1.frequency.value = hz(m);
+				o1.connect(f);
+				const o2 = ac.createOscillator();
+				const g2 = ac.createGain();
+				o2.type = 'triangle';
+				o2.frequency.value = hz(m + 12);
+				g2.gain.value = 0.35;
+				o2.connect(g2);
+				g2.connect(f);
+				if (dur > 0.5) {
+					const lfo = ac.createOscillator();
+					const depth = ac.createGain();
+					lfo.frequency.value = 6;
+					depth.gain.value = hz(m) * 0.012;
+					lfo.connect(depth);
+					depth.connect(o1.frequency);
+					lfo.start(t + 0.15);
+					lfo.stop(t + len + 0.1);
+				}
+				[o1, o2].forEach((o) => { o.start(t); o.stop(t + len + 0.1); });
+			}
+			function pluck(dest, notes, t, vol, dec, type) {
+				const g = ac.createGain();
+				g.connect(dest);
+				g.gain.setValueAtTime(0.0001, t);
+				g.gain.exponentialRampToValueAtTime(vol, t + 0.005);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + dec);
+				notes.forEach((m) => {
 					const o = ac.createOscillator();
-					const og = ac.createGain();
-					o.type = 'sine';
-					o.frequency.value = f * m;
-					og.gain.value = amp;
-					o.connect(og); og.connect(g);
-					o.start(t); o.stop(t + tail + 0.05);
+					o.type = type || 'triangle';
+					o.frequency.value = hz(m);
+					o.connect(g);
+					o.start(t);
+					o.stop(t + dec + 0.02);
 				});
 			}
-			function newBus() {
-				const b = ac.createGain();
-				b.connect(ac.destination);
-				return b;
+			function bass(dest, m, t) {
+				pluck(dest, [m], t, 0.3, 0.32, 'triangle');
+				pluck(dest, [m + 12], t, 0.05, 0.2, 'square');
 			}
+			function kick(dest, t) {
+				const o = ac.createOscillator();
+				const g = ac.createGain();
+				o.frequency.setValueAtTime(160, t);
+				o.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+				g.gain.setValueAtTime(0.5, t);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + 0.2);
+				o.connect(g);
+				g.connect(dest);
+				o.start(t);
+				o.stop(t + 0.22);
+			}
+			function hiss(dest, t, type, freq, vol, dec) {
+				const src = ac.createBufferSource();
+				const f = ac.createBiquadFilter();
+				const g = ac.createGain();
+				src.buffer = noise;
+				f.type = type;
+				f.frequency.value = freq;
+				g.gain.setValueAtTime(vol, t);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + dec);
+				src.connect(f);
+				f.connect(g);
+				g.connect(dest);
+				src.start(t);
+				src.stop(t + dec + 0.02);
+			}
+			const hat = (d, t) => hiss(d, t, 'highpass', 7000, 0.07, 0.05);
+			const clap = (d, t) => hiss(d, t, 'bandpass', 1600, 0.16, 0.11);
+			const crash = (d, t) => hiss(d, t, 'highpass', 4500, 0.12, 1.2);
+			function glide(dest, t, from, to, dur, vol) {
+				const o = ac.createOscillator();
+				const g = ac.createGain();
+				o.type = 'sine';
+				o.frequency.setValueAtTime(from, t);
+				o.frequency.exponentialRampToValueAtTime(to, t + dur);
+				g.gain.setValueAtTime(vol, t);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.05);
+				o.connect(g);
+				g.connect(dest);
+				o.start(t);
+				o.stop(t + dur + 0.08);
+			}
+
+			/* the arrangement: ta-da intro, oom-pah-pah verse in C, key change to D, run + boing */
+			const MELODY = [
+				[[69, 0, 1], [67, 1, 1], [72, 2, 1]],
+				[[71, 0, 2], [67, 2, 0.75], [67, 2.75, 0.25]],
+				[[69, 0, 1], [67, 1, 1], [74, 2, 1]],
+				[[72, 0, 2], [67, 2, 0.75], [67, 2.75, 0.25]],
+				[[79, 0, 1], [76, 1, 1], [72, 2, 1]],
+				[[71, 0, 1], [69, 1, 1], [77, 2, 0.75], [77, 2.75, 0.25]],
+				[[76, 0, 1], [72, 1, 1], [74, 2, 1]],
+				[[72, 0, 2]],
+			];
+			const CH = {
+				C: { b: 48, s: [60, 64, 67] }, G7: { b: 43, s: [59, 65, 67] }, F: { b: 41, s: [57, 60, 65] },
+				C7: { b: 48, s: [58, 64, 67] }, A7: { b: 45, s: [57, 61, 67] },
+			};
+			const BARS = [['C', 'C', 'C'], ['G7', 'G7', 'G7'], ['G7', 'G7', 'G7'], ['C', 'C', 'C'], ['C', 'C7', 'C7'], ['F', 'F', 'F'], ['C', 'C', 'G7'], ['C', 'C', 'C']];
+
+			function arrangement() {
+				const ev = [];
+				const at = (beat, fn) => ev.push([beat, fn]);
+				// intro: ta-da-da-DAA! then the "Hap-py" pickup
+				[[72, 0], [76, 0.33], [79, 0.67]].forEach(([m, b]) => at(b, (d, t) => pluck(d, [m], t, 0.1, 0.2, 'square')));
+				at(1, (d, t) => { pluck(d, [72, 76, 79, 84], t, 0.07, 0.6); kick(d, t); crash(d, t); });
+				at(2, (d, t, beat) => lead(d, 67, t, 0.75 * beat));
+				at(2.75, (d, t, beat) => lead(d, 67, t, 0.25 * beat));
+				let bar = 3;
+				[0, 2].forEach((key, verse) => {
+					for (let i = 0; i < 8; i++, bar += 3) {
+						const b0 = bar;
+						MELODY[i].forEach(([m, s, l]) => at(b0 + s, (d, t, beat) => lead(d, m + key, t, l * beat)));
+						const [c1, c2, c3] = BARS[i];
+						const last = i === 7;
+						at(b0, (d, t) => { bass(d, CH[c1].b + key, t); kick(d, t); });
+						at(b0 + 1, (d, t) => { pluck(d, CH[c2].s.map((n) => n + key), t, 0.06, 0.14); hat(d, t); });
+						if (last && verse === 0) {
+							// pivot on A7 into the new key, with a little clap fill and the pickup in D
+							at(b0 + 2, (d, t) => { pluck(d, CH.A7.s, t, 0.07, 0.2); clap(d, t); });
+							at(b0 + 2.5, (d, t) => clap(d, t));
+							at(b0 + 2, (d, t, beat) => lead(d, 69, t, 0.75 * beat));
+							at(b0 + 2.75, (d, t, beat) => { lead(d, 69, t, 0.25 * beat); clap(d, t); });
+						} else if (last) {
+							at(b0 + 2, (d, t) => { clap(d, t); hat(d, t); });
+							at(b0 + 2.5, (d, t) => clap(d, t));
+							at(b0 + 2.75, (d, t) => clap(d, t));
+						} else {
+							at(b0 + 2, (d, t) => { pluck(d, CH[c3].s.map((n) => n + key), t, 0.06, 0.14); clap(d, t); });
+						}
+					}
+				});
+				// ending: quick run up, big D chord, crash, then a silly boing
+				[74, 78, 81, 86].forEach((m, k) => at(bar + k * 0.25, (d, t) => pluck(d, [m], t, 0.1, 0.18, 'square')));
+				at(bar + 1, (d, t) => { pluck(d, [62, 66, 69, 74, 78], t, 0.08, 1.4); bass(d, 38, t); kick(d, t); crash(d, t); });
+				at(bar + 1, (d, t, beat) => lead(d, 86, t, 2 * beat));
+				at(bar + 3.4, (d, t) => glide(d, t, 900, 220, 0.35, 0.16));
+				return ev.sort((a, b) => a[0] - b[0]);
+			}
+
 			return {
 				unlock() {
 					if (!ctx()) return;
-					const b = ac.createBuffer(1, 1, 22050);
 					const src = ac.createBufferSource();
-					src.buffer = b;
+					src.buffer = ac.createBuffer(1, 1, 22050);
 					src.connect(ac.destination);
 					src.start(0);
 				},
 				chime() {
 					if (!ctx()) return;
-					const b = newBus();
-					['C5', 'E5', 'G5', 'C6'].forEach((n, i) => tone(b, N[n], ac.currentTime + 0.05 + i * 0.09, 0.3, 0.12));
+					[72, 76, 79, 84].forEach((m, i) => pluck(out, [m], ac.currentTime + 0.05 + i * 0.09, 0.09, 0.5, 'sine'));
 				},
 				play(done) {
 					if (!ctx()) return false;
 					this.stop();
 					onEnd = done || (() => {});
-					bus = newBus();
-					const beat = 0.42;
-					let t = ac.currentTime + 0.08;
-					for (const [n, d] of SONG) { tone(bus, N[n], t, d * beat, 0.15); t += d * beat; }
-					endTimer = setTimeout(() => { bus = null; onEnd(); }, (t - ac.currentTime) * 1000 + 600);
+					const b = ac.createGain();
+					b.connect(out);
+					bus = b;
+					const beat = 0.31;
+					const ev = arrangement();
+					const t0 = ac.currentTime + 0.12;
+					let i = 0;
+					// schedule a quarter-second ahead at a time, so stop() is instant and nodes stay few
+					const pump = () => {
+						const horizon = ac.currentTime + 0.25;
+						while (i < ev.length && t0 + ev[i][0] * beat < horizon) {
+							ev[i][1](b, Math.max(t0 + ev[i][0] * beat, ac.currentTime), beat);
+							i++;
+						}
+						if (i >= ev.length) { clearInterval(timer); timer = 0; }
+					};
+					pump();
+					timer = setInterval(pump, 60);
+					endTimer = setTimeout(() => { bus = null; onEnd(); }, (ev[ev.length - 1][0] * beat + 1.2) * 1000);
 					return true;
 				},
 				stop() {
+					clearInterval(timer);
 					clearTimeout(endTimer);
+					timer = 0;
 					if (bus) {
 						const b = bus;
 						b.gain.setTargetAtTime(0, ac.currentTime, 0.04);
@@ -1145,6 +1299,7 @@
 					}
 				},
 				get playing() { return !!bus; },
+				get running() { return !!ac && ac.state === 'running'; },
 			};
 		})();
 
@@ -1439,10 +1594,30 @@
 				music.classList.toggle('on', on);
 				music.setAttribute('aria-label', on ? '停止生日歌' : '播放生日歌');
 			};
+			const startSong = () => {
+				if (!sound.playing && sound.play(() => setMusic(false))) setMusic(true);
+			};
 			music.addEventListener('click', () => {
 				if (sound.playing) { sound.stop(); return; }
-				if (sound.play(() => setMusic(false))) setMusic(true);
+				sound.unlock();
+				startSong();
 			});
+			document.addEventListener('visibilitychange', () => { if (document.hidden) sound.stop(); });
+
+			// The song starts as soon as she's in. If the browser hasn't let audio start yet
+			// (e.g. coming back later, no tap so far), it starts on her first tap anywhere.
+			if (fresh && sound.running) setTimeout(startSong, 350);
+			else {
+				const firstTap = (e) => {
+					if (e.target.closest && e.target.closest('#music')) return;
+					document.removeEventListener('pointerup', firstTap);
+					document.removeEventListener('keydown', firstTap);
+					sound.unlock();
+					startSong();
+				};
+				document.addEventListener('pointerup', firstTap);
+				document.addEventListener('keydown', firstTap);
+			}
 
 			// cake
 			const cakeBtn = $('#cake');
@@ -1455,7 +1630,8 @@
 				hint.innerHTML = '愿望收到啦！<br />一定会实现的～';
 				setTimeout(() => {
 					popAt(cakeBtn, 110);
-					if (sound.play(() => setMusic(false))) setMusic(true);
+					if (sound.playing) sound.chime();
+					else startSong();
 					relight.hidden = false;
 				}, 450);
 			});
