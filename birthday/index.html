@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<title>生日快乐 ♥</title>
+	<meta name="description" content="今晚 7 点（美东时间）准时开启" />
+	<meta property="og:title" content="嘘——这里藏着一份生日惊喜" />
+	<meta property="og:description" content="今晚 7 点（美东时间）准时开启" />
+	<meta name="robots" content="noindex" />
+	<meta name="theme-color" content="#fff4ea" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="icon" href="../app/icons/icon-192.png" type="image/png" />
+	<link rel="apple-touch-icon" href="../app/icons/apple-touch-icon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+	<style>
+		:root {
+			--cream: #fff6ec;
+			--paper: #fffdf9;
+			--ink: #5a3d36;
+			--ink-soft: #8a6a60;
+			--ink-mute: #b39c92;
+			--pink: #ff9fb5;
+			--pink-soft: #ffd6e0;
+			--pink-deep: #e8728f;
+			--honey: #ffc94d;
+			--mint: #8fd3b8;
+			--sky: #9cc3f2;
+			--lav: #c3aef0;
+			--shadow: 0 10px 30px rgba(214, 140, 120, 0.16), 0 2px 6px rgba(214, 140, 120, 0.1);
+			--display: "ZCOOL KuaiLe", "Nunito", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			--body: "Nunito", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+		}
+
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		[hidden] { display: none !important; }
+		html { -webkit-text-size-adjust: 100%; background: var(--cream); }
+		body {
+			min-height: 100vh;
+			min-height: 100svh;
+			font-family: var(--body);
+			color: var(--ink);
+			background:
+				radial-gradient(60vmax 60vmax at 0% 0%, #ffe3ea 0%, transparent 60%),
+				radial-gradient(55vmax 55vmax at 100% 30%, #fff0cc 0%, transparent 60%),
+				radial-gradient(60vmax 60vmax at 20% 100%, #e3f4ec 0%, transparent 60%),
+				var(--cream);
+			background-attachment: fixed;
+			overflow-x: hidden;
+			-webkit-tap-highlight-color: transparent;
+		}
+		button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; touch-action: manipulation; }
+		svg { display: block; overflow: visible; }
+
+		/* ---------- floating hearts / paws / sparkles ---------- */
+		.sky { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+		.floaty { position: absolute; bottom: -48px; opacity: 0.5; animation: floatUp linear infinite; will-change: transform; }
+		.floaty i { display: block; width: 100%; height: 100%; animation: sway 3.2s ease-in-out infinite alternate; }
+		.floaty svg { width: 100%; height: 100%; fill: currentColor; }
+		@keyframes floatUp { to { transform: translateY(calc(-100vh - 96px)) rotate(24deg); } }
+		@keyframes sway { from { transform: translateX(-10px); } to { transform: translateX(10px); } }
+
+		#confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 60; }
+
+		main {
+			position: relative;
+			z-index: 1;
+			max-width: 460px;
+			margin: 0 auto;
+			padding: calc(env(safe-area-inset-top) + 22px) max(16px, env(safe-area-inset-right)) calc(env(safe-area-inset-bottom) + 40px) max(16px, env(safe-area-inset-left));
+		}
+		@media (min-width: 720px) { main { max-width: 500px; padding-top: 48px; } }
+
+		.stage { animation: stageIn 0.55s ease both; }
+		@keyframes stageIn { from { opacity: 0; transform: translateY(14px); } }
+
+		.head { text-align: center; }
+		.eyebrow {
+			display: inline-block;
+			font-weight: 800;
+			font-size: 13px;
+			letter-spacing: 0.12em;
+			color: var(--pink-deep);
+			background: #fff;
+			padding: 6px 14px;
+			border-radius: 999px;
+			box-shadow: 0 2px 10px rgba(232, 114, 143, 0.16);
+		}
+		.title {
+			font-family: var(--display);
+			font-weight: 400;
+			font-size: clamp(46px, 14vw, 66px);
+			line-height: 1.08;
+			color: var(--pink-deep);
+			margin-top: 14px;
+			text-shadow: 0 4px 0 #ffe0e8;
+		}
+		.sub { font-family: var(--display); font-size: clamp(21px, 6.2vw, 27px); color: var(--ink-soft); margin-top: 6px; }
+
+		.card {
+			position: relative;
+			background: var(--paper);
+			border: 2px solid #fff;
+			border-radius: 28px;
+			box-shadow: var(--shadow);
+			padding: 20px;
+			margin-top: 20px;
+		}
+		.card h2, .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--pink-deep); text-align: center; }
+		.hint { text-align: center; color: var(--ink-soft); font-size: 15px; line-height: 1.6; margin-top: 6px; }
+
+		.bob { animation: bob 3.2s ease-in-out infinite; }
+		.bob.late { animation-delay: -1.6s; }
+		@keyframes bob { 50% { transform: translateY(-6px); } }
+
+		/* character parts */
+		.blink { transform-box: fill-box; transform-origin: center; animation: blink 4.6s infinite; }
+		@keyframes blink { 0%, 93%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+		.wave { transform-box: view-box; transform-origin: 146px 168px; animation: wave 1.6s ease-in-out infinite; }
+		@keyframes wave { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(14deg); } }
+		.tail { transform-box: view-box; transform-origin: 146px 206px; animation: tail 2.2s ease-in-out infinite; }
+		@keyframes tail { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg); } }
+
+		/* ---------- stage: locked ---------- */
+		.scene {
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			gap: 2%;
+			max-width: 380px;
+			margin: 22px auto 0;
+			padding-bottom: 6px;
+		}
+		.scene::after {
+			content: "";
+			position: absolute;
+			left: 6%; right: 6%; bottom: 0;
+			height: 14px;
+			border-radius: 50%;
+			background: radial-gradient(closest-side, rgba(200, 140, 120, 0.22), transparent);
+			z-index: -1;
+		}
+		.scene .bear { width: 36%; }
+		.scene .cat { width: 33%; }
+		.locked-gift { width: 29%; transform-origin: 50% 100%; }
+		.locked-gift.wiggle { animation: wiggle 0.55s ease; }
+		@keyframes wiggle {
+			20% { transform: rotate(-9deg); } 40% { transform: rotate(8deg); }
+			60% { transform: rotate(-5deg); } 80% { transform: rotate(3deg); }
+		}
+		.toast {
+			position: absolute;
+			left: 50%; top: 0;
+			transform: translate(-50%, -100%) scale(0.6);
+			opacity: 0;
+			background: #fff;
+			color: var(--pink-deep);
+			font-weight: 800;
+			font-size: 15px;
+			padding: 8px 14px;
+			border-radius: 16px;
+			white-space: nowrap;
+			box-shadow: var(--shadow);
+			pointer-events: none;
+			transition: transform 0.28s cubic-bezier(0.2, 1.6, 0.4, 1), opacity 0.2s;
+		}
+		.toast::after {
+			content: "";
+			position: absolute; left: 50%; bottom: -6px;
+			width: 12px; height: 12px; background: #fff;
+			transform: translateX(-50%) rotate(45deg);
+			border-radius: 2px;
+		}
+		.toast.show { opacity: 1; transform: translate(-50%, -110%) scale(1); }
+
+		/* chat */
+		.chat { background: #fff8f1; padding: 16px 14px 14px; }
+		.chat-log { min-height: 40px; }
+		.msg { display: flex; align-items: flex-end; gap: 8px; margin: 10px 0; animation: pop 0.38s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
+		.msg.no-anim { animation: none; }
+		.msg:first-child { margin-top: 0; }
+		@keyframes pop { from { opacity: 0; transform: translateY(8px) scale(0.92); } }
+		.av {
+			flex: none;
+			width: 36px; height: 36px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 0 2px 6px rgba(214, 140, 120, 0.2);
+			display: grid; place-items: center;
+			padding: 3px;
+		}
+		.av svg { width: 100%; height: 100%; }
+		.bubble {
+			max-width: 76%;
+			padding: 10px 14px;
+			border-radius: 18px 18px 18px 6px;
+			background: #fff;
+			box-shadow: 0 2px 8px rgba(214, 140, 120, 0.14);
+			font-size: 16px;
+			line-height: 1.5;
+			font-weight: 700;
+			word-break: break-word;
+		}
+		.msg.you { flex-direction: row-reverse; }
+		.msg.you .bubble { background: linear-gradient(135deg, #ffb0c3, #f5869f); color: #fff; border-radius: 18px 18px 6px 18px; }
+		.typing .bubble { display: flex; gap: 5px; padding: 14px 16px; }
+		.typing .bubble span { width: 7px; height: 7px; border-radius: 50%; background: var(--pink); animation: dot 1s infinite; }
+		.typing .bubble span:nth-child(2) { animation-delay: 0.15s; }
+		.typing .bubble span:nth-child(3) { animation-delay: 0.3s; }
+		@keyframes dot { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+		.chips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+		.chip {
+			padding: 9px 15px;
+			border-radius: 999px;
+			background: #fff;
+			border: 2px dashed var(--pink);
+			color: var(--pink-deep);
+			font-weight: 800;
+			font-size: 15px;
+			animation: pop 0.38s cubic-bezier(0.2, 1.5, 0.4, 1) both;
+		}
+		.chip:active { transform: scale(0.95); }
+		.chip.first { animation: pop 0.38s cubic-bezier(0.2, 1.5, 0.4, 1) both, nudge 1.8s 1s ease-in-out infinite; }
+		@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+		.composer {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 12px;
+			background: #fff;
+			border-radius: 999px;
+			padding: 5px 5px 5px 18px;
+			box-shadow: inset 0 0 0 2px #ffe2d6;
+			transition: box-shadow 0.2s;
+		}
+		.composer:focus-within { box-shadow: inset 0 0 0 2px var(--pink); }
+		.composer input {
+			flex: 1; min-width: 0;
+			border: 0; outline: 0; background: transparent;
+			font: inherit; font-size: 16px; font-weight: 700; color: var(--ink);
+			padding: 8px 0;
+		}
+		.composer input::placeholder { color: var(--ink-mute); }
+		.composer button {
+			flex: none;
+			width: 42px; height: 42px;
+			border-radius: 50%;
+			background: var(--pink-deep);
+			color: #fff;
+			display: grid; place-items: center;
+		}
+		.composer button svg { width: 20px; height: 20px; }
+		.composer button:active { transform: scale(0.92); }
+
+		/* countdown */
+		.countdown { margin-top: 86px; text-align: center; padding-top: 30px; animation: pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+		.peek { position: absolute; left: 50%; top: -74px; width: 92px; transform: translateX(-50%); }
+		.cd-label { font-family: var(--display); font-size: 22px; color: var(--ink-soft); }
+		.cd-digits { display: flex; justify-content: center; align-items: flex-start; gap: 6px; margin-top: 14px; }
+		.cd-unit { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+		.cd-num {
+			display: block;
+			min-width: clamp(60px, 19vw, 80px);
+			padding: 12px 6px;
+			border-radius: 18px;
+			background: linear-gradient(#fff, #fff2ea);
+			box-shadow: 0 4px 0 #ffd3c4, 0 10px 18px rgba(232, 114, 143, 0.14);
+			font: 900 clamp(32px, 10vw, 44px)/1 var(--body);
+			font-variant-numeric: tabular-nums;
+			color: var(--pink-deep);
+		}
+		.cd-num.tick { animation: tickPop 0.32s ease; }
+		@keyframes tickPop { 40% { transform: translateY(-3px) scale(1.06); } }
+		.cd-sep { font: 900 32px/1 var(--body); color: var(--pink); padding-top: 14px; animation: sep 1s steps(1) infinite; }
+		@keyframes sep { 50% { opacity: 0.25; } }
+		.cd-cap { font-size: 13px; font-weight: 800; color: var(--ink-mute); }
+		.cd-foot { margin-top: 16px; font-weight: 800; font-size: 14px; color: var(--ink-soft); }
+		.countdown .btn-big { margin-top: 18px; }
+
+		.btn-big {
+			display: block;
+			width: 100%;
+			padding: 16px 20px;
+			border-radius: 999px;
+			background: linear-gradient(135deg, #ffa9bd, #e8728f);
+			color: #fff;
+			font-family: var(--display);
+			font-size: 23px;
+			letter-spacing: 0.04em;
+			box-shadow: 0 6px 0 #d0587a, 0 14px 26px rgba(232, 114, 143, 0.35);
+			animation: pulse 1.6s ease-in-out infinite;
+		}
+		.btn-big:active { transform: translateY(4px); box-shadow: 0 2px 0 #d0587a, 0 6px 12px rgba(232, 114, 143, 0.3); animation: none; }
+		@keyframes pulse { 50% { transform: scale(1.03); } }
+
+		/* ---------- stage: door ---------- */
+		.door-scene { display: flex; align-items: flex-end; justify-content: center; gap: 1%; margin: 26px auto 26px; max-width: 400px; }
+		.door-scene .bear { width: 31%; }
+		.door-scene .cat { width: 29%; }
+		.door-gift { width: 38%; transform-origin: 50% 100%; animation: hop 1.4s ease-in-out infinite; }
+		@keyframes hop { 0%, 100% { transform: translateY(0) rotate(0); } 25% { transform: translateY(-10px) rotate(-3deg); } 50% { transform: translateY(0) rotate(0); } 70% { transform: translateY(-5px) rotate(2deg); } }
+		.gift-svg .lid { transform-box: view-box; transform-origin: 80px 64px; transition: transform 0.55s cubic-bezier(0.3, 1.4, 0.5, 1), opacity 0.4s 0.2s; }
+		.is-open .gift-svg .lid { transform: translate(-26px, -70px) rotate(-28deg); opacity: 0; }
+		.is-open { animation: none !important; }
+
+		/* ---------- stage: verify ---------- */
+		.verify { margin-top: 96px; padding-top: 34px; text-align: center; }
+		.verify-q { font-size: 17px; font-weight: 800; color: var(--ink-soft); }
+		.verify-q b { color: var(--pink-deep); }
+		.pin { position: relative; display: flex; justify-content: center; gap: 10px; margin: 18px auto 0; width: max-content; cursor: text; }
+		.pin input {
+			position: absolute; inset: 0; width: 100%; height: 100%;
+			opacity: 0; border: 0; font-size: 16px; caret-color: transparent; z-index: 2;
+		}
+		.pin-box {
+			position: relative;
+			width: clamp(52px, 15vw, 62px); height: clamp(62px, 18vw, 72px);
+			border-radius: 18px;
+			background: #fff;
+			box-shadow: inset 0 0 0 2px #ffd6e0, 0 4px 0 #ffe4d8;
+			display: grid; place-items: center;
+			font: 900 32px/1 var(--body);
+			color: var(--pink-deep);
+			transition: box-shadow 0.15s, background 0.2s;
+		}
+		.pin.focus .pin-box.active { box-shadow: inset 0 0 0 3px var(--pink-deep), 0 4px 0 #ffd0dc; }
+		.pin.focus .pin-box.active::after { content: ""; position: absolute; width: 3px; height: 30px; border-radius: 2px; background: var(--pink-deep); animation: sep 1s steps(1) infinite; }
+		.pin.shake { animation: shake 0.5s ease; }
+		@keyframes shake { 20%, 60% { transform: translateX(-10px); } 40%, 80% { transform: translateX(10px); } }
+		.pin.ok .pin-box { background: #eaf8f1; color: #3aa57a; box-shadow: inset 0 0 0 2px #8fd3b8, 0 4px 0 #cfeee0; }
+		.pin-msg { margin-top: 16px; font-weight: 800; font-size: 15px; color: var(--ink-mute); min-height: 1.5em; }
+		.pin-msg.bad { color: var(--pink-deep); }
+		.pin-msg.good { color: #3aa57a; }
+
+		/* ---------- stage: party ---------- */
+		.party-hero { position: relative; text-align: center; padding-top: 6px; }
+		.balloon { position: absolute; top: 0; width: 50px; z-index: -1; }
+		.balloon svg { width: 100%; }
+		.balloon.b1 { left: -2px; animation: drift 5s ease-in-out infinite; }
+		.balloon.b2 { right: -2px; top: 18px; width: 44px; animation: drift 6s ease-in-out -2s infinite; }
+		@keyframes drift { 50% { transform: translateY(-12px) rotate(4deg); } }
+		.bday-title {
+			display: flex;
+			justify-content: center;
+			margin-top: 12px;
+			font-family: var(--display);
+			font-weight: 400;
+			font-size: clamp(66px, 21vw, 104px);
+			line-height: 1.05;
+			cursor: pointer;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+		.bday-title span {
+			display: inline-block;
+			text-shadow: 0 3px 0 #fff, 0 -3px 0 #fff, 3px 0 0 #fff, -3px 0 0 #fff, 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 0 10px 18px rgba(232, 114, 143, 0.28);
+			animation: dropIn 0.75s cubic-bezier(0.2, 1.6, 0.4, 1) calc(var(--i) * 0.12s) both, bob 2.8s ease-in-out calc(1.2s + var(--i) * 0.22s) infinite;
+		}
+		.bday-title span:nth-child(1) { color: #ef7a96; }
+		.bday-title span:nth-child(2) { color: #f2a93b; }
+		.bday-title span:nth-child(3) { color: #4fb892; }
+		.bday-title span:nth-child(4) { color: #6c9ee6; }
+		@keyframes dropIn { from { opacity: 0; transform: translateY(-60px) scale(0.6) rotate(-12deg); } }
+		.bday-sub { font-weight: 900; font-size: 14px; letter-spacing: 0.34em; color: var(--ink-soft); margin-top: 6px; text-transform: uppercase; }
+		.duo { display: flex; justify-content: center; align-items: flex-end; gap: 4%; margin-top: 14px; }
+		.duo .bear { width: 44%; max-width: 180px; }
+		.duo .cat { width: 41%; max-width: 168px; }
+
+		.apart { display: flex; align-items: center; gap: 10px; margin: 4px 4px 14px; }
+		.apart .av { width: 52px; height: 52px; padding: 4px; }
+		.apart-line { position: relative; flex: 1; height: 0; border-top: 3px dashed var(--pink-soft); }
+		.apart-heart { position: absolute; top: -13px; left: 0; width: 24px; height: 24px; color: var(--pink-deep); animation: travel 2.6s ease-in-out infinite alternate; }
+		.apart-heart svg { width: 100%; height: 100%; fill: currentColor; }
+		@keyframes travel { from { left: 0; } to { left: calc(100% - 24px); } }
+		.apart-card p { text-align: center; line-height: 1.75; font-size: 16px; font-weight: 700; color: var(--ink-soft); }
+		.apart-card .big { font-family: var(--display); font-weight: 400; font-size: 25px; line-height: 1.45; color: var(--pink-deep); margin-top: 6px; }
+		.apart-card .small { margin-top: 8px; font-size: 15px; }
+
+		.cake { display: block; width: min(78%, 280px); margin: 12px auto 0; }
+		.flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flicker 0.16s ease-in-out infinite alternate; transition: transform 0.35s ease, opacity 0.35s ease; }
+		.glow { transition: opacity 0.35s ease; animation: glow 1.8s ease-in-out infinite; }
+		@keyframes flicker { from { transform: scale(1, 1) skewX(-2deg); } to { transform: scale(0.93, 1.08) skewX(2deg); } }
+		@keyframes glow { 50% { opacity: 0.35; } }
+		.smoke { opacity: 0; }
+		.cake.out .flame { animation: none; transform: scale(0.1); opacity: 0; }
+		.cake.out .glow { animation: none; opacity: 0; }
+		.cake.out .smoke { animation: smoke 1.6s ease-out forwards; }
+		.cake.out .c2 .flame, .cake.out .c2 .glow { transition-delay: 0.12s; }
+		.cake.out .c2 .smoke { animation-delay: 0.12s; }
+		.cake.out .c3 .flame, .cake.out .c3 .glow { transition-delay: 0.24s; }
+		.cake.out .c3 .smoke { animation-delay: 0.24s; }
+		@keyframes smoke { 0% { opacity: 0; transform: translateY(0); } 25% { opacity: 0.8; } 100% { opacity: 0; transform: translateY(-26px); } }
+		.relight { display: block; margin: 12px auto 0; font-weight: 800; font-size: 14px; color: var(--pink-deep); padding: 8px 14px; border-radius: 999px; background: #fff0f3; }
+
+		.section-head { text-align: center; margin-top: 34px; }
+		.section-head p { color: var(--ink-soft); font-weight: 700; margin-top: 4px; }
+		.gift-top { display: flex; align-items: center; justify-content: center; gap: 10px; }
+		.gift-top h3 { font-family: var(--display); font-weight: 400; font-size: 25px; color: var(--ink); }
+		.tag { font-weight: 900; font-size: 13px; letter-spacing: 0.06em; color: #fff; background: var(--pink-deep); padding: 4px 10px; border-radius: 999px; }
+		.tag.honey { background: #f2a93b; }
+		.giftbox { display: block; width: min(52%, 200px); margin: 14px auto 0; transform-origin: 50% 100%; animation: hop 1.8s ease-in-out infinite; }
+		.reveal { text-align: center; animation: pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+		.stand { width: min(92%, 320px); margin: 10px auto 0; }
+		.drawer-hot { animation: hot 1.2s ease-in-out infinite; }
+		@keyframes hot { 50% { opacity: 0.55; } }
+		.point { animation: point 0.9s ease-in-out infinite; }
+		@keyframes point { 50% { transform: translateX(6px); } }
+		.twinkle { transform-box: fill-box; transform-origin: center; animation: twinkle 1.4s ease-in-out infinite; }
+		.twinkle:nth-of-type(2) { animation-delay: 0.45s; }
+		.twinkle:nth-of-type(3) { animation-delay: 0.9s; }
+		@keyframes twinkle { 50% { transform: scale(0.4) rotate(45deg); opacity: 0.4; } }
+		.reveal .big { font-family: var(--display); font-size: 26px; line-height: 1.45; color: var(--ink); margin-top: 12px; }
+		.reveal .big b { font-weight: 400; color: var(--pink-deep); }
+		.reveal .small { color: var(--ink-soft); font-weight: 700; margin-top: 8px; line-height: 1.6; }
+
+		.scratch {
+			position: relative;
+			margin-top: 14px;
+			aspect-ratio: 1290 / 1159;
+			border-radius: 18px;
+			overflow: hidden;
+			background: #fff;
+			box-shadow: inset 0 0 0 2px #ffe2d6;
+			user-select: none;
+			-webkit-user-select: none;
+			-webkit-touch-callout: none;
+		}
+		.scratch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; -webkit-user-drag: none; }
+		.scratch canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: grab; transition: opacity 0.6s ease; }
+		.scratch canvas.gone { opacity: 0; pointer-events: none; }
+		.scratch.revealed img { cursor: zoom-in; }
+		.seal {
+			position: absolute;
+			left: 34.42%; top: 75.93%; width: 42.64%; height: 19.33%;
+			clip-path: polygon(22.5% 0, 100% 0, 100% 100%, 0 100%, 0 32.1%, 22.5% 32.1%);
+			background: repeating-linear-gradient(-45deg, #ffb3c5 0 8px, #ffd0dc 8px 16px);
+			display: flex; align-items: flex-end; justify-content: center;
+			padding-bottom: 4%;
+		}
+		.seal span { font-size: 12px; font-weight: 900; color: #c0506e; background: rgba(255, 255, 255, 0.9); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+		.seal.wiggle { animation: wiggle 0.5s ease; }
+		.scratch-toast {
+			position: absolute;
+			left: 50%; top: 58%;
+			transform: translate(-50%, -50%) scale(0.7);
+			opacity: 0;
+			z-index: 3;
+			background: #fff;
+			color: var(--pink-deep);
+			font-weight: 900;
+			font-size: 15px;
+			padding: 9px 16px;
+			border-radius: 999px;
+			white-space: nowrap;
+			box-shadow: var(--shadow);
+			pointer-events: none;
+			transition: transform 0.28s cubic-bezier(0.2, 1.6, 0.4, 1), opacity 0.2s;
+		}
+		.scratch-toast.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+		.scratch-nudge { text-align: center; font-weight: 800; color: var(--pink-deep); margin-top: 10px; font-size: 15px; min-height: 1.5em; }
+		.skip { display: block; margin: 6px auto 0; font-size: 13px; font-weight: 700; color: var(--ink-mute); text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
+		.scratch-done { text-align: center; margin-top: 14px; animation: pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+		.scratch-done .big { font-family: var(--display); font-size: 24px; color: var(--pink-deep); line-height: 1.4; }
+		.scratch-done .small { color: var(--ink-soft); font-weight: 700; margin-top: 6px; font-size: 14px; }
+
+		.letter { margin-top: 34px; padding: 26px 22px 24px; }
+		.letter::before { content: ""; position: absolute; inset: 8px; border: 2px dashed #fbd9df; border-radius: 22px; pointer-events: none; }
+		.letter h2 { text-align: left; margin-bottom: 8px; }
+		.letter p { font-size: 17px; line-height: 1.85; font-weight: 700; color: var(--ink); margin-top: 6px; text-wrap: pretty; }
+		.letter .sign { text-align: right; font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--pink-deep); margin-top: 6px; }
+		.letter .corner { position: absolute; right: -10px; top: -26px; width: 72px; transform: rotate(10deg); }
+
+		.foot { text-align: center; margin-top: 30px; }
+		.foot a { color: var(--ink-soft); font-weight: 800; font-size: 14px; text-decoration: none; padding: 10px 16px; border-radius: 999px; background: rgba(255, 255, 255, 0.7); }
+
+		.music {
+			position: fixed;
+			z-index: 40;
+			right: max(16px, calc(env(safe-area-inset-right) + 10px));
+			bottom: calc(env(safe-area-inset-bottom) + 16px);
+			width: 54px; height: 54px;
+			border-radius: 50%;
+			background: #fff;
+			color: var(--pink-deep);
+			box-shadow: var(--shadow);
+			display: grid; place-items: center;
+			border: 2px solid #ffe2ea;
+		}
+		.music svg { width: 24px; height: 24px; }
+		.music.on { animation: spin 3s linear infinite; background: var(--pink-deep); color: #fff; border-color: var(--pink-deep); }
+		@keyframes spin { to { transform: rotate(360deg); } }
+
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+		}
+	</style>
+</head>
+<body>
+	<div class="sky" id="sky" aria-hidden="true"></div>
+	<canvas id="confetti" aria-hidden="true"></canvas>
+
+	<main>
+		<!-- ============ before 7pm ET ============ -->
+		<section id="stage-lock" class="stage" hidden>
+			<div class="head">
+				<span class="eyebrow">嘿！等一下！</span>
+				<h1 class="title">太心急啦！</h1>
+				<p class="sub">还没到你生日呢～</p>
+			</div>
+			<div class="scene">
+				<div class="bear bob" data-art="bear-pout"></div>
+				<button class="locked-gift" id="locked-gift" aria-label="上了锁的礼物" data-art="gift-locked"></button>
+				<div class="cat bob late" data-art="cat"></div>
+				<div class="toast" id="toast" role="status"></div>
+			</div>
+
+			<div class="card chat">
+				<div class="chat-log" id="chat-log" aria-live="polite"></div>
+				<div class="chips" id="chips"></div>
+				<form class="composer" id="composer" autocomplete="off" hidden>
+					<input id="msg" type="text" enterkeyhint="send" placeholder="说点什么…" maxlength="60" aria-label="消息" />
+					<button type="submit" aria-label="发送">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+					</button>
+				</form>
+			</div>
+
+			<div class="card countdown" id="countdown" hidden>
+				<div class="peek" data-art="bear-peek"></div>
+				<p class="cd-label" id="cd-label">距离拆礼物还有</p>
+				<div class="cd-digits">
+					<div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-cap">小时</span></div>
+					<span class="cd-sep">:</span>
+					<div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-cap">分钟</span></div>
+					<span class="cd-sep">:</span>
+					<div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-cap">秒</span></div>
+				</div>
+				<p class="cd-foot" id="cd-foot">今晚 7 点（美东时间）准时开启</p>
+				<button class="btn-big" id="btn-ready" hidden>时间到啦！拆开惊喜</button>
+			</div>
+		</section>
+
+		<!-- ============ 7pm, first visit: the doorbell ============ -->
+		<section id="stage-door" class="stage" hidden>
+			<div class="head">
+				<span class="eyebrow">叮咚～ 7 点到啦</span>
+				<h1 class="title">你的生日惊喜<br />送到啦！</h1>
+			</div>
+			<div class="door-scene">
+				<div class="bear bob" data-art="bear-hat"></div>
+				<button class="door-gift" id="door-gift" aria-label="打开礼物" data-art="gift"></button>
+				<div class="cat bob late" data-art="cat-hat"></div>
+			</div>
+			<button class="btn-big" id="btn-open">拆开它</button>
+		</section>
+
+		<!-- ============ are you really you? ============ -->
+		<section id="stage-verify" class="stage" hidden>
+			<div class="head">
+				<span class="eyebrow">拆礼物之前</span>
+				<h1 class="title">真的是你吗？</h1>
+				<p class="sub">先验证一下身份～</p>
+			</div>
+			<div class="card verify">
+				<div class="peek" data-art="bear-peek"></div>
+				<p class="verify-q">输入<b>我们在一起的日子</b></p>
+				<label class="pin" id="pin">
+					<input id="pin-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" aria-label="我们在一起的日子，4 个数字" />
+					<span class="pin-box"></span><span class="pin-box"></span><span class="pin-box"></span><span class="pin-box"></span>
+				</label>
+				<p class="pin-msg" id="pin-msg">4 个数字哦</p>
+			</div>
+		</section>
+
+		<!-- ============ the party ============ -->
+		<section id="stage-party" class="stage" hidden>
+			<header class="party-hero">
+				<div class="balloon b1" data-art="balloon-pink"></div>
+				<div class="balloon b2" data-art="balloon-blue"></div>
+				<span class="eyebrow">给全世界最可爱的小朋友</span>
+				<h1 class="bday-title" id="bday-title" aria-label="生日快乐">
+					<span style="--i:0">生</span><span style="--i:1">日</span><span style="--i:2">快</span><span style="--i:3">乐</span>
+				</h1>
+				<p class="bday-sub">Happy Birthday</p>
+				<div class="duo">
+					<div class="bear bob" data-art="bear-hat"></div>
+					<div class="cat bob late" data-art="cat-hat"></div>
+				</div>
+			</header>
+
+			<section class="card apart-card">
+				<div class="apart">
+					<div class="av" data-art="bear-face"></div>
+					<div class="apart-line"><span class="apart-heart" data-art="heart"></span></div>
+					<div class="av" data-art="cat-face"></div>
+				</div>
+				<p>我知道，今年生日我不在你身边……</p>
+				<p class="big">但是礼物，<br />一定一定要有的呀！</p>
+				<p class="small">所以我偷偷准备了两份：<br />一份早就藏好了，一份正在路上跑着～</p>
+			</section>
+
+			<section class="card">
+				<h2>先许个愿吧</h2>
+				<p class="hint" id="cake-hint">闭上眼睛许个愿，<br />然后点一下蜡烛，把它们吹灭～</p>
+				<button class="cake" id="cake" aria-label="吹蜡烛" data-art="cake"></button>
+				<button class="relight" id="relight" hidden>再点一次蜡烛</button>
+			</section>
+
+			<div class="section-head">
+				<h2>你的生日礼物</h2>
+				<p>一共两份，一个一个拆～</p>
+			</div>
+
+			<section class="card" id="gift1">
+				<div class="gift-top"><span class="tag">No.1</span><h3>神秘礼物</h3></div>
+				<button class="giftbox" id="giftbox" aria-label="拆开第一份礼物" data-art="gift"></button>
+				<p class="hint" id="giftbox-hint">点一下礼物盒，拆开看看</p>
+				<div class="reveal" id="gift1-reveal" hidden>
+					<div class="stand" data-art="nightstand"></div>
+					<p class="big">去<b>床头柜</b>那里，<br />拉开<b>最下面</b>的那个抽屉～</p>
+					<p class="small">它已经在里面偷偷等你好久啦</p>
+				</div>
+			</section>
+
+			<section class="card" id="gift2">
+				<div class="gift-top"><span class="tag honey">No.2</span><h3>刮刮乐</h3></div>
+				<p class="hint">用手指把涂层刮开，看看是什么～</p>
+				<div class="scratch" id="scratch">
+					<img id="scratch-img" alt="第二份礼物：订单已下，预计 10 月 6 日送到" data-src="gift.jpg" draggable="false" />
+					<div class="seal" id="seal"><span>地址保密</span></div>
+					<canvas id="scratch-cover"></canvas>
+					<div class="scratch-toast" id="scratch-toast">不能把个人信息暴露在网上哦～</div>
+				</div>
+				<p class="scratch-nudge" id="scratch-nudge"></p>
+				<button class="skip" id="scratch-skip">手指刮累了？直接揭晓</button>
+				<div class="scratch-done" id="scratch-done" hidden>
+					<p class="big">它已经在路上啦，<br />10 月 6 日见！</p>
+					<p class="small">人没法飞过去，就先让礼物替我跑一趟～</p>
+				</div>
+			</section>
+
+			<section class="card letter">
+				<div class="corner" data-art="cat-face"></div>
+				<h2>写给你</h2>
+				<p>小朋友，生日快乐呀！</p>
+				<p>今年没办法陪你吹蜡烛，也没办法第一个当面抱抱你，想到这个就有一点点小遗憾。</p>
+				<p>但是距离挡不住礼物，更挡不住想你。这些小惊喜，就当是我先替自己陪在你身边～</p>
+				<p>等我们见面，再补你一个大大的拥抱。</p>
+				<p>新的一岁，要一直开开心心的。</p>
+				<p class="sign">永远爱你的哥哥 ♥&#xFE0E;</p>
+			</section>
+
+			<div class="foot"><a href="/">回到我们的故事 →</a></div>
+		</section>
+
+		<noscript><p class="hint" style="margin-top:40px">要打开 JavaScript 才能拆礼物哦</p></noscript>
+	</main>
+	<button class="music" id="music" aria-label="播放生日歌" hidden>
+		<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 17.5a3 3 0 1 1-2-2.83V5.2a1 1 0 0 1 .76-.97l10-2.5A1 1 0 0 1 19 2.7v12.8a3 3 0 1 1-2-2.83V7.28l-8 2V17.5z"/></svg>
+	</button>
+
+	<script>
+	(() => {
+		'use strict';
+
+		// 2026-09-29 19:00 America/New_York (EDT = UTC-4)
+		const UNLOCK = Date.UTC(2026, 8, 29, 23, 0, 0);
+
+		// Preview helpers: ?now=2026-09-29T23:00:05Z pretends it's that moment; ?reset forgets progress.
+		const qs = new URLSearchParams(location.search);
+		let clockOffset = 0;
+		if (qs.has('now')) {
+			const t = Date.parse(qs.get('now'));
+			if (!Number.isNaN(t)) clockOffset = t - Date.now();
+		}
+		const now = () => Date.now() + clockOffset;
+
+		// "our day" as 4 digits; only a salted FNV-1a hash lives here, never the digits
+		const CODE_HASH = '9ea02e50';
+		const codeOk = (code) => {
+			const str = `ff-bday-2026::${code}`;
+			let h = 0x811c9dc5;
+			for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+			return h.toString(16).padStart(8, '0') === CODE_HASH;
+		};
+
+		const KEY = 'ff-bday-2026:';
+		const store = {
+			get(k) { try { return localStorage.getItem(KEY + k); } catch (e) { return null; } },
+			set(k, v) { try { localStorage.setItem(KEY + k, v); } catch (e) {} },
+			clear() {
+				try { Object.keys(localStorage).filter((k) => k.startsWith(KEY)).forEach((k) => localStorage.removeItem(k)); } catch (e) {}
+			},
+		};
+		if (qs.has('reset')) store.clear();
+
+		const $ = (s, r = document) => r.querySelector(s);
+		const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+		const pick = (a) => a[Math.floor(Math.random() * a.length)];
+		const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		/* ================= art ================= */
+
+		const HEART_D = 'M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.2 1.7-2 3.2-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z';
+		const ICONS = {
+			heart: `<svg viewBox="0 0 24 24"><path d="${HEART_D}"/></svg>`,
+			paw: '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="15.5" rx="5.6" ry="4.6"/><circle cx="5.8" cy="9.6" r="2.4"/><circle cx="9.8" cy="5.8" r="2.4"/><circle cx="14.2" cy="5.8" r="2.4"/><circle cx="18.2" cy="9.6" r="2.4"/></svg>',
+			star: '<svg viewBox="0 0 24 24"><path d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/></svg>',
+		};
+
+		function partyHat(x, y, tilt, color) {
+			return `<g transform="rotate(${tilt} ${x} ${y})">
+				<path d="M${x - 20} ${y} L${x} ${y - 42} L${x + 20} ${y} Z" fill="${color}"/>
+				<path d="M${x - 13} ${y - 14} L${x + 13} ${y - 14} M${x - 7} ${y - 28} L${x + 7} ${y - 28}" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+				<circle cx="${x}" cy="${y - 44}" r="7" fill="#ffc94d"/>
+			</g>`;
+		}
+
+		function bearHead({ pout = false, hat = false } = {}) {
+			const brows = pout
+				? '<path d="M64 70 L84 76 M136 70 L116 76" stroke="#6b4a36" stroke-width="4" stroke-linecap="round"/>'
+				: '';
+			const mouth = pout
+				? '<path d="M100 111 v3 M92 121 q8 -6 16 0" stroke="#4a3228" stroke-width="2.8" fill="none" stroke-linecap="round"/>'
+				: '<path d="M100 110 v4 M100 114 q-6 7 -11 2 M100 114 q6 7 11 2" stroke="#4a3228" stroke-width="2.8" fill="none" stroke-linecap="round"/>';
+			return `<g>
+				<circle cx="52" cy="48" r="23" fill="#b8845a"/><circle cx="52" cy="48" r="12" fill="#ebbd98"/>
+				<circle cx="148" cy="48" r="23" fill="#b8845a"/><circle cx="148" cy="48" r="12" fill="#ebbd98"/>
+				<ellipse cx="100" cy="94" rx="64" ry="56" fill="#c8956a"/>
+				<ellipse cx="100" cy="115" rx="27" ry="20" fill="#f5e0c9"/>
+				<ellipse cx="100" cy="106" rx="9" ry="6" fill="#4a3228"/>
+				${mouth}
+				<g class="blink">
+					<ellipse cx="76" cy="88" rx="6" ry="7.5" fill="#3a2a24"/><ellipse cx="124" cy="88" rx="6" ry="7.5" fill="#3a2a24"/>
+					<circle cx="78.2" cy="85" r="2.3" fill="#fff"/><circle cx="126.2" cy="85" r="2.3" fill="#fff"/>
+				</g>
+				<ellipse cx="62" cy="110" rx="11" ry="6.5" fill="#f59aa7" opacity=".6"/>
+				<ellipse cx="138" cy="110" rx="11" ry="6.5" fill="#f59aa7" opacity=".6"/>
+				${brows}
+				${hat ? partyHat(100, 42, -10, '#ff9fb5') : ''}
+			</g>`;
+		}
+
+		function bear({ pout = false, hat = false } = {}) {
+			return `<svg class="bear-svg" viewBox="0 -14 200 248" aria-hidden="true">
+				<ellipse cx="100" cy="184" rx="56" ry="44" fill="#c8956a"/>
+				<ellipse cx="100" cy="192" rx="33" ry="28" fill="#f5e0c9"/>
+				<ellipse cx="50" cy="186" rx="15" ry="24" fill="#b8845a" transform="rotate(22 50 186)"/>
+				<ellipse cx="68" cy="222" rx="21" ry="11" fill="#b8845a"/><ellipse cx="132" cy="222" rx="21" ry="11" fill="#b8845a"/>
+				<ellipse cx="68" cy="221" rx="9" ry="5" fill="#f5e0c9"/><ellipse cx="132" cy="221" rx="9" ry="5" fill="#f5e0c9"/>
+				${bearHead({ pout, hat })}
+				<g class="wave">
+					<ellipse cx="160" cy="142" rx="14" ry="27" fill="#b8845a" transform="rotate(28 160 142)"/>
+					<ellipse cx="170" cy="122" rx="8" ry="9" fill="#f5e0c9"/>
+				</g>
+			</svg>`;
+		}
+
+		function catHead({ hat = false } = {}) {
+			return `<g>
+				<path d="M48 76 L56 20 L96 54 Z" fill="#d6cfe0" stroke="#d6cfe0" stroke-width="6" stroke-linejoin="round"/>
+				<path d="M60 64 L63 36 L84 55 Z" fill="#f7b8c4"/>
+				<path d="M152 76 L144 20 L104 54 Z" fill="#d6cfe0" stroke="#d6cfe0" stroke-width="6" stroke-linejoin="round"/>
+				<path d="M140 64 L137 36 L116 55 Z" fill="#f7b8c4"/>
+				<ellipse cx="100" cy="98" rx="61" ry="51" fill="#d6cfe0"/>
+				<path d="M100 50 v13 M86 53 l3 11 M114 53 l-3 11" stroke="#b1a6c2" stroke-width="4.5" stroke-linecap="round"/>
+				<ellipse cx="100" cy="116" rx="23" ry="16" fill="#f8f4fb"/>
+				<g class="blink">
+					<ellipse cx="75" cy="98" rx="6.5" ry="8" fill="#3a2f45"/><ellipse cx="125" cy="98" rx="6.5" ry="8" fill="#3a2f45"/>
+					<circle cx="77.4" cy="95" r="2.4" fill="#fff"/><circle cx="127.4" cy="95" r="2.4" fill="#fff"/>
+				</g>
+				<path d="M94.5 108 h11 l-5.5 6 z" fill="#f28ca3" stroke="#f28ca3" stroke-width="2" stroke-linejoin="round"/>
+				<path d="M100 114 q-4 7 -9.5 3 M100 114 q4 7 9.5 3" stroke="#3a2f45" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+				<g stroke="#a197b0" stroke-width="2" stroke-linecap="round"><path d="M68 114 l-26 -5 M68 121 l-25 4 M132 114 l26 -5 M132 121 l25 4"/></g>
+				<ellipse cx="62" cy="118" rx="9" ry="5.5" fill="#f59aa7" opacity=".55"/>
+				<ellipse cx="138" cy="118" rx="9" ry="5.5" fill="#f59aa7" opacity=".55"/>
+				${hat ? partyHat(100, 50, 10, '#9cc3f2') : ''}
+			</g>`;
+		}
+
+		function cat({ hat = false } = {}) {
+			return `<svg class="cat-svg" viewBox="0 -14 210 248" aria-hidden="true">
+				<g class="tail"><path d="M146 206 C 196 204, 204 150, 176 132" stroke="#c4bbd1" stroke-width="15" fill="none" stroke-linecap="round"/></g>
+				<ellipse cx="100" cy="186" rx="50" ry="43" fill="#d6cfe0"/>
+				<ellipse cx="100" cy="196" rx="27" ry="27" fill="#f8f4fb"/>
+				<ellipse cx="80" cy="224" rx="15" ry="9" fill="#f8f4fb"/><ellipse cx="120" cy="224" rx="15" ry="9" fill="#f8f4fb"/>
+				${catHead({ hat })}
+			</svg>`;
+		}
+
+		const bearFace = () => `<svg viewBox="26 20 148 134" aria-hidden="true">${bearHead()}</svg>`;
+		const catFace = () => `<svg viewBox="36 14 128 140" aria-hidden="true">${catHead()}</svg>`;
+		const bearPeek = () => `<svg viewBox="26 20 148 144" aria-hidden="true">${bearHead()}
+			<ellipse cx="66" cy="152" rx="17" ry="11" fill="#b8845a"/><ellipse cx="134" cy="152" rx="17" ry="11" fill="#b8845a"/>
+			<ellipse cx="66" cy="150" rx="7" ry="4" fill="#f5e0c9"/><ellipse cx="134" cy="150" rx="7" ry="4" fill="#f5e0c9"/></svg>`;
+
+		function gift({ locked = false } = {}) {
+			const lock = locked ? `<g>
+				<path d="M71 104 v-9 a9 9 0 0 1 18 0 v9" stroke="#a86c35" stroke-width="5.5" fill="none"/>
+				<rect x="63" y="101" width="34" height="28" rx="7" fill="#d9954a"/>
+				<circle cx="80" cy="112" r="4" fill="#5a3d36"/><rect x="78.5" y="113" width="3" height="8" rx="1.5" fill="#5a3d36"/>
+			</g>` : '';
+			return `<svg class="gift-svg" viewBox="0 0 160 160" aria-hidden="true">
+				<ellipse cx="80" cy="152" rx="60" ry="6" fill="rgba(200,140,120,.2)"/>
+				<rect x="24" y="72" width="112" height="76" rx="10" fill="#ff9fb5"/>
+				<g fill="#fff" opacity=".55"><circle cx="42" cy="94" r="4"/><circle cx="54" cy="124" r="4"/><circle cx="112" cy="96" r="4"/><circle cx="122" cy="128" r="4"/><circle cx="38" cy="138" r="3"/><circle cx="104" cy="138" r="3"/></g>
+				<rect x="71" y="72" width="18" height="76" fill="#ffd36e"/>
+				<rect x="24" y="72" width="112" height="9" fill="#c0506e" opacity=".12"/>
+				${lock}
+				<g class="lid">
+					<ellipse cx="62" cy="44" rx="18" ry="11" transform="rotate(-28 62 44)" fill="#ffd36e"/>
+					<ellipse cx="98" cy="44" rx="18" ry="11" transform="rotate(28 98 44)" fill="#ffd36e"/>
+					<ellipse cx="63" cy="45" rx="8" ry="4" transform="rotate(-28 63 45)" fill="#f2b23c"/>
+					<ellipse cx="97" cy="45" rx="8" ry="4" transform="rotate(28 97 45)" fill="#f2b23c"/>
+					<rect x="16" y="52" width="128" height="26" rx="8" fill="#ff86a3"/>
+					<rect x="71" y="52" width="18" height="26" fill="#ffc94d"/>
+					<circle cx="80" cy="51" r="8" fill="#ffc94d"/>
+				</g>
+			</svg>`;
+		}
+
+		function candle(x, color, cls) {
+			return `<g class="${cls}">
+				<rect x="${x - 4}" y="52" width="8" height="34" rx="3" fill="${color}"/>
+				<rect x="${x - 2}" y="56" width="2" height="26" rx="1" fill="#fff" opacity=".6"/>
+				<path d="M${x} 52 v-6" stroke="#5a3d36" stroke-width="2" stroke-linecap="round"/>
+				<g transform="translate(${x} 46)">
+					<circle class="glow" cx="0" cy="-12" r="15" fill="#ffd76e" opacity=".55"/>
+					<g class="flame">
+						<path d="M0 0 C-8 -6 -6 -18 0 -27 C6 -18 8 -6 0 0 Z" fill="#ffb347"/>
+						<path d="M0 -2 C-4 -6 -3 -12 0 -17 C3 -12 4 -6 0 -2 Z" fill="#fff3b0"/>
+					</g>
+					<path class="smoke" d="M0 -4 c-5 -6 5 -10 0 -16 c-5 -6 5 -10 0 -16" stroke="#cbbdb8" stroke-width="3" fill="none" stroke-linecap="round"/>
+				</g>
+			</g>`;
+		}
+
+		function cake() {
+			return `<svg viewBox="0 0 240 222" aria-hidden="true">
+				<ellipse cx="120" cy="202" rx="104" ry="14" fill="#fff" stroke="#f3dccf" stroke-width="3"/>
+				<rect x="40" y="130" width="160" height="70" rx="14" fill="#ffd3de"/>
+				<path d="M40 142 C44 154 56 154 60 142 C64 156 76 156 80 142 C84 152 96 152 100 142 C104 158 116 158 120 142 C124 152 136 152 140 142 C144 156 156 156 160 142 C164 152 176 152 180 142 C184 154 196 154 200 142 L200 142 Q200 130 188 130 L52 130 Q40 130 40 142 Z" fill="#fffaf3"/>
+				<g fill="#ff86a3"><path transform="translate(62 170) scale(.6)" d="${HEART_D}"/><path transform="translate(113 174) scale(.6)" d="${HEART_D}"/><path transform="translate(164 170) scale(.6)" d="${HEART_D}"/></g>
+				<g stroke-width="3.5" stroke-linecap="round"><path d="M96 166 l6 -3" stroke="#8fd3b8"/><path d="M146 186 l5 3" stroke="#9cc3f2"/><path d="M58 190 l6 2" stroke="#ffc94d"/><path d="M186 186 l-5 3" stroke="#c3aef0"/><path d="M140 164 l4 4" stroke="#ffc94d"/></g>
+				<rect x="66" y="84" width="108" height="50" rx="12" fill="#fff1c9"/>
+				<path d="M66 96 C70 106 80 106 84 96 C88 108 98 108 102 96 C106 104 116 104 120 96 C124 108 134 108 138 96 C142 104 152 104 156 96 C160 106 170 106 174 96 L174 96 Q174 84 162 84 L78 84 Q66 84 66 96 Z" fill="#ff9fb5"/>
+				<g fill="#fff" opacity=".85"><circle cx="86" cy="118" r="2.5"/><circle cx="104" cy="124" r="2.5"/><circle cx="124" cy="116" r="2.5"/><circle cx="144" cy="124" r="2.5"/><circle cx="160" cy="116" r="2.5"/></g>
+				${candle(96, '#9cc3f2', 'c1')}${candle(120, '#ff9fb5', 'c2')}${candle(144, '#8fd3b8', 'c3')}
+			</svg>`;
+		}
+
+		function nightstand() {
+			return `<svg viewBox="0 0 240 212" aria-hidden="true">
+				<ellipse cx="120" cy="205" rx="94" ry="6" fill="rgba(200,140,120,.2)"/>
+				<circle cx="181" cy="50" r="32" fill="#ffe9a8" opacity=".45"/>
+				<rect x="178" y="52" width="6" height="30" fill="#d8b48c"/>
+				<ellipse cx="181" cy="84" rx="16" ry="4.5" fill="#b8845a"/>
+				<path d="M160 54 L168 20 H194 L202 54 Z" fill="#ffe29a"/>
+				<rect x="50" y="50" width="32" height="36" rx="4" fill="#fff" stroke="#e6bb90" stroke-width="3"/>
+				<path transform="translate(57 58) scale(.75)" d="${HEART_D}" fill="#ff9fb5"/>
+				<rect x="30" y="86" width="180" height="14" rx="6" fill="#b8845a"/>
+				<rect x="40" y="98" width="160" height="96" rx="6" fill="#d9a878"/>
+				<rect x="50" y="106" width="140" height="24" rx="5" fill="#e9c197"/><circle cx="120" cy="118" r="4" fill="#a5704a"/>
+				<rect x="50" y="136" width="140" height="24" rx="5" fill="#e9c197"/><circle cx="120" cy="148" r="4" fill="#a5704a"/>
+				<g class="drawer-hot"><rect x="48" y="164" width="144" height="26" rx="6" fill="#ffe6f0" stroke="#e8728f" stroke-width="3"/></g>
+				<rect x="50" y="166" width="140" height="22" rx="5" fill="#fff4c9"/>
+				<circle cx="120" cy="177" r="4" fill="#a5704a"/>
+				<path transform="translate(137 170) scale(.55)" d="${HEART_D}" fill="#e8728f"/>
+				<rect x="48" y="192" width="10" height="12" rx="3" fill="#b8845a"/><rect x="182" y="192" width="10" height="12" rx="3" fill="#b8845a"/>
+				<g fill="#ffc94d">
+					<path class="twinkle" transform="translate(196 150) scale(.7)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
+					<path class="twinkle" transform="translate(204 178) scale(.5)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
+					<path class="twinkle" transform="translate(28 150) scale(.45)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
+				</g>
+				<g class="point"><path d="M4 177 h30 M24 167 l10 10 l-10 10" stroke="#e8728f" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+			</svg>`;
+		}
+
+		const balloon = (fill, shine) => `<svg viewBox="0 0 50 110" aria-hidden="true">
+			<path d="M25 58 C 22 72, 30 80, 24 94 S 26 106, 25 110" stroke="#c9a99e" stroke-width="1.5" fill="none"/>
+			<ellipse cx="25" cy="28" rx="22" ry="27" fill="${fill}"/>
+			<path d="M21 55 L29 55 L25 60 Z" fill="${fill}"/>
+			<ellipse cx="17" cy="18" rx="5" ry="8" fill="${shine}" opacity=".7" transform="rotate(20 17 18)"/>
+		</svg>`;
+
+		const ART = {
+			'bear-pout': () => bear({ pout: true }),
+			'bear-hat': () => bear({ hat: true }),
+			cat: () => cat(),
+			'cat-hat': () => cat({ hat: true }),
+			'bear-face': bearFace,
+			'cat-face': catFace,
+			'bear-peek': bearPeek,
+			gift: () => gift(),
+			'gift-locked': () => gift({ locked: true }),
+			cake,
+			nightstand,
+			heart: () => ICONS.heart,
+			'balloon-pink': () => balloon('#ffadc0', '#fff'),
+			'balloon-blue': () => balloon('#a9cdf5', '#fff'),
+		};
+		function paintArt(root) {
+			root.querySelectorAll('[data-art]').forEach((el) => {
+				if (!el.firstElementChild) el.innerHTML = ART[el.dataset.art]();
+			});
+		}
+
+		function floaties() {
+			if (reduced) return;
+			const sky = $('#sky');
+			const kinds = ['heart', 'paw', 'star'];
+			const colors = ['#ff9fb5', '#ffc94d', '#8fd3b8', '#c3aef0', '#9cc3f2'];
+			for (let i = 0; i < 14; i++) {
+				const el = document.createElement('span');
+				const size = 14 + Math.random() * 16;
+				el.className = 'floaty';
+				el.style.cssText = `left:${Math.random() * 96}%;width:${size}px;height:${size}px;color:${colors[i % colors.length]};animation-duration:${15 + Math.random() * 12}s;animation-delay:${-Math.random() * 26}s`;
+				el.innerHTML = `<i style="animation-delay:${-Math.random() * 3}s">${ICONS[kinds[i % 3]]}</i>`;
+				sky.appendChild(el);
+			}
+		}
+
+		/* ================= confetti ================= */
+
+		const confetti = (() => {
+			const cv = $('#confetti');
+			const ctx = cv.getContext('2d');
+			const heart = new Path2D(HEART_D);
+			const COLORS = ['#ff9fb5', '#ffc94d', '#8fd3b8', '#9cc3f2', '#c3aef0', '#ff8fa3', '#ffb877'];
+			let W = 0, H = 0, parts = [], raf = 0;
+
+			function resize() {
+				const dpr = Math.min(window.devicePixelRatio || 1, 2);
+				W = window.innerWidth; H = window.innerHeight;
+				cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+				ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			}
+			resize();
+			window.addEventListener('resize', resize);
+
+			function add(x, y, angle, spread, power, count) {
+				if (reduced) count = Math.min(count, 24);
+				for (let i = 0; i < count; i++) {
+					const a = angle + (Math.random() - 0.5) * spread;
+					const v = power * (0.45 + Math.random() * 0.75);
+					parts.push({
+						x, y,
+						vx: Math.cos(a) * v, vy: Math.sin(a) * v,
+						g: 0.16 + Math.random() * 0.1,
+						s: 7 + Math.random() * 7,
+						rot: Math.random() * 6.28, vr: (Math.random() - 0.5) * 0.3,
+						flip: Math.random() * 6.28, vf: 0.08 + Math.random() * 0.12,
+						shape: Math.random() < 0.28 ? 2 : Math.random() < 0.6 ? 0 : 1,
+						color: COLORS[(Math.random() * COLORS.length) | 0],
+						life: 0, ttl: 150 + Math.random() * 90,
+					});
+				}
+				if (!raf) raf = requestAnimationFrame(tick);
+			}
+
+			function tick() {
+				ctx.clearRect(0, 0, W, H);
+				parts = parts.filter((p) => p.life < p.ttl && p.y < H + 40);
+				for (const p of parts) {
+					p.life++;
+					p.vx *= 0.985; p.vy = p.vy * 0.985 + p.g;
+					p.x += p.vx + Math.sin(p.flip) * 0.6; p.y += p.vy;
+					p.rot += p.vr; p.flip += p.vf;
+					ctx.save();
+					ctx.globalAlpha = Math.min(1, (p.ttl - p.life) / 40);
+					ctx.translate(p.x, p.y);
+					ctx.rotate(p.rot);
+					ctx.fillStyle = p.color;
+					if (p.shape === 0) {
+						const h = p.s * 0.5 * (0.3 + Math.abs(Math.cos(p.flip)));
+						ctx.fillRect(-p.s / 2, -h / 2, p.s, h);
+					} else if (p.shape === 1) {
+						ctx.beginPath(); ctx.arc(0, 0, p.s * 0.35, 0, 6.283); ctx.fill();
+					} else {
+						const k = p.s / 22;
+						ctx.scale(k, k * (0.4 + 0.6 * Math.abs(Math.cos(p.flip))));
+						ctx.translate(-12, -12);
+						ctx.fill(heart);
+					}
+					ctx.restore();
+				}
+				raf = parts.length ? requestAnimationFrame(tick) : 0;
+				if (!raf) ctx.clearRect(0, 0, W, H);
+			}
+
+			return {
+				pop(x, y, count = 70) { add(x, y, -Math.PI / 2, Math.PI * 2, 11, count); },
+				cannons() {
+					add(0, H * 0.9, -Math.PI / 3, 0.7, 20, 80);
+					add(W, H * 0.9, (-2 * Math.PI) / 3, 0.7, 20, 80);
+				},
+				rain(count = 90) {
+					for (let i = 0; i < count; i++) add(Math.random() * W, -20 - Math.random() * 120, Math.PI / 2, 0.6, 2, 1);
+				},
+			};
+		})();
+
+		function popAt(el, count) {
+			const r = el.getBoundingClientRect();
+			confetti.pop(r.left + r.width / 2, r.top + r.height / 2, count);
+		}
+
+		/* ================= sound (tiny music box) ================= */
+
+		const sound = (() => {
+			let ac = null, bus = null, endTimer = 0;
+			const N = { G4: 392, A4: 440, B4: 493.88, C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99, C6: 1046.5 };
+			const SONG = [
+				['G4', 0.75], ['G4', 0.25], ['A4', 1], ['G4', 1], ['C5', 1], ['B4', 2],
+				['G4', 0.75], ['G4', 0.25], ['A4', 1], ['G4', 1], ['D5', 1], ['C5', 2],
+				['G4', 0.75], ['G4', 0.25], ['G5', 1], ['E5', 1], ['C5', 1], ['B4', 1], ['A4', 2],
+				['F5', 0.75], ['F5', 0.25], ['E5', 1], ['C5', 1], ['D5', 1], ['C5', 3],
+			];
+			let onEnd = () => {};
+
+			function ctx() {
+				if (!ac) {
+					const AC = window.AudioContext || window.webkitAudioContext;
+					if (!AC) return null;
+					ac = new AC();
+				}
+				if (ac.state === 'suspended') ac.resume();
+				return ac;
+			}
+			function tone(dest, f, t, dur, vol) {
+				const tail = Math.max(dur, 0.3) + 0.6;
+				const g = ac.createGain();
+				g.gain.setValueAtTime(0.0001, t);
+				g.gain.exponentialRampToValueAtTime(vol, t + 0.015);
+				g.gain.exponentialRampToValueAtTime(0.0001, t + tail);
+				g.connect(dest);
+				[[1, 1], [2, 0.28], [3, 0.07]].forEach(([m, amp]) => {
+					const o = ac.createOscillator();
+					const og = ac.createGain();
+					o.type = 'sine';
+					o.frequency.value = f * m;
+					og.gain.value = amp;
+					o.connect(og); og.connect(g);
+					o.start(t); o.stop(t + tail + 0.05);
+				});
+			}
+			function newBus() {
+				const b = ac.createGain();
+				b.connect(ac.destination);
+				return b;
+			}
+			return {
+				unlock() {
+					if (!ctx()) return;
+					const b = ac.createBuffer(1, 1, 22050);
+					const src = ac.createBufferSource();
+					src.buffer = b;
+					src.connect(ac.destination);
+					src.start(0);
+				},
+				chime() {
+					if (!ctx()) return;
+					const b = newBus();
+					['C5', 'E5', 'G5', 'C6'].forEach((n, i) => tone(b, N[n], ac.currentTime + 0.05 + i * 0.09, 0.3, 0.12));
+				},
+				play(done) {
+					if (!ctx()) return false;
+					this.stop();
+					onEnd = done || (() => {});
+					bus = newBus();
+					const beat = 0.42;
+					let t = ac.currentTime + 0.08;
+					for (const [n, d] of SONG) { tone(bus, N[n], t, d * beat, 0.15); t += d * beat; }
+					endTimer = setTimeout(() => { bus = null; onEnd(); }, (t - ac.currentTime) * 1000 + 600);
+					return true;
+				},
+				stop() {
+					clearTimeout(endTimer);
+					if (bus) {
+						const b = bus;
+						b.gain.setTargetAtTime(0, ac.currentTime, 0.04);
+						setTimeout(() => b.disconnect(), 400);
+						bus = null;
+						onEnd();
+					}
+				},
+				get playing() { return !!bus; },
+			};
+		})();
+
+		/* ================= stage switching ================= */
+
+		function show(id) {
+			document.querySelectorAll('.stage').forEach((s) => { s.hidden = s.id !== id; });
+			const stage = document.getElementById(id);
+			paintArt(stage);
+			window.scrollTo(0, 0);
+			return stage;
+		}
+
+		/* ================= before 7pm: locked + chat + countdown ================= */
+
+		const OPENING = ['嘿嘿，被我抓到了吧～', '礼物还锁着呢，现在不可以偷看哦'];
+		const FIRST_CHIP = '什么时候可以看？';
+		const FIRST_REPLY = '好吧好吧，那我允许你7点打开';
+		const MORE_CHIPS = ['能不能提前一点点？', '给点提示嘛', '哼'];
+		const RANDOM = ['倒计时已经在走啦，不许催～', '再等一下下嘛', '嘘——惊喜要留到最后', '我也很着急的！但是要忍住', '猫猫说：喵～（意思是再等等）'];
+		const GIFT_TEASE = ['锁住啦！', '不可以偷看！', '7 点才能开哦', '摇也没用～', '里面是什么呢～', '嘿，放下它！'];
+
+		let unlocked = false, busy = false, tickTimer = 0, lastSec = -1, giftTaps = 0, toastTimer = 0;
+		const chatLog = $('#chat-log');
+		const chips = $('#chips');
+		const composer = $('#composer');
+		const input = $('#msg');
+
+		function scrollIntoViewIfNeeded(el) {
+			const r = el.getBoundingClientRect();
+			if (r.bottom > window.innerHeight - 12 || r.top < 0) el.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+		}
+
+		function addMsg(who, text, instant) {
+			const row = document.createElement('div');
+			row.className = `msg ${who}${instant ? ' no-anim' : ''}`;
+			row.innerHTML = `<div class="av">${who === 'you' ? catFace() : bearFace()}</div><div class="bubble"></div>`;
+			row.querySelector('.bubble').textContent = text;
+			chatLog.appendChild(row);
+			if (!instant) scrollIntoViewIfNeeded(row);
+			return row;
+		}
+
+		async function bearSays(text, delay = 900) {
+			const t = document.createElement('div');
+			t.className = 'msg bear typing';
+			t.innerHTML = `<div class="av">${bearFace()}</div><div class="bubble"><span></span><span></span><span></span></div>`;
+			chatLog.appendChild(t);
+			scrollIntoViewIfNeeded(t);
+			await sleep(delay);
+			t.remove();
+			addMsg('bear', text);
+		}
+
+		function setChips(list, first) {
+			chips.innerHTML = '';
+			list.forEach((label) => {
+				const b = document.createElement('button');
+				b.type = 'button';
+				b.className = `chip${first ? ' first' : ''}`;
+				b.textContent = label;
+				b.addEventListener('click', () => send(label));
+				chips.appendChild(b);
+			});
+		}
+
+		function replyTo(t) {
+			if (/爱|想你|想我|miss|love/i.test(t)) return '我也超级想你的 ♥ 但还是要 7 点才能开哦';
+			if (/提示|hint|是什么|啥/i.test(t)) return '提示：一共有两份哦，别的……不能再说了';
+			if (/提前|现在|马上|立刻|早点|now/i.test(t)) return '不行不行，一秒都不能提前～';
+			if (/几点|什么时候|多久|when/i.test(t)) return '晚上 7 点呀（美东时间），看倒计时～';
+			if (/哼|生气|坏|讨厌/.test(t)) return '不许哼～ 很快的，乖乖等一下嘛';
+			return pick(RANDOM);
+		}
+
+		async function send(raw) {
+			const text = String(raw || '').trim();
+			if (!text || busy) return;
+			busy = true;
+			input.value = '';
+			addMsg('you', text);
+			if (!store.get('asked')) {
+				input.blur();
+				chips.innerHTML = '';
+				await bearSays(FIRST_REPLY, 1200);
+				store.set('asked', '1');
+				store.set('asked-text', text);
+				await sleep(400);
+				if (!unlocked) {
+					showCountdown(true);
+					setChips(MORE_CHIPS);
+				}
+			} else {
+				await bearSays(unlocked ? '7 点已经到啦！快去拆！' : replyTo(text), 800);
+			}
+			busy = false;
+		}
+
+		function showToast(text) {
+			const t = $('#toast');
+			t.textContent = text;
+			t.classList.add('show');
+			clearTimeout(toastTimer);
+			toastTimer = setTimeout(() => t.classList.remove('show'), 1300);
+		}
+
+		function showCountdown(animate) {
+			const cd = $('#countdown');
+			cd.hidden = false;
+			paintArt(cd);
+			tick();
+			if (animate) setTimeout(() => cd.scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' }), 60);
+		}
+
+		const pad = (n) => String(n).padStart(2, '0');
+		function setNum(el, v) {
+			if (el.textContent === v) return;
+			el.textContent = v;
+			el.classList.remove('tick');
+			void el.offsetWidth;
+			el.classList.add('tick');
+		}
+
+		function tick() {
+			const ms = UNLOCK - now();
+			if (ms <= 0) { onUnlock(); return; }
+			const s = Math.ceil(ms / 1000);
+			if (s === lastSec) return;
+			lastSec = s;
+			setNum($('#cd-h'), pad(Math.floor(s / 3600)));
+			setNum($('#cd-m'), pad(Math.floor((s % 3600) / 60)));
+			setNum($('#cd-s'), pad(s % 60));
+		}
+
+		function onUnlock() {
+			if (unlocked) return;
+			unlocked = true;
+			clearInterval(tickTimer);
+			if ($('#stage-lock').hidden) return;
+			if ($('#countdown').hidden) { enterDoor(); return; }
+			['#cd-h', '#cd-m', '#cd-s'].forEach((s) => setNum($(s), '00'));
+			$('#cd-label').textContent = '叮！时间到啦！';
+			$('#cd-foot').hidden = true;
+			$('#btn-ready').hidden = false;
+			chips.innerHTML = '';
+			composer.hidden = true;
+			confetti.rain(70);
+			bearSays('7 点到啦！！快去拆礼物！', 500).then(() => $('#btn-ready').scrollIntoView({ block: 'center', behavior: 'smooth' }));
+		}
+
+		async function enterLock() {
+			show('stage-lock');
+			tickTimer = setInterval(tick, 250);
+			document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
+
+			$('#locked-gift').addEventListener('click', (e) => {
+				const g = e.currentTarget;
+				g.classList.remove('wiggle');
+				void g.offsetWidth;
+				g.classList.add('wiggle');
+				giftTaps++;
+				showToast(giftTaps === 7 ? `已经摇了 ${giftTaps} 次啦……` : pick(GIFT_TEASE));
+				if (navigator.vibrate) navigator.vibrate(18);
+			});
+			composer.addEventListener('submit', (e) => { e.preventDefault(); send(input.value); });
+			$('#btn-ready').addEventListener('click', () => { sound.unlock(); proceed(); });
+
+			if (store.get('asked')) {
+				OPENING.forEach((t) => addMsg('bear', t, true));
+				addMsg('you', store.get('asked-text') || FIRST_CHIP, true);
+				addMsg('bear', FIRST_REPLY, true);
+				composer.hidden = false;
+				setChips(MORE_CHIPS);
+				showCountdown(false);
+				return;
+			}
+			await sleep(700);
+			await bearSays(OPENING[0], 800);
+			await bearSays(OPENING[1], 1000);
+			if (unlocked) return;
+			setChips([FIRST_CHIP], true);
+			composer.hidden = false;
+		}
+
+		/* ================= 7pm: the doorbell ================= */
+
+		function proceed() {
+			if (store.get('verified')) { sound.chime(); enterParty(true); }
+			else enterVerify();
+		}
+
+		function enterDoor() {
+			show('stage-door');
+			let opening = false;
+			const open = () => {
+				if (opening) return;
+				if (!store.get('verified')) { sound.unlock(); enterVerify(); return; }
+				opening = true;
+				sound.chime();
+				const g = $('#door-gift');
+				g.classList.add('is-open');
+				popAt(g, 90);
+				if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
+				setTimeout(() => enterParty(true), 750);
+			};
+			$('#door-gift').addEventListener('click', open);
+			$('#btn-open').addEventListener('click', open);
+		}
+
+		/* ================= are you really you? ================= */
+
+		let verifyReady = false;
+		function enterVerify() {
+			show('stage-verify');
+			const input = $('#pin-input');
+			const pin = $('#pin');
+			const boxes = pin.querySelectorAll('.pin-box');
+			const msg = $('#pin-msg');
+			// focus inside the same tap that brought us here, so iOS actually raises the keypad
+			input.focus();
+			if (verifyReady) return;
+			verifyReady = true;
+
+			let tries = 0, locked = false;
+			const HINTS = ['嗯？不对哦，再想想～', '提示：月 + 日，一共 4 个数字', '再提示一下：那是一个冬天～', '难道……你不是本人？！再试试'];
+			const render = () => {
+				const v = input.value;
+				boxes.forEach((b, i) => {
+					b.textContent = v[i] || '';
+					b.classList.toggle('active', i === Math.min(v.length, 3) && !locked);
+				});
+			};
+			const setMsg = (text, cls) => { msg.textContent = text; msg.className = `pin-msg ${cls || ''}`; };
+
+			input.addEventListener('focus', () => pin.classList.add('focus'));
+			input.addEventListener('blur', () => pin.classList.remove('focus'));
+			input.addEventListener('input', () => {
+				if (locked) { input.value = input.value.slice(0, 4); return; }
+				input.value = input.value.replace(/\D/g, '').slice(0, 4);
+				render();
+				if (input.value.length < 4) return;
+				locked = true;
+				if (codeOk(input.value)) {
+					store.set('verified', '1');
+					pin.classList.add('ok');
+					render();
+					input.blur();
+					setMsg('叮！验证成功，是你没错～', 'good');
+					sound.chime();
+					popAt(pin, 70);
+					if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
+					setTimeout(() => enterParty(true), 1100);
+				} else {
+					tries++;
+					pin.classList.remove('shake');
+					void pin.offsetWidth;
+					pin.classList.add('shake');
+					setMsg(HINTS[Math.min(tries, HINTS.length) - 1], 'bad');
+					if (navigator.vibrate) navigator.vibrate(60);
+					setTimeout(() => { input.value = ''; locked = false; render(); }, 600);
+				}
+			});
+			render();
+		}
+
+		/* ================= the party ================= */
+
+		let partyReady = false;
+		function enterParty(fresh) {
+			store.set('opened', '1');
+			show('stage-party');
+			if (partyReady) return;
+			partyReady = true;
+
+			setTimeout(() => {
+				confetti.cannons();
+				if (fresh) setTimeout(() => confetti.rain(80), 500);
+			}, fresh ? 250 : 400);
+
+			$('#bday-title').addEventListener('click', (e) => popAt(e.currentTarget, 60));
+
+			// music button
+			const music = $('#music');
+			music.hidden = false;
+			const setMusic = (on) => {
+				music.classList.toggle('on', on);
+				music.setAttribute('aria-label', on ? '停止生日歌' : '播放生日歌');
+			};
+			music.addEventListener('click', () => {
+				if (sound.playing) { sound.stop(); return; }
+				if (sound.play(() => setMusic(false))) setMusic(true);
+			});
+
+			// cake
+			const cakeBtn = $('#cake');
+			const hint = $('#cake-hint');
+			const relight = $('#relight');
+			cakeBtn.addEventListener('click', () => {
+				if (cakeBtn.classList.contains('out')) return;
+				sound.unlock();
+				cakeBtn.classList.add('out');
+				hint.innerHTML = '愿望收到啦！<br />一定会实现的～';
+				setTimeout(() => {
+					popAt(cakeBtn, 110);
+					if (sound.play(() => setMusic(false))) setMusic(true);
+					relight.hidden = false;
+				}, 450);
+			});
+			relight.addEventListener('click', () => {
+				cakeBtn.classList.remove('out');
+				relight.hidden = true;
+				hint.innerHTML = '再许一个愿望吧，<br />然后再吹一次～';
+			});
+
+			// gift no.1 — the drawer
+			const box = $('#giftbox');
+			const reveal1 = () => {
+				box.hidden = true;
+				$('#giftbox-hint').hidden = true;
+				const r = $('#gift1-reveal');
+				r.hidden = false;
+				paintArt(r);
+			};
+			if (store.get('gift1')) reveal1();
+			box.addEventListener('click', () => {
+				if (box.classList.contains('is-open')) return;
+				box.classList.add('is-open');
+				sound.chime();
+				popAt(box, 80);
+				store.set('gift1', '1');
+				setTimeout(reveal1, 650);
+			});
+
+			initScratch();
+		}
+
+		/* ================= gift no.2 — scratch card ================= */
+
+		function initScratch() {
+			const wrap = $('#scratch');
+			const img = $('#scratch-img');
+			const cv = $('#scratch-cover');
+			const nudge = $('#scratch-nudge');
+			const skip = $('#scratch-skip');
+			const seal = $('#seal');
+			const toast = $('#scratch-toast');
+			const ctx = cv.getContext('2d');
+
+			// The address past the house number stays sealed (image-pixel rects, 1290x1159 source).
+			const SEALED = [[568, 880, 994, 952], [444, 952, 994, 1104]];
+			let warnTimer = 0, lastWarn = 0;
+			const warn = () => {
+				const t = Date.now();
+				if (t - lastWarn < 900) return;
+				lastWarn = t;
+				toast.classList.add('show');
+				clearTimeout(warnTimer);
+				warnTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+				if (navigator.vibrate) navigator.vibrate(30);
+			};
+			seal.addEventListener('click', () => {
+				seal.classList.remove('wiggle');
+				void seal.offsetWidth;
+				seal.classList.add('wiggle');
+				warn();
+			});
+			img.src = img.dataset.src;
+			img.addEventListener('error', () => {
+				if (img.dataset.retried) return;
+				img.dataset.retried = '1';
+				setTimeout(() => { img.src = `${img.dataset.src}?r=${Date.now()}`; }, 800);
+			});
+
+			let done = false;
+			const finish = (fresh) => {
+				if (done) return;
+				done = true;
+				store.set('scratched', '1');
+				cv.classList.add('gone');
+				setTimeout(() => cv.remove(), 700);
+				wrap.classList.add('revealed');
+				nudge.textContent = '';
+				skip.hidden = true;
+				$('#scratch-done').hidden = false;
+				if (fresh) {
+					popAt(wrap, 110);
+					sound.chime();
+					if (navigator.vibrate) navigator.vibrate([20, 50, 30]);
+				}
+			};
+			img.addEventListener('click', () => { if (done) window.open(img.src, '_blank'); });
+			skip.addEventListener('click', () => finish(true));
+
+			if (store.get('scratched')) { finish(false); return; }
+
+			const BRUSH = 46;
+			const DISPLAY = '"ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", sans-serif';
+			let W = 0, H = 0, dpr = 1, drawing = false, last = null, moves = 0, touched = false;
+
+			function roundRect(x, y, w, h, r) {
+				ctx.beginPath();
+				ctx.moveTo(x + r, y);
+				ctx.arcTo(x + w, y, x + w, y + h, r);
+				ctx.arcTo(x + w, y + h, x, y + h, r);
+				ctx.arcTo(x, y + h, x, y, r);
+				ctx.arcTo(x, y, x + w, y, r);
+				ctx.closePath();
+			}
+			function paw(x, y, s, rot) {
+				ctx.save();
+				ctx.translate(x, y);
+				ctx.rotate(rot);
+				ctx.beginPath(); ctx.ellipse(0, s * 0.35, s * 0.55, s * 0.45, 0, 0, 6.283); ctx.fill();
+				[[-0.62, -0.25], [-0.22, -0.62], [0.22, -0.62], [0.62, -0.25]].forEach(([dx, dy]) => {
+					ctx.beginPath(); ctx.arc(dx * s, dy * s, s * 0.24, 0, 6.283); ctx.fill();
+				});
+				ctx.restore();
+			}
+			function paint() {
+				ctx.globalCompositeOperation = 'source-over';
+				const g = ctx.createLinearGradient(0, 0, W, H);
+				g.addColorStop(0, '#ffc2d1');
+				g.addColorStop(0.5, '#ffe2a6');
+				g.addColorStop(1, '#ffb6ca');
+				ctx.fillStyle = g;
+				ctx.fillRect(0, 0, W, H);
+				ctx.fillStyle = 'rgba(255,255,255,.2)';
+				for (let x = -H; x < W; x += 48) {
+					ctx.beginPath();
+					ctx.moveTo(x, 0); ctx.lineTo(x + 18, 0); ctx.lineTo(x + 18 + H, H); ctx.lineTo(x + H, H);
+					ctx.closePath(); ctx.fill();
+				}
+				ctx.fillStyle = 'rgba(232,114,143,.2)';
+				let row = 0;
+				for (let y = 20; y < H + 50; y += 50, row++) {
+					for (let x = row % 2 ? 44 : 18; x < W + 50; x += 52) paw(x, y, 9, ((row * 3 + x) % 7) * 0.12 - 0.36);
+				}
+				for (let i = 0, n = (W * H) / 240; i < n; i++) {
+					ctx.fillStyle = `rgba(255,255,255,${(Math.random() * 0.8).toFixed(2)})`;
+					ctx.fillRect(Math.random() * W, Math.random() * H, 1.6, 1.6);
+				}
+				const cx = W / 2, cy = H / 2;
+				const pw = Math.min(240, W - 40), ph = 96;
+				ctx.fillStyle = 'rgba(255,255,255,.92)';
+				roundRect(cx - pw / 2, cy - ph / 2, pw, ph, ph / 2);
+				ctx.fill();
+				ctx.textAlign = 'center';
+				ctx.textBaseline = 'middle';
+				ctx.fillStyle = '#e8728f';
+				ctx.font = `36px ${DISPLAY}`;
+				ctx.fillText('刮一刮', cx, cy - 12);
+				ctx.fillStyle = '#b48a7c';
+				ctx.font = '800 14px "Nunito", "PingFang SC", sans-serif';
+				ctx.fillText('看看第二份礼物是什么', cx, cy + 24);
+			}
+			function size() {
+				const r = wrap.getBoundingClientRect();
+				const w = Math.round(r.width), h = Math.round(r.height);
+				if (!w || !h || (w === W && h === H) || done) return;
+				let snap = null;
+				if (W && touched) {
+					snap = document.createElement('canvas');
+					snap.width = cv.width; snap.height = cv.height;
+					snap.getContext('2d').drawImage(cv, 0, 0);
+				}
+				W = w; H = h;
+				dpr = Math.min(window.devicePixelRatio || 1, 2);
+				cv.width = Math.round(W * dpr);
+				cv.height = Math.round(H * dpr);
+				if (snap) {
+					ctx.setTransform(1, 0, 0, 1, 0, 0);
+					ctx.drawImage(snap, 0, 0, cv.width, cv.height);
+				}
+				ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+				if (!snap) paint();
+			}
+			size();
+			if (window.ResizeObserver) new ResizeObserver(size).observe(wrap);
+			else window.addEventListener('resize', size);
+			if (document.fonts && document.fonts.load) {
+				document.fonts.load(`36px ${DISPLAY}`, '刮一刮看').then(() => { if (!touched && !done) paint(); }).catch(() => {});
+			}
+
+			function pt(e) {
+				const r = cv.getBoundingClientRect();
+				return { x: e.clientX - r.left, y: e.clientY - r.top };
+			}
+			const k = () => W / 1290;
+			function inSeal(p) {
+				const s = k();
+				return SEALED.some(([x0, y0, x1, y1]) => p.x >= x0 * s && p.x <= x1 * s && p.y >= y0 * s && p.y <= y1 * s);
+			}
+			function scratch(a, b) {
+				if (inSeal(b || a)) warn();
+				ctx.save();
+				const s = k();
+				const clip = new Path2D();
+				clip.rect(0, 0, W, H);
+				SEALED.forEach(([x0, y0, x1, y1]) => clip.rect(x0 * s, y0 * s, (x1 - x0) * s, (y1 - y0) * s));
+				ctx.clip(clip, 'evenodd');
+				ctx.globalCompositeOperation = 'destination-out';
+				ctx.lineCap = 'round';
+				ctx.lineJoin = 'round';
+				ctx.lineWidth = BRUSH;
+				ctx.beginPath();
+				ctx.arc(a.x, a.y, BRUSH / 2, 0, 6.283);
+				ctx.fill();
+				if (b) {
+					ctx.beginPath();
+					ctx.moveTo(a.x, a.y);
+					ctx.lineTo(b.x, b.y);
+					ctx.stroke();
+				}
+				ctx.restore();
+			}
+			const probe = document.createElement('canvas');
+			const pctx = probe.getContext('2d', { willReadFrequently: true });
+			function progress() {
+				probe.width = 40;
+				probe.height = Math.max(1, Math.round((40 * H) / W));
+				pctx.clearRect(0, 0, probe.width, probe.height);
+				pctx.drawImage(cv, 0, 0, probe.width, probe.height);
+				const d = pctx.getImageData(0, 0, probe.width, probe.height).data;
+				let clear = 0;
+				for (let i = 3; i < d.length; i += 4) if (d[i] < 110) clear++;
+				return clear / (d.length / 4);
+			}
+			function check() {
+				const f = progress();
+				if (f > 0.52) finish(true);
+				else if (f > 0.25) nudge.textContent = '快看到了！再刮刮～';
+				else if (f > 0.04) nudge.textContent = '对对对，就是这样～';
+			}
+
+			cv.addEventListener('pointerdown', (e) => {
+				if (done) return;
+				e.preventDefault();
+				drawing = true;
+				if (!touched) sound.unlock();
+				touched = true;
+				if (cv.setPointerCapture) { try { cv.setPointerCapture(e.pointerId); } catch (err) {} }
+				last = pt(e);
+				scratch(last);
+			});
+			cv.addEventListener('pointermove', (e) => {
+				if (!drawing || done) return;
+				e.preventDefault();
+				const events = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
+				for (const ev of events.length ? events : [e]) {
+					const p = pt(ev);
+					scratch(last, p);
+					last = p;
+				}
+				if (++moves % 8 === 0) check();
+			});
+			const end = () => {
+				if (!drawing) return;
+				drawing = false;
+				if (!done) check();
+			};
+			cv.addEventListener('pointerup', end);
+			cv.addEventListener('pointercancel', end);
+			cv.addEventListener('lostpointercapture', end);
+			// iOS: stop the page from scrolling / rubber-banding while a finger is on the card
+			cv.addEventListener('touchmove', (e) => { if (!done) e.preventDefault(); }, { passive: false });
+		}
+
+		/* ================= boot ================= */
+
+		floaties();
+		if (now() >= UNLOCK) {
+			unlocked = true;
+			if (store.get('opened') && store.get('verified')) enterParty(false);
+			else enterDoor();
+		} else {
+			enterLock();
+		}
+	})();
+	</script>
+</body>
+</html>
