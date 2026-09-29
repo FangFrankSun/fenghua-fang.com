@@ -421,12 +421,21 @@
 		.point { animation: point 0.9s ease-in-out infinite; }
 		@keyframes point { 50% { transform: translateX(6px); } }
 		.twinkle { transform-box: fill-box; transform-origin: center; animation: twinkle 1.4s ease-in-out infinite; }
-		.twinkle:nth-of-type(2) { animation-delay: 0.45s; }
-		.twinkle:nth-of-type(3) { animation-delay: 0.9s; }
+		.tug { animation: tug 1.8s ease-in-out infinite; }
+		@keyframes tug { 0%, 55%, 100% { transform: translateY(0); } 70% { transform: translateY(5px); } 85% { transform: translateY(1px); } }
+		.zoom-tag { display: inline-block; margin-top: 18px; font-weight: 900; font-size: 13px; letter-spacing: 0.08em; color: #fff; background: #f2a93b; padding: 4px 12px; border-radius: 999px; }
+		.drawer-top { width: min(100%, 360px); margin: 10px auto 0; }
+		.pouch { animation: pouchDrop 0.55s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+		@keyframes pouchDrop { from { opacity: 0; transform: translateY(-24px); } }
+		.ring { transform-box: fill-box; transform-origin: center; animation: ring 1.6s ease-in-out 1.3s infinite both; }
+		@keyframes ring { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(1.12) rotate(24deg); opacity: 0.55; } }
+		.point-dl { animation: pointDl 0.9s ease-in-out infinite; }
+		@keyframes pointDl { 50% { transform: translate(-5px, 4px); } }
 		@keyframes twinkle { 50% { transform: scale(0.4) rotate(45deg); opacity: 0.4; } }
 		.reveal .big { font-family: var(--display); font-size: 26px; line-height: 1.45; color: var(--ink); margin-top: 12px; }
 		.reveal .big b { font-weight: 400; color: var(--pink-deep); }
-		.reveal .small { color: var(--ink-soft); font-weight: 700; margin-top: 8px; line-height: 1.6; }
+		.reveal .small { color: var(--ink-soft); font-weight: 700; margin-top: 10px; line-height: 1.7; }
+		.reveal .small b { color: var(--pink-deep); }
 
 		.scratch {
 			position: relative;
@@ -632,8 +641,10 @@
 				<p class="hint" id="giftbox-hint">点一下礼物盒，拆开看看</p>
 				<div class="reveal" id="gift1-reveal" hidden>
 					<div class="stand" data-art="nightstand"></div>
-					<p class="big">去<b>床头柜</b>那里，<br />拉开<b>最下面</b>的那个抽屉～</p>
-					<p class="small">它已经在里面偷偷等你好久啦</p>
+					<p class="big">去<b>床头柜</b>那里，<br />拉开<b>抽屉</b>～</p>
+					<p class="zoom-tag">抽屉里面</p>
+					<div class="drawer-top" data-art="drawer"></div>
+					<p class="small">翻到<b>最底下</b>，<b>左下角</b>有东西在等你～<br />上面盖了一些东西，要翻一翻才找得到哦</p>
 				</div>
 			</section>
 
@@ -864,6 +875,10 @@
 			</svg>`;
 		}
 
+		const STAR_D = 'M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z';
+		// position lives on the wrapper <g>, so the CSS twinkle can't override it
+		const star = (x, y, k, delay) => `<g transform="translate(${x} ${y}) scale(${k})"><path class="twinkle" style="animation-delay:${delay}s" d="${STAR_D}"/></g>`;
+
 		function nightstand() {
 			return `<svg viewBox="0 0 240 212" aria-hidden="true">
 				<ellipse cx="120" cy="205" rx="94" ry="6" fill="rgba(200,140,120,.2)"/>
@@ -875,19 +890,48 @@
 				<path transform="translate(57 58) scale(.75)" d="${HEART_D}" fill="#ff9fb5"/>
 				<rect x="30" y="86" width="180" height="14" rx="6" fill="#b8845a"/>
 				<rect x="40" y="98" width="160" height="96" rx="6" fill="#d9a878"/>
-				<rect x="50" y="106" width="140" height="24" rx="5" fill="#e9c197"/><circle cx="120" cy="118" r="4" fill="#a5704a"/>
-				<rect x="50" y="136" width="140" height="24" rx="5" fill="#e9c197"/><circle cx="120" cy="148" r="4" fill="#a5704a"/>
-				<g class="drawer-hot"><rect x="48" y="164" width="144" height="26" rx="6" fill="#ffe6f0" stroke="#e8728f" stroke-width="3"/></g>
-				<rect x="50" y="166" width="140" height="22" rx="5" fill="#fff4c9"/>
-				<circle cx="120" cy="177" r="4" fill="#a5704a"/>
-				<path transform="translate(137 170) scale(.55)" d="${HEART_D}" fill="#e8728f"/>
-				<rect x="48" y="192" width="10" height="12" rx="3" fill="#b8845a"/><rect x="182" y="192" width="10" height="12" rx="3" fill="#b8845a"/>
-				<g fill="#ffc94d">
-					<path class="twinkle" transform="translate(196 150) scale(.7)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
-					<path class="twinkle" transform="translate(204 178) scale(.5)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
-					<path class="twinkle" transform="translate(28 150) scale(.45)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/>
+				<g class="drawer-hot"><rect x="46" y="104" width="148" height="84" rx="8" fill="#ffe6f0" stroke="#e8728f" stroke-width="3"/></g>
+				<g class="tug">
+					<rect x="50" y="108" width="140" height="76" rx="6" fill="#fff4c9"/>
+					<rect x="102" y="140" width="36" height="9" rx="4.5" fill="#a5704a"/>
+					<path transform="translate(150 130) scale(.6)" d="${HEART_D}" fill="#e8728f"/>
 				</g>
-				<g class="point"><path d="M4 177 h30 M24 167 l10 10 l-10 10" stroke="#e8728f" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+				<rect x="48" y="192" width="10" height="12" rx="3" fill="#b8845a"/><rect x="182" y="192" width="10" height="12" rx="3" fill="#b8845a"/>
+				<g fill="#ffc94d">${star(198, 112, 0.7, 0)}${star(206, 160, 0.5, 0.45)}${star(24, 104, 0.45, 0.9)}</g>
+				<g class="point"><path d="M4 146 h30 M24 136 l10 10 l-10 10" stroke="#e8728f" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+			</svg>`;
+		}
+
+		// Top-down view inside the drawer: soft pouches on top, the card tucked underneath, front-left corner.
+		function drawerInside() {
+			const pouch = (x, y, r, fill, i) => `<g class="pouch" style="animation-delay:${0.15 + i * 0.09}s"><g transform="translate(${x} ${y}) rotate(${r})">
+				<rect x="-38" y="-22" width="76" height="44" rx="13" fill="${fill}" stroke="rgba(160,110,90,.2)" stroke-width="1.5"/>
+				<rect x="-31" y="-15" width="62" height="30" rx="9" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/>
+			</g></g>`;
+			const layers = [
+				[60, 52, -10, '#e8e1f7'], [140, 46, 12, '#fff1cf'], [222, 50, -6, '#ffe1ea'],
+				[160, 96, -14, '#dff3ea'], [240, 106, 16, '#f8ebdf'], [196, 152, -8, '#e8e1f7'],
+				[252, 164, 10, '#fff1cf'], [70, 110, 8, '#f8ebdf'], [116, 146, -18, '#ffe1ea'],
+			];
+			return `<svg viewBox="0 0 300 212" aria-hidden="true">
+				<rect x="4" y="4" width="292" height="204" rx="18" fill="#c8956a"/>
+				<rect x="16" y="16" width="268" height="180" rx="10" fill="#a8744c"/>
+				<rect x="22" y="22" width="256" height="170" rx="7" fill="#f3e0c8"/>
+				<clipPath id="drawer-floor"><rect x="22" y="22" width="256" height="170" rx="7"/></clipPath>
+				<g clip-path="url(#drawer-floor)">
+				<g transform="rotate(-8 80 152)">
+					<rect x="36" y="124" width="88" height="56" rx="6" fill="#fff" stroke="#f2a7ba" stroke-width="3"/>
+					<path d="M36 130 L80 156 L124 130" stroke="#f7c6d2" stroke-width="2.5" fill="none"/>
+					<path transform="translate(47 147) scale(.8)" d="${HEART_D}" fill="#e8728f"/>
+				</g>
+				${layers.map(([x, y, r, f], i) => pouch(x, y, r, f, i)).join('')}
+				</g>
+				<circle class="ring" cx="60" cy="161" r="29" fill="none" stroke="#ffc94d" stroke-width="4" stroke-dasharray="7 6"/>
+				<g fill="#ffc94d">${star(14, 176, 0.5, 0.2)}${star(92, 176, 0.42, 0.7)}${star(20, 118, 0.4, 1.1)}</g>
+				<g class="point-dl">
+					<path d="M152 110 L102 147 M102 147 l16 -0.5 M102 147 l5 -15" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M152 110 L102 147 M102 147 l16 -0.5 M102 147 l5 -15" stroke="#e8728f" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>
 			</svg>`;
 		}
 
@@ -910,6 +954,7 @@
 			'gift-locked': () => gift({ locked: true }),
 			cake,
 			nightstand,
+			drawer: drawerInside,
 			heart: () => ICONS.heart,
 			'balloon-pink': () => balloon('#ffadc0', '#fff'),
 			'balloon-blue': () => balloon('#a9cdf5', '#fff'),
