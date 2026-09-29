@@ -1524,27 +1524,24 @@
 				setTimeout(() => { img.src = `${img.dataset.src}?r=${Date.now()}`; }, 800);
 			});
 
+			// Not remembered on purpose: every visit starts with the card covered again.
 			let done = false;
-			const finish = (fresh) => {
+			const finish = () => {
 				if (done) return;
 				done = true;
-				store.set('scratched', '1');
 				cv.classList.add('gone');
 				setTimeout(() => cv.remove(), 700);
 				wrap.classList.add('revealed');
 				nudge.textContent = '';
 				skip.hidden = true;
 				$('#scratch-done').hidden = false;
-				if (fresh) {
-					popAt(wrap, 110);
-					sound.chime();
-					if (navigator.vibrate) navigator.vibrate([20, 50, 30]);
-				}
+				popAt(wrap, 110);
+				sound.chime();
+				if (navigator.vibrate) navigator.vibrate([20, 50, 30]);
 			};
 			img.addEventListener('click', () => { if (done) window.open(img.src, '_blank'); });
-			skip.addEventListener('click', () => finish(true));
+			skip.addEventListener('click', finish);
 
-			if (store.get('scratched')) { finish(false); return; }
 
 			const BRUSH = 46;
 			const DISPLAY = '"ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", sans-serif';
@@ -1680,7 +1677,7 @@
 			}
 			function check() {
 				const f = progress();
-				if (f > 0.52) finish(true);
+				if (f > 0.52) finish();
 				else if (f > 0.25) nudge.textContent = '快看到了！再刮刮～';
 				else if (f > 0.04) nudge.textContent = '对对对，就是这样～';
 			}
