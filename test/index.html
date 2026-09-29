@@ -14,7 +14,8 @@
 			localStorage.setItem(K + 'asked', '1');
 			localStorage.setItem(K + 'asked-text', '什么时候可以看？');
 		} catch (e) {}
-		location.replace('/birthday/?now=2026-09-29T22:59:50Z');
+		// unique query so the phone never reuses a cached (up to 10 min old) copy of the page
+		location.replace('/birthday/?now=2026-09-29T22:59:50Z&fresh=' + Date.now());
 	</script>
 </head>
 <body></body>
