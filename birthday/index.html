@@ -178,7 +178,18 @@
 
 		/* chat */
 		.chat { background: #fff8f1; padding: 16px 14px 14px; }
-		.chat-log { min-height: 40px; }
+		.chat-log {
+			height: clamp(220px, 36vh, 320px);
+			margin: -6px -6px 0;
+			padding: 14px 6px 6px;
+			overflow-y: auto;
+			overscroll-behavior: contain;
+			-webkit-overflow-scrolling: touch;
+			scrollbar-width: none;
+			-webkit-mask-image: linear-gradient(transparent, #000 18px);
+			mask-image: linear-gradient(transparent, #000 18px);
+		}
+		.chat-log::-webkit-scrollbar { display: none; }
 		.msg { display: flex; align-items: flex-end; gap: 8px; margin: 10px 0; animation: pop 0.38s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
 		.msg.no-anim { animation: none; }
 		.msg:first-child { margin-top: 0; }
@@ -1122,13 +1133,18 @@
 			if (r.bottom > window.innerHeight - 12 || r.top < 0) el.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
 		}
 
+		// The chat is a fixed-height window: new messages scroll it, the page below stays put.
+		function toBottom(smooth) {
+			chatLog.scrollTo({ top: chatLog.scrollHeight, behavior: smooth && !reduced ? 'smooth' : 'auto' });
+		}
+
 		function addMsg(who, text, instant) {
 			const row = document.createElement('div');
 			row.className = `msg ${who}${instant ? ' no-anim' : ''}`;
 			row.innerHTML = `<div class="av">${who === 'you' ? catFace() : bearFace()}</div><div class="bubble"></div>`;
 			row.querySelector('.bubble').textContent = text;
 			chatLog.appendChild(row);
-			if (!instant) scrollIntoViewIfNeeded(row);
+			toBottom(!instant);
 			return row;
 		}
 
@@ -1137,7 +1153,7 @@
 			t.className = 'msg bear typing';
 			t.innerHTML = `<div class="av">${bearFace()}</div><div class="bubble"><span></span><span></span><span></span></div>`;
 			chatLog.appendChild(t);
-			scrollIntoViewIfNeeded(t);
+			toBottom(true);
 			await sleep(delay);
 			t.remove();
 			addMsg('bear', text);
@@ -1271,6 +1287,7 @@
 			if (unlocked) return;
 			setChips([FIRST_CHIP], true);
 			composer.hidden = false;
+			scrollIntoViewIfNeeded(composer);
 		}
 
 		/* ================= 7pm: the doorbell ================= */
