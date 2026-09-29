@@ -7,12 +7,6 @@
 	const END = Date.UTC(2026, 9, 7, 4, 0, 0);
 	if (Date.now() >= END) return;
 
-	const SEEN = 'ff-bday-letter-seen';
-	try {
-		if (sessionStorage.getItem(SEEN)) return;
-		sessionStorage.setItem(SEEN, '1');
-	} catch (e) { /* private mode: just show it */ }
-
 	const font = document.createElement('link');
 	font.rel = 'stylesheet';
 	font.href = 'https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap';
